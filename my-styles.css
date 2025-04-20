@@ -263,7 +263,7 @@ body {
     max-width: 1730px;
     margin: 0 auto;
     padding: 80px 70px 40px 70px;
-    background-color: #f2f2f2; /* This should already be here */
+    background-color: #ffffff; /* This should already be here */
 }
 
 .fleet-intro-content {
@@ -303,8 +303,7 @@ body {
     padding: 40px 20px 60px 20px;
     max-width: 1730px;
     margin: 0 auto;
-    /* background: transparent; */ /* Remove or comment out this line */
-    background-color: #f2f2f2;   /* <-- ADD THIS LINE */
+    background: transparent;
 }
 
 /* Rest of your CSS for .vehicle-column, etc. remains the same */
