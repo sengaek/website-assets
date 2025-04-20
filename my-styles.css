@@ -230,6 +230,28 @@ body {
         }
         .location-link-inline:hover, .location-link-inline:focus {
         }
+.embedsocial-section {
+  background-color: #f2f2f2; 
+  padding: 80px 20px;       
+  margin-top: 0;            
+  margin-bottom: 0;        
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+.embedsocial-section .embedsocial-widget {
+  max-width: 100%;
+  width: 100%;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .embedsocial-section {
+    padding-left: 70px;  /* Restore larger INNER horizontal space */
+    padding-right: 70px;
+  }
         .fleet-intro-section {
             max-width: 1730px;
             margin: 0 auto;
