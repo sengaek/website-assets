@@ -233,7 +233,7 @@ body {
     margin: 0 auto;            /* Center if max-width is set */
     /* Padding: Top, Sides, Bottom */
     padding: 80px 70px 40px 70px;
-    background-color: #ffffff; /* White background like fleet intro */
+    background-color: #f2f2f2;
     box-sizing: border-box;
 }
 
