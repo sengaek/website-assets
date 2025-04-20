@@ -231,28 +231,34 @@ body {
         .location-link-inline:hover, .location-link-inline:focus {
         }
 .embedsocial-section {
-  background-color: #f2f2f2; 
-  padding: 80px 20px;       
-  margin-top: 0;            
-  margin-bottom: 0;        
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
+  background-color: #f2f2f2;   
+  padding-top: 35px;         
+  padding-bottom: 20px;      
+  margin-top: 0;              
+  margin-bottom: 0;           
+  overflow: hidden;           
   box-sizing: border-box;
 }
-.embedsocial-section .embedsocial-widget {
-  max-width: 100%;
-  width: 100%;
-  z-index: 1;
+.embedsocial-inner-container {
+  max-width: 1140px; 
+  width: 100%;       
+  margin-left: auto;   
+  margin-right: auto;  
+  padding-left: 20px;  
+  padding-right: 20px; 
+  box-sizing: border-box;
 }
-@media (min-width: 768px) {
-  .embedsocial-section {
-    padding-left: 70px;  /* Restore larger INNER horizontal space */
+.embedsocial-section .embedsocial-inner-container .embedsocial-widget {
+  max-width: 100%; 
+  width: 100%;     
+}
+@media (min-width: 768px) { 
+  .embedsocial-inner-container {
+    padding-left: 70px; 
     padding-right: 70px;
   }
-        .fleet-intro-section {
+}
+ .fleet-intro-section {
             max-width: 1730px;
             margin: 0 auto;
             padding: 80px 70px 40px 70px;
