@@ -229,16 +229,16 @@ body {
 }
 /* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
 .review-intro-section {
-    max-width: 1730px;         /* Optional: Match max-width */
-    margin: 0 auto;            /* Center if max-width is set */
-    /* Padding: Top, Sides, Bottom */
-    padding: 80px 70px 40px 20px;
-    background-color: #f2f2f2; /* UPDATED: Changed to light grey */
+    max-width: 1730px;
+    margin: 0 auto;
+    /* Padding: Top 80px, Sides 70px, Bottom 0px */
+    padding: 80px 70px 0px 70px; /* Removed bottom padding */
+    background-color: #e0e0e0; /* UPDATED Background color */
     box-sizing: border-box;
 }
 
 .review-intro-content {
-    text-align: left;         /* Align text left */
+    text-align: left;
 }
 
 .review-intro-content h2 {
@@ -247,31 +247,125 @@ body {
     margin: 0 0 10px 0;
     padding: 0;
     color: #000000;
-    font-size: 35px !important; /* Match fleet intro */
+    font-size: 35px !important;
     line-height: 1.2;
 }
 
 .review-intro-content hr {
     border: none;
-    border-top: 1px dotted #d8a94e; /* Gold dotted line */
+    border-top: 1px dotted #d8a94e;
     margin: 10px 0 20px 0;
     width: 100%;
 }
 
 .review-intro-content p {
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;          /* Light weight */
+    font-weight: 300;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 0;          /* No space below paragraph */
+    margin-bottom: 0;
     padding: 0;
-    color: #595959;            /* Grey text color */
+    color: #595959;
 }
 
-/* ... (Keep the responsive adjustments for .review-intro-section as they were) ... */
-@media (max-width: 1024px) {
+/* --- Review Display Section Styles --- */
+.review-section {
+  background-color: #e0e0e0; /* UPDATED Background color */
+  /* Padding: Top 30px, Sides 70px, Bottom 60px */
+  padding: 30px 70px 60px 70px; /* Reduced top padding */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.review-columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; /* Keeps columns centered if space allows */
+  max-width: 1730px;
+  margin: 0 auto;
+}
+
+.review-column {
+  flex: 1;
+  min-width: 260px;
+  max-width: 350px;
+  text-align: left;         /* Ensure left alignment always */
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.review-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding: 0;
+  color: #000000;
+}
+/* Modifier for explicitly normal weight if needed for Column 1 */
+/* .review-text--normal { font-weight: 400; } */
+
+.review-author {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700; /* Bold */
+  line-height: 1.4;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #000000;
+}
+
+.review-stars {
+  color: #b8860b;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Styles for the Button Container --- */
+.review-button-container {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* --- Styles for the Button --- */
+.review-cta-button {
+  display: inline-block;
+  width: 218px;
+  height: 55px;
+  line-height: 55px;
+  background-color: #000000;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.review-cta-button:hover {
+  background-color: transparent;
+  color: #000000 !important;
+  border-color: #000000;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) { /* Tablet breakpoint */
     .review-intro-section {
-        padding: 60px 40px 30px 40px; /* Reduce padding */
+        /* Padding: Top 60px, Sides 40px, Bottom 0px */
+        padding: 60px 40px 0px 40px;
     }
     .review-intro-content h2 {
         font-size: 32px !important;
@@ -279,150 +373,75 @@ body {
     .review-intro-content p {
         font-size: 15px;
     }
+
+    .review-section {
+        /* Padding: Top 30px, Sides 40px, Bottom 50px */
+        padding: 30px 40px 50px 40px;
+    }
+    .review-columns-container {
+        gap: 30px;
+    }
+    /* .review-column remains text-align: left */
+
+    .review-button-container {
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+    .review-cta-button {
+        width: 100%; /* Spread across container width */
+    }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) { /* Mobile breakpoint */
     .review-intro-section {
-        padding: 40px 20px 30px 20px; /* Further reduce padding */
+        /* Padding: Top 40px, Sides 20px, Bottom 0px */
+        padding: 40px 20px 0px 20px;
     }
-     /* H2 and P font sizes already adjusted in 1024px breakpoint */
+
+    .review-section {
+        /* Padding: Top 30px, Sides 20px, Bottom 30px */
+        padding: 30px 20px 30px 20px;
+    }
+    .review-column {
+        min-width: 100%;
+        max-width: 100%;
+        text-align: left; /* Override previous center alignment */
+    }
+    .review-button-container {
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+    .review-cta-button {
+        width: 100%; /* Still spread across */
+    }
 }
 
 @media (max-width: 480px) {
     .review-intro-section {
-        padding: 30px 30px 20px 30px;
+         /* Padding: Top 30px, Sides 30px, Bottom 0px */
+        padding: 30px 30px 0px 30px;
     }
     .review-intro-content h2 {
         font-size: 30px !important;
+    }
+
+    .review-section {
+        /* Padding: Top 20px, Sides 30px, Bottom 40px */
+        padding: 20px 30px 40px 30px;
+    }
+     .review-button-container {
+        margin-top: 25px;
     }
 }
 @media (max-width: 400px) {
      .review-intro-section {
         padding-left: 20px;
         padding-right: 20px;
-    }
-}
-/* ========= END TESTIMONIALS INTRO SECTION STYLES ========= */
-
-
-/* --- Review Display Section Styles (Existing Rules) --- */
-
-.review-section {
-  background-color: #f2f2f2; /* Section background color */
-  /* Padding: Top 80px, Sides 70px, Bottom 60px initially */
-  padding: 20px 70px 60px 70px;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* ... rest of your existing CSS for reviews, columns, button etc. ... */
-.review-section {
-	background-color: #f2f2f2;
-	padding: 80px 70px 60px 70px;
-	margin: 0;
-	box-sizing: border-box;
-}
-.review-columns-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 40px;
-	justify-content: center;
-	max-width: 1730px;
-	margin: 0 auto;
-}
-.review-column {
-	flex: 1;
-	min-width: 260px;
-	max-width: 350px;
-	text-align:left;
-	color: #000000;
-	box-sizing: border-box;
-}
-.review-text {
-	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 1.6;
-	margin-bottom: 15px;
-	padding: 0;
-	color: #000000;
-}
-.review-author {
-	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 1.4;
-	margin-bottom: 10px;
-	padding: 0;
-	color: #000000;
-}
-.review-stars {
-	color: #b8860b;
-	font-size: 20px;
-	line-height: 1;
-	margin: 0;
-	padding: 0;
-}
-.review-button-container {
-	text-align: center;
-	margin-top: 40px;
-	padding-bottom: 20px;
-}
-.review-cta-button {
-	display: inline-block;
-	width: 218px;
-	height: 55px;
-	line-height: 55px;
-	background-color: #000000;
-	color: #ffffff !important;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 18px;
-	text-align: center;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 6px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-	cursor: pointer;
-	box-sizing: border-box;
-}
-.review-cta-button:hover {
-	background-color: transparent;
-	color: #000000 !important;
-	border-color: #000000;
-}
-@media (max-width: 1024px) {
-	.review-section {
-		padding: 60px 40px 50px 40px;
-	}
-	.review-columns-container {
-		gap: 30px;
-	}
-	.review-button-container {
-		margin-top: 30px;
-		padding-bottom: 10px;
-	}
-	.review-cta-button {
-		width: 100%;
-	}
-}
-@media (max-width: 767px) {
-	.review-section {
-		padding: 40px 20px 30px 20px;
-	}
-	.review-column {
-		min-width: 100%;
-		max-width: 100%;
-		text-align: center;
-	}
-	.review-button-container {
-		margin-top: 30px;
-		padding-bottom: 10px;
-	}
-	.review-cta-button {
-		width: 100%;
-	}
+     }
+     .review-section {
+        padding-left: 20px;
+        padding-right: 20px;
+     }
 }
 .fleet-intro-section {
 	max-width: 1730px;
