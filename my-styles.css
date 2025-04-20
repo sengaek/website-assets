@@ -233,7 +233,7 @@ body {
     margin: 0 auto;            /* Center if max-width is set */
     /* Padding: Top, Sides, Bottom */
     padding: 80px 70px 40px 70px;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* UPDATED: Changed to light grey */
     box-sizing: border-box;
 }
 
@@ -268,7 +268,7 @@ body {
     color: #595959;            /* Grey text color */
 }
 
-/* Responsive adjustments for the intro section */
+/* ... (Keep the responsive adjustments for .review-intro-section as they were) ... */
 @media (max-width: 1024px) {
     .review-intro-section {
         padding: 60px 40px 30px 40px; /* Reduce padding */
@@ -302,7 +302,6 @@ body {
         padding-right: 20px;
     }
 }
-
 /* ========= END TESTIMONIALS INTRO SECTION STYLES ========= */
 
 
