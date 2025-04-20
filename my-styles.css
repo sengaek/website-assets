@@ -265,7 +265,7 @@ body {
     line-height: 1.6;
     margin-bottom: 0;
     padding: 0;
-    color: #000000;
+    color: #000000;!important;
 }
 
 /* --- Review Display Section Styles --- */
