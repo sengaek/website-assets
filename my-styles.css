@@ -1,4 +1,51 @@
-        body {
+/* === Self-Hosted Fonts (WOFF2) === */
+
+/* Poppins Light */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://sengaek.github.io/website-assets/fonts/Poppins-Light.woff2') format('woff2');
+}
+
+/* Poppins Medium */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://sengaek.github.io/website-assets/fonts/Poppins-Medium.woff2') format('woff2');
+}
+
+/* Poppins Bold */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://sengaek.github.io/website-assets/fonts/Poppins-Bold.woff2') format('woff2');
+}
+
+/* Roboto Condensed Regular */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://sengaek.github.io/website-assets/fonts/RobotoCondensed-Regular.woff2') format('woff2');
+}
+
+/* Roboto Condensed Bold */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://sengaek.github.io/website-assets/fonts/RobotoCondensed-Bold.woff2') format('woff2');
+}
+/* === End Self-Hosted Fonts === */
+body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
