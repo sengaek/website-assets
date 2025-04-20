@@ -227,6 +227,96 @@ body {
 }
 .location-link-inline:hover, .location-link-inline:focus {
 }
+/* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
+.review-intro-section {
+    max-width: 1730px;         /* Optional: Match max-width */
+    margin: 0 auto;            /* Center if max-width is set */
+    /* Padding: Top, Sides, Bottom */
+    padding: 80px 70px 40px 70px;
+    background-color: #ffffff; /* White background like fleet intro */
+    box-sizing: border-box;
+}
+
+.review-intro-content {
+    text-align: left;         /* Align text left */
+}
+
+.review-intro-content h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #000000;
+    font-size: 35px !important; /* Match fleet intro */
+    line-height: 1.2;
+}
+
+.review-intro-content hr {
+    border: none;
+    border-top: 1px dotted #d8a94e; /* Gold dotted line */
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+
+.review-intro-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;          /* Light weight */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;          /* No space below paragraph */
+    padding: 0;
+    color: #595959;            /* Grey text color */
+}
+
+/* Responsive adjustments for the intro section */
+@media (max-width: 1024px) {
+    .review-intro-section {
+        padding: 60px 40px 30px 40px; /* Reduce padding */
+    }
+    .review-intro-content h2 {
+        font-size: 32px !important;
+    }
+    .review-intro-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .review-intro-section {
+        padding: 40px 20px 30px 20px; /* Further reduce padding */
+    }
+     /* H2 and P font sizes already adjusted in 1024px breakpoint */
+}
+
+@media (max-width: 480px) {
+    .review-intro-section {
+        padding: 30px 30px 20px 30px;
+    }
+    .review-intro-content h2 {
+        font-size: 30px !important;
+    }
+}
+@media (max-width: 400px) {
+     .review-intro-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* ========= END TESTIMONIALS INTRO SECTION STYLES ========= */
+
+
+/* --- Review Display Section Styles (Existing Rules) --- */
+
+.review-section {
+  background-color: #f2f2f2; /* Section background color */
+  /* Padding: Top 80px, Sides 70px, Bottom 60px initially */
+  padding: 80px 70px 60px 70px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ... rest of your existing CSS for reviews, columns, button etc. ... */
 .review-section {
 	background-color: #f2f2f2;
 	padding: 80px 70px 60px 70px;
