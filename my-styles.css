@@ -228,12 +228,12 @@ body {
 .location-link-inline:hover, .location-link-inline:focus {
 }
 /* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
+/* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
 .review-intro-section {
     max-width: 1730px;
     margin: 0 auto;
-    /* Padding: Top 80px, Sides 70px, Bottom 0px */
-    padding: 80px 70px 0px 70px; /* Removed bottom padding */
-    background-color: #e0e0e0; /* UPDATED Background color */
+    padding: 80px 70px 0px 70px;
+    background-color: #e0e0e0;
     box-sizing: border-box;
 }
 
@@ -265,9 +265,8 @@ body {
     line-height: 1.6;
     margin-bottom: 0;
     padding: 0;
-    color: #000000;!important;
+    color: #000000 !important; /* UPDATED: Changed from #595959 to black */
 }
-
 /* --- Review Display Section Styles --- */
 .review-section {
   background-color: #e0e0e0; /* UPDATED Background color */
