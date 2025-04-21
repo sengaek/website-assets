@@ -374,6 +374,15 @@ body {
 	border-top: 1px dotted #d8a94e;
 	margin: 10px 0 0 0;
 	width: 100%;
+	}
+	.review-intro-content p {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.6;
+	margin-bottom: 0;
+	padding: 0;
+	color: #000000 !important;
 }
 .review-section {
 	background-color: #e0e0e0;
