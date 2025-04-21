@@ -163,8 +163,8 @@ body {
 .experience-heading {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-	font-size: 50px;
-	color: #ffffff;
+	font-size: 50px !important;
+	color: #ffffff !important;
 	margin-top: 0;
 	margin-bottom: 20px;
 	line-height: 1.2;
