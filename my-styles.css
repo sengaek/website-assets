@@ -130,6 +130,154 @@ body {
 	margin: 0;
 	padding: 0;
 }
+/* ========= START DARK TWO-COLUMN SECTION STYLES ========= */
+
+.dark-two-column-section {
+  background-color: #1c1c1c;
+  padding-top: 80px;    /* Maintain top space */
+  padding-left: 70px;   /* Side space */
+  padding-right: 70px;  /* Side space */
+  padding-bottom: 0;    /* NO bottom padding on the section itself */
+  color: #ffffff;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;   /* Crucial: Positioning context for absolute child */
+  overflow: hidden;     /* Prevent image overflow if needed */
+}
+
+.dark-columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1730px;
+  margin: 0 auto;
+  /* align-items removed, not reliable for this effect */
+}
+
+.dark-column { /* Style for BOTH columns */
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box;
+  text-align: left;
+  /* Add padding bottom HERE to push TEXT column content up */
+  padding-bottom: 80px;
+}
+
+/* Specific overrides for the IMAGE column */
+.image-column-right {
+  position: relative;   /* Needed if image positioning was relative to column */
+                          /* But image will be absolute to SECTION now */
+  padding-bottom: 0;    /* NO bottom padding on the image column */
+  /* Remove flex alignment previously tried */
+  /* display: flex; justify-content: center; align-items: flex-end; */
+}
+
+/* Styles for Left Column Content */
+.experience-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.experience-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Styling for the absolutely positioned image */
+.flush-bottom-image {
+  display: block;
+  position: absolute;   /* Position relative to .dark-two-column-section */
+  bottom: 0;            /* Stick to the bottom of the section */
+  /* Centering horizontally within its column's conceptual space */
+  /* This assumes 50% width column and gap */
+  left: calc(50% + (40px / 2)); /* Start at center + half the gap */
+  transform: translateX(-50%); /* Shift left by half its own width */
+
+  max-width: calc(50% - (40px / 2)); /* Limit width to column width minus half gap */
+                                     /* Adjust 40px if gap changes */
+  height: auto;         /* Maintain aspect ratio */
+  max-height: 100%;     /* Prevent it exceeding section height */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) { /* Tablet */
+  .dark-two-column-section {
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 0;
+  }
+  .dark-columns-container {
+    gap: 30px;
+  }
+  .dark-column {
+     padding-bottom: 60px; /* Adjust text column padding */
+  }
+  .image-column-right {
+     padding-bottom: 0;
+  }
+  .experience-heading {
+    font-size: 40px;
+  }
+  .flush-bottom-image {
+      /* Adjust horizontal positioning based on new padding/gap */
+      left: calc(50% + (30px / 2)); /* Use tablet gap (30px) */
+      max-width: calc(50% - (30px / 2)); /* Adjust max-width */
+      /* Absolute positioning remains */
+  }
+}
+
+@media (max-width: 767px) { /* Mobile - STACKING */
+  .dark-two-column-section {
+    padding: 40px 20px 0px 20px; /* Adjust side/top padding, NO bottom padding */
+  }
+  .dark-columns-container {
+     gap: 0; /* No gap needed when stacked */
+  }
+  .dark-column { /* Applies to both when stacked */
+     min-width: 100%;
+     width: 100%;
+     padding-bottom: 30px; /* Space below text column */
+  }
+  .image-column-right {
+     order: 2; /* Image below text */
+     padding-bottom: 0; /* No padding needed below image */
+     margin-top: 20px; /* Add space above the image */
+     position: static; /* IMPORTANT: Reset position for stacking */
+  }
+  .dark-column:not(.image-column-right) { /* Text column */
+        order: 1;
+        padding-bottom: 20px; /* Reduce padding below text slightly */
+  }
+  .experience-heading {
+    font-size: 43px;
+  }
+  .experience-text {
+      font-size: 15px;
+  }
+  .flush-bottom-image {
+      position: static; /* Reset positioning */
+      bottom: auto;
+      left: auto;
+      transform: none;
+      max-width: 80%; /* Example: Control size */
+      max-height: unset; /* Allow natural height */
+      margin: 0 auto; /* Center the block image */
+      display: block;
+  }
+}
 .section-container {
 	display: flex;
 	flex-direction: row;
