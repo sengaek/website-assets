@@ -130,153 +130,127 @@ body {
 	margin: 0;
 	padding: 0;
 }
-/* ========= START DARK TWO-COLUMN SECTION STYLES ========= */
-
 .dark-two-column-section {
-  background-color: #1c1c1c;
-  padding-top: 80px;    /* Maintain top space */
-  padding-left: 70px;   /* Side space */
-  padding-right: 70px;  /* Side space */
-  padding-bottom: 0;    /* NO bottom padding on the section itself */
-  color: #ffffff;
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;   /* Crucial: Positioning context for absolute child */
-  overflow: hidden;     /* Prevent image overflow if needed */
+	background-color: #1c1c1c;
+	padding-top: 80px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 0;
+	color: #ffffff;
+	margin: 0;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
 }
-
 .dark-columns-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1730px;
-  margin: 0 auto;
-  /* align-items removed, not reliable for this effect */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	max-width: 1730px;
+	margin: 0 auto;
 }
-
-.dark-column { /* Style for BOTH columns */
-  flex: 1;
-  min-width: 280px;
-  box-sizing: border-box;
-  text-align: left;
-  /* Add padding bottom HERE to push TEXT column content up */
-  padding-bottom: 80px;
+.dark-column {
+	flex: 1;
+	min-width: 280px;
+	box-sizing: border-box;
+	text-align: left;
+	padding-bottom: 80px;
 }
-
-/* Specific overrides for the IMAGE column */
 .image-column-right {
-  position: relative;   /* Needed if image positioning was relative to column */
-                          /* But image will be absolute to SECTION now */
-  padding-bottom: 0;    /* NO bottom padding on the image column */
-  /* Remove flex alignment previously tried */
-  /* display: flex; justify-content: center; align-items: flex-end; */
+	position: relative;
+	padding-bottom: 0;
 }
-
-/* Styles for Left Column Content */
 .experience-heading {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	color: #ffffff;
+	margin-top: 0;
+	margin-bottom: 20px;
+	line-height: 1.2;
+	text-transform: uppercase;
 }
-
 .experience-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  color: #cccccc;
-  line-height: 1.6;
-  margin-top: 0;
-  margin-bottom: 25px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 1.5;
+	margin-top: 0;
+	margin-bottom: 25px;
 }
-
-/* Styling for the absolutely positioned image */
 .flush-bottom-image {
-  display: block;
-  position: absolute;   /* Position relative to .dark-two-column-section */
-  bottom: 0;            /* Stick to the bottom of the section */
-  /* Centering horizontally within its column's conceptual space */
-  /* This assumes 50% width column and gap */
-  left: calc(50% + (40px / 2)); /* Start at center + half the gap */
-  transform: translateX(-50%); /* Shift left by half its own width */
-
-  max-width: calc(50% - (40px / 2)); /* Limit width to column width minus half gap */
-                                     /* Adjust 40px if gap changes */
-  height: auto;         /* Maintain aspect ratio */
-  max-height: 100%;     /* Prevent it exceeding section height */
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% + (40px / 2));
+	transform: translateX(-50%);
+	max-width: calc(50% - (40px / 2));
+	height: auto;
+	max-height: 100%;
 }
-
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 1024px) { /* Tablet */
-  .dark-two-column-section {
-    padding-top: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 0;
-  }
-  .dark-columns-container {
-    gap: 30px;
-  }
-  .dark-column {
-     padding-bottom: 60px; /* Adjust text column padding */
-  }
-  .image-column-right {
-     padding-bottom: 0;
-  }
-  .experience-heading {
-    font-size: 40px;
-  }
-  .flush-bottom-image {
-      /* Adjust horizontal positioning based on new padding/gap */
-      left: calc(50% + (30px / 2)); /* Use tablet gap (30px) */
-      max-width: calc(50% - (30px / 2)); /* Adjust max-width */
-      /* Absolute positioning remains */
-  }
+@media (max-width: 1024px) {
+	.dark-two-column-section {
+		padding-top: 60px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 0;
+	}
+	.dark-columns-container {
+		gap: 30px;
+	}
+	.dark-column {
+		padding-bottom: 60px;
+	}
+	.image-column-right {
+		padding-bottom: 0;
+	}
+	.experience-heading {
+		font-size: 40px;
+	}
+	.flush-bottom-image {
+		left: calc(50% + (30px / 2));
+		max-width: calc(50% - (30px / 2));
+	}
 }
-
-@media (max-width: 767px) { /* Mobile - STACKING */
-  .dark-two-column-section {
-    padding: 40px 20px 0px 20px; /* Adjust side/top padding, NO bottom padding */
-  }
-  .dark-columns-container {
-     gap: 0; /* No gap needed when stacked */
-  }
-  .dark-column { /* Applies to both when stacked */
-     min-width: 100%;
-     width: 100%;
-     padding-bottom: 30px; /* Space below text column */
-  }
-  .image-column-right {
-     order: 2; /* Image below text */
-     padding-bottom: 0; /* No padding needed below image */
-     margin-top: 20px; /* Add space above the image */
-     position: static; /* IMPORTANT: Reset position for stacking */
-  }
-  .dark-column:not(.image-column-right) { /* Text column */
-        order: 1;
-        padding-bottom: 20px; /* Reduce padding below text slightly */
-  }
-  .experience-heading {
-    font-size: 43px;
-  }
-  .experience-text {
-      font-size: 15px;
-  }
-  .flush-bottom-image {
-      position: static; /* Reset positioning */
-      bottom: auto;
-      left: auto;
-      transform: none;
-      max-width: 80%; /* Example: Control size */
-      max-height: unset; /* Allow natural height */
-      margin: 0 auto; /* Center the block image */
-      display: block;
-  }
+@media (max-width: 767px) {
+	.dark-two-column-section {
+		padding: 40px 20px 0px 20px;
+	}
+	.dark-columns-container {
+		gap: 0;
+	}
+	.dark-column {
+		min-width: 100%;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.image-column-right {
+		order: 2;
+		padding-bottom: 0;
+		margin-top: 20px;
+		position: static;
+	}
+	.dark-column:not(.image-column-right) {
+		order: 1;
+		padding-bottom: 20px;
+	}
+	.experience-heading {
+		font-size: 43px;
+	}
+	.experience-text {
+		font-size: 15px;
+	}
+	.flush-bottom-image {
+		position: static;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		max-width: 80%;
+		max-height: unset;
+		margin: 0 auto;
+		display: block;
+	}
 }
 .section-container {
 	display: flex;
@@ -375,220 +349,183 @@ body {
 }
 .location-link-inline:hover, .location-link-inline:focus {
 }
-/* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
-/* ========= START TESTIMONIALS INTRO SECTION STYLES ========= */
 .review-intro-section {
-    max-width: 1730px;
-    margin: 0 auto;
-    padding: 80px 70px 0px 70px;
-    background-color: #e0e0e0;
-    box-sizing: border-box;
+	max-width: 1730px;
+	margin: 0 auto;
+	padding: 80px 70px 0px 70px;
+	background-color: #e0e0e0;
+	box-sizing: border-box;
 }
-
 .review-intro-content {
-    text-align: left;
+	text-align: left;
 }
-
 .review-intro-content h2 {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-    padding: 0;
-    color: #000000;
-    font-size: 35px !important;
-    line-height: 1.2;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #000000;
+	font-size: 35px !important;
+	line-height: 1.2;
 }
-
 .review-intro-content hr {
-    border: none;
-    border-top: 1px dotted #d8a94e;
-    margin: 10px 0 20px 0;
-    width: 100%;
+	border: none;
+	border-top: 1px dotted #d8a94e;
+	margin: 10px 0 20px 0;
+	width: 100%;
 }
-
 .review-intro-content p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    padding: 0;
-    color: #000000 !important; /* UPDATED: Changed from #595959 to black */
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.6;
+	margin-bottom: 0;
+	padding: 0;
+	color: #000000 !important;
 }
-/* --- Review Display Section Styles --- */
 .review-section {
-  background-color: #e0e0e0; /* UPDATED Background color */
-  /* Padding: Top 30px, Sides 70px, Bottom 60px */
-  padding: 30px 70px 60px 70px; /* Reduced top padding */
-  margin: 0;
-  box-sizing: border-box;
+	background-color: #e0e0e0;
+	padding: 30px 70px 60px 70px;
+	margin: 0;
+	box-sizing: border-box;
 }
-
 .review-columns-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center; /* Keeps columns centered if space allows */
-  max-width: 1730px;
-  margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: center;
+	max-width: 1730px;
+	margin: 0 auto;
 }
-
 .review-column {
-  flex: 1;
-  min-width: 260px;
-  max-width: 350px;
-  text-align: left;         /* Ensure left alignment always */
-  color: #000000;
-  box-sizing: border-box;
+	flex: 1;
+	min-width: 260px;
+	max-width: 350px;
+	text-align: left;
+	color: #000000;
+	box-sizing: border-box;
 }
-
 .review-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  padding: 0;
-  color: #000000;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.6;
+	margin-bottom: 15px;
+	padding: 0;
+	color: #000000;
 }
-/* Modifier for explicitly normal weight if needed for Column 1 */
-/* .review-text--normal { font-weight: 400; } */
-
 .review-author {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 700; /* Bold */
-  line-height: 1.4;
-  margin-bottom: 10px;
-  padding: 0;
-  color: #000000;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.4;
+	margin-bottom: 10px;
+	padding: 0;
+	color: #000000;
 }
-
 .review-stars {
-  color: #b8860b;
-  font-size: 20px;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
+	color: #b8860b;
+	font-size: 20px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
 }
-
-/* --- Styles for the Button Container --- */
 .review-button-container {
-  text-align: center;
-  margin-top: 40px;
-  padding-bottom: 20px;
+	text-align: center;
+	margin-top: 40px;
+	padding-bottom: 20px;
 }
-
-/* --- Styles for the Button --- */
 .review-cta-button {
-  display: inline-block;
-  width: 218px;
-  height: 55px;
-  line-height: 55px;
-  background-color: #000000;
-  color: #ffffff !important;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  box-sizing: border-box;
+	display: inline-block;
+	width: 218px;
+	height: 55px;
+	line-height: 55px;
+	background-color: #000000;
+	color: #ffffff !important;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	box-sizing: border-box;
 }
-
 .review-cta-button:hover {
-  background-color: transparent;
-  color: #000000 !important;
-  border-color: #000000;
+	background-color: transparent;
+	color: #000000 !important;
+	border-color: #000000;
 }
-
-
-/* --- Responsive Adjustments --- */
-
-@media (max-width: 1024px) { /* Tablet breakpoint */
-    .review-intro-section {
-        /* Padding: Top 60px, Sides 40px, Bottom 0px */
-        padding: 60px 40px 0px 40px;
-    }
-    .review-intro-content h2 {
-        font-size: 32px !important;
-    }
-    .review-intro-content p {
-        font-size: 15px;
-    }
-
-    .review-section {
-        /* Padding: Top 30px, Sides 40px, Bottom 50px */
-        padding: 30px 40px 50px 40px;
-    }
-    .review-columns-container {
-        gap: 30px;
-    }
-    /* .review-column remains text-align: left */
-
-    .review-button-container {
-        margin-top: 30px;
-        padding-bottom: 10px;
-    }
-    .review-cta-button {
-        width: 100%; /* Spread across container width */
-    }
+@media (max-width: 1024px) {
+	.review-intro-section {
+		padding: 60px 40px 0px 40px;
+	}
+	.review-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.review-intro-content p {
+		font-size: 15px;
+	}
+	.review-section {
+		padding: 30px 40px 50px 40px;
+	}
+	.review-columns-container {
+		gap: 30px;
+	}
+	.review-button-container {
+		margin-top: 30px;
+		padding-bottom: 10px;
+	}
+	.review-cta-button {
+		width: 100%;
+	}
 }
-
-@media (max-width: 767px) { /* Mobile breakpoint */
-    .review-intro-section {
-        /* Padding: Top 40px, Sides 20px, Bottom 0px */
-        padding: 40px 20px 0px 20px;
-    }
-
-    .review-section {
-        /* Padding: Top 30px, Sides 20px, Bottom 30px */
-        padding: 30px 20px 30px 20px;
-    }
-    .review-column {
-        min-width: 100%;
-        max-width: 100%;
-        text-align: left; /* Override previous center alignment */
-    }
-    .review-button-container {
-        margin-top: 30px;
-        padding-bottom: 10px;
-    }
-    .review-cta-button {
-        width: 100%; /* Still spread across */
-    }
+@media (max-width: 767px) {
+	.review-intro-section {
+		padding: 40px 20px 0px 20px;
+	}
+	.review-section {
+		padding: 30px 20px 30px 20px;
+	}
+	.review-column {
+		min-width: 100%;
+		max-width: 100%;
+		text-align: left;
+	}
+	.review-button-container {
+		margin-top: 30px;
+		padding-bottom: 10px;
+	}
+	.review-cta-button {
+		width: 100%;
+	}
 }
-
 @media (max-width: 480px) {
-    .review-intro-section {
-         /* Padding: Top 30px, Sides 30px, Bottom 0px */
-        padding: 30px 30px 0px 30px;
-    }
-    .review-intro-content h2 {
-        font-size: 30px !important;
-    }
-
-    .review-section {
-        /* Padding: Top 20px, Sides 30px, Bottom 40px */
-        padding: 20px 30px 40px 30px;
-    }
-     .review-button-container {
-        margin-top: 25px;
-    }
+	.review-intro-section {
+		padding: 30px 30px 0px 30px;
+	}
+	.review-intro-content h2 {
+		font-size: 30px !important;
+	}
+	.review-section {
+		padding: 20px 30px 40px 30px;
+	}
+	.review-button-container {
+		margin-top: 25px;
+	}
 }
 @media (max-width: 400px) {
-     .review-intro-section {
-        padding-left: 20px;
-        padding-right: 20px;
-     }
-     .review-section {
-        padding-left: 20px;
-        padding-right: 20px;
-     }
+	.review-intro-section {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.review-section {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 .fleet-intro-section {
 	max-width: 1730px;
