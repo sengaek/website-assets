@@ -240,16 +240,21 @@ body {
 	.experience-text {
 		font-size: 16px;
 	}
-	.flush-bottom-image {
-		position: static;
-		bottom: auto;
-		left: auto;
-		transform: none;
-		max-width: 80%;
-		max-height: unset;
-		margin: 0 auto;
-		display: block;
-	}
+  .flush-bottom-image {
+      position: static; /* Reset positioning */
+      bottom: auto;
+      left: auto;
+      transform: none;
+      max-width: 80%;   /* Constrain width */
+      width: 80%;       /* Often needed with aspect-ratio */
+      height: auto;     /* Let aspect-ratio determine height */
+      max-height: unset;
+      margin: 20px auto 0 auto; /* Top/Bottom margin, center horizontal */
+      display: block;
+      z-index: auto;
+      object-fit: contain; /* Ensure image fits */
+      aspect-ratio: 250 / 359;
+  }
 }
 .section-container {
 	display: flex;
