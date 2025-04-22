@@ -43,6 +43,7 @@
       padding-right: 20px;
       padding-top: 15px;
       padding-bottom: 15px;
+	    display: none;
   }
     /* .site-logo width might already be 170px from above */
 }
