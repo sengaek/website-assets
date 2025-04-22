@@ -1,3 +1,73 @@
+.logo-container {
+  /* === Positioning & Spacing === */
+  /* Constrain width and center container like other sections */
+  max-width: 1730px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Side padding to align logo with content */
+  padding-left: 70px;   /* Desktop side padding */
+  padding-right: 70px;  /* Desktop side padding */
+  /* Vertical space around the logo */
+  padding-top: 30px;    /* Adjust space above */
+  padding-bottom: 30px; /* Adjust space below */
+  /* Ensure content inside aligns left */
+  text-align: left;
+  /* Basic box model */
+  box-sizing: border-box;
+  /* Default visibility */
+  display: block;
+}
+
+/* Base Logo Image Style (Desktop First - 200x91) */
+.site-logo {
+  display: block; /* Treat as block for layout */
+  width: 200px !important;  /* Matches HTML width attr - !important for robustness */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  object-fit: contain; /* Scale nicely */
+  margin-left: 0; /* Force left alignment */
+  margin-right: auto; /* Keep left */
+}
+
+/* --- Responsive Adjustments for Logo --- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .logo-container {
+      padding-left: 40px;  /* Reduced side padding */
+      padding-right: 40px; /* Reduced side padding */
+      padding-top: 20px;   /* Reduced vertical space */
+      padding-bottom: 20px;/* Reduced vertical space */
+  }
+  .site-logo {
+    width: 170px !important; /* Smaller logo on tablet */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .logo-container {
+      padding-left: 20px;  /* Further reduced side padding */
+      padding-right: 20px; /* Further reduced side padding */
+      padding-top: 15px;   /* Further reduced vertical space */
+      padding-bottom: 15px;/* Further reduced vertical space */
+    }
+    /* Logo width likely stays 170px from above, adjust if needed */
+}
+
+/* Smaller Mobile Adjustments (Match Hero Padding) */
+@media (max-width: 480px) {
+    .logo-container {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
+@media (max-width: 400px) {
+    .logo-container {
+      padding-left: 25px;
+      padding-right: 25px;
+  }
+}
 body {
 	margin: 0;
 	padding: 0;
