@@ -1,3 +1,55 @@
+.logo-container {
+	padding: 20px 0;
+	text-align: left;
+	max-width: 1730px;
+	margin: 0 auto;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.site-logo {
+	display: block;
+	width: 200px !important;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+	margin-left: 0;
+	margin-right: auto;
+}
+@media (max-width: 1024px) {
+	.logo-container {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.site-logo {
+		width: 170px !important;
+	}
+}
+@media (max-width: 767px) {
+	.logo-container {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.site-logo {
+	}
+}
+@media (max-width: 480px) {
+	.logo-container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+@media (max-width: 400px) {
+	.logo-container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -160,7 +212,7 @@ body {
 	padding-bottom: 0;
 }
 .experience-heading {
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 50px !important;
 	color: #ffffff !important;
@@ -170,7 +222,7 @@ body {
 	text-transform: uppercase;
 }
 .experience-text {
-	font-family: 'Poppins', sans-serif; 
+	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 	color: #ffffff;
@@ -373,8 +425,8 @@ body {
 	border-top: 1px dotted #d8a94e;
 	margin: 10px 0 0 0;
 	width: 100%;
-	}
-	.review-intro-content p {
+}
+.review-intro-content p {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
