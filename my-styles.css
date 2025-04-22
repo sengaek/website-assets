@@ -169,9 +169,9 @@ body {
 }
 
 .stat-column h2 {
-  font-family: 'Poppins', sans-serif; /* CHANGED font family */
+  font-family: 'Poppins', sans-serif !important; /* CHANGED font family */
   font-size: 50px !important;
-  font-weight: 600;         /* CHANGED font weight to Semibold */
+  font-weight: 600 !important;         /* CHANGED font weight to Semibold */
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 10px;
