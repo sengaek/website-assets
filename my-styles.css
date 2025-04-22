@@ -5,8 +5,8 @@
 	margin: 0 auto;
 	padding-left: 70px;
 	padding-right: 70px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .site-logo {
 	display: block;
@@ -21,8 +21,8 @@
 	.logo-container {
 		padding-left: 40px;
 		padding-right: 40px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	.site-logo {
 		width: 170px !important;
@@ -30,8 +30,8 @@
 }
 @media (max-width: 767px) {
 	.logo-container {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
@@ -40,14 +40,14 @@
 }
 @media (max-width: 480px) {
 	.logo-container {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 @media (max-width: 400px) {
 	.logo-container {
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 body {
