@@ -130,104 +130,118 @@ body {
 	padding: 0;
 }
 	
-	.stats-section {
-  background-color: #ffffff; /* --- SET YOUR DESIRED BACKGROUND COLOR HERE --- */
-                              /* Example: #ffffff for white, #f2f2f2 for light grey */
-  padding-top: 80px;       /* Vertical padding for the section */
-  padding-bottom: 80px;    /* Vertical padding for the section */
-  padding-left: 0;         /* No horizontal padding for full bleed */
-  padding-right: 0;        /* No horizontal padding for full bleed */
+	/* ========= START STATS SECTION STYLES ========= */
+
+.stats-section {
+  background-color: #f8f8f8; /* Or your chosen background */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* ADD horizontal padding HERE for overall gutters */
+  padding-left: 40px;   /* <-- ADDED */
+  padding-right: 40px;  /* <-- ADDED */
   margin: 0;
   box-sizing: border-box;
 }
 
 .stats-container {
-  display: flex;            /* Arrange columns horizontally */
-  flex-wrap: wrap;          /* Allow columns to wrap */
-  gap: 30px;                /* Space between columns (adjust as needed) */
-  justify-content: center;  /* Center columns horizontally */
+  display: flex;
+  flex-wrap: wrap;       /* Keep wrapping for responsiveness */
+  gap: 30px;             /* Keep gap between columns */
+  justify-content: space-between; /* <-- CHANGED: Distribute space between items */
 
-  /* Center the container within the full-bleed section */
-  max-width: 1200px;        /* Set a max-width for the content area (adjust as needed) */
+  /* Center the container (optional if section padding is used) */
+  max-width: 1730px;     /* Set max-width (adjust as needed) */
+                          /* If using section padding, you might not need max-width here */
+                          /* Depending on desired effect */
   margin-left: auto;
   margin-right: auto;
 
-  /* Add side padding for gutters on smaller screens */
-  padding-left: 20px;
-  padding-right: 20px;
+  /* REMOVE side padding from container, it's now on the section */
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
   box-sizing: border-box;
 }
 
 .stat-column {
-  flex: 1;                  /* Allow columns to grow/shrink */
-  min-width: 180px;         /* Minimum width before wrapping (adjust for 4 columns) */
-  /* Optional: Limit max width if needed */
-  /* max-width: 250px; */
-  text-align: center;       /* Center text within each column */
-  color: #000000;           /* Default text color */
+  flex: 1 1 auto; /* CHANGED: Allow grow, shrink, auto basis - helps distribution */
+                  /* You might need to experiment with flex-basis if wrapping is odd */
+                  /* e.g., flex: 1 1 180px; */
+  /* min-width: 180px; */ /* Remove or adjust min-width if using flex-basis */
+  text-align: center;
+  color: #000000;
   box-sizing: border-box;
 }
 
+/* ... (Keep .stat-column h2 and .stat-column p styles as they were) ... */
 .stat-column h2 {
-  font-family: 'Poppins', sans-serif !important; /* CHANGED font family */
+  font-family: 'Poppins', sans-serif;
   font-size: 50px !important;
-  font-weight: 600 !important;         /* CHANGED font weight to Semibold */
+  font-weight: 600;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0;
   color: #000000;
 }
-/* The .gold-text class will handle the arrow/star color */
-
 .stat-column p {
-  font-family: 'Poppins', sans-serif; /* Or your preferred body font */
-  font-weight: 300;         /* Light weight is common for descriptions */
-  font-size: 15px;          /* Adjust size as needed */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  color: #595959;           /* Grey color for description */
+  color: #595959;
 }
+
+
 /* --- Responsive Adjustments --- */
 
 @media (max-width: 1024px) {
   .stats-section {
-    padding-top: 60px;    /* Reduced vertical padding */
+    padding-top: 60px;
     padding-bottom: 60px;
+    /* Keep side padding */
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .stats-container {
-    gap: 25px;            /* Reduced gap */
-    padding-left: 40px;   /* Match tablet gutters */
-    padding-right: 40px;  /* Match tablet gutters */
-    max-width: 90%;       /* Allow slightly wider container */
+    gap: 25px;
+    /* justify-content: space-between; still applies */
+    /* Remove padding overrides */
+    /* padding-left: 40px; */
+    /* padding-right: 40px; */
+    /* max-width: 90%; */ /* Keep or adjust max-width */
   }
-  .stat-column h2 {
-      font-size: 45px !important; /* Slightly smaller font on tablet */
-  }
+   /* Adjust column flex properties if needed for tablet */
    .stat-column {
-      min-width: 160px; /* Adjust wrapping point */
+       /* flex: 1 1 160px; Example */
    }
+   .stat-column h2 {
+      font-size: 45px !important;
+  }
 }
 
 @media (max-width: 767px) {
   .stats-section {
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-left: 20px;   /* Reduced side padding */
+    padding-right: 20px;  /* Reduced side padding */
   }
   .stats-container {
-    gap: 30px; /* Increase gap slightly for stacked/2-column */
-    padding-left: 20px;   /* Match mobile gutters */
-    padding-right: 20px;  /* Match mobile gutters */
-    max-width: 100%;      /* Allow full width */
-    /* Columns might naturally stack 2x2 or 1x4 depending on min-width */
+    gap: 30px;
+    justify-content: center; /* Switch back to center for 2x2 layout */
+    /* Remove padding overrides */
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    max-width: 100%;
   }
    .stat-column {
-       flex-basis: calc(50% - 15px); /* Aim for 2 columns (adjust gap calc if needed) */
-       min-width: 140px; /* Ensure wrapping */
+       flex: 1 1 calc(50% - 15px); /* Explicitly aim for 2 columns */
+       min-width: 0; /* Reset min-width */
    }
    .stat-column h2 {
-      font-size: 40px !important; /* Smaller font on mobile */
+      font-size: 40px !important;
   }
    .stat-column p {
       font-size: 14px;
@@ -235,16 +249,19 @@ body {
 }
 
 @media (max-width: 480px) {
-    .stats-container {
-        padding-left: 30px;   /* Match smallest gutters */
+    .stats-section {
+        padding-left: 30px; /* Match desired smallest gutters */
         padding-right: 30px;
+    }
+    .stats-container {
         gap: 25px;
+        /* justify-content: center; remains */
     }
     .stat-column {
-       flex-basis: calc(50% - 13px); /* Still aim for 2 columns if possible */
-       min-width: 120px;
+       flex-basis: calc(50% - 13px); /* Adjust gap calculation */
    }
 }
+/* ========= END STATS SECTION STYLES ========= */
 .dark-two-column-section {
 	background-color: #1c1c1c;
 	padding-top: 80px;
