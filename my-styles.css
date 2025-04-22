@@ -129,6 +129,122 @@ body {
 	margin: 0;
 	padding: 0;
 }
+	
+	.stats-section {
+  background-color: #f8f8f8; /* --- SET YOUR DESIRED BACKGROUND COLOR HERE --- */
+                              /* Example: #ffffff for white, #f2f2f2 for light grey */
+  padding-top: 80px;       /* Vertical padding for the section */
+  padding-bottom: 80px;    /* Vertical padding for the section */
+  padding-left: 0;         /* No horizontal padding for full bleed */
+  padding-right: 0;        /* No horizontal padding for full bleed */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.stats-container {
+  display: flex;            /* Arrange columns horizontally */
+  flex-wrap: wrap;          /* Allow columns to wrap */
+  gap: 30px;                /* Space between columns (adjust as needed) */
+  justify-content: center;  /* Center columns horizontally */
+
+  /* Center the container within the full-bleed section */
+  max-width: 1200px;        /* Set a max-width for the content area (adjust as needed) */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Add side padding for gutters on smaller screens */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.stat-column {
+  flex: 1;                  /* Allow columns to grow/shrink */
+  min-width: 180px;         /* Minimum width before wrapping (adjust for 4 columns) */
+  /* Optional: Limit max width if needed */
+  /* max-width: 250px; */
+  text-align: center;       /* Center text within each column */
+  color: #000000;           /* Default text color */
+  box-sizing: border-box;
+}
+
+.stat-column h2 {
+  font-family: 'Roboto Condensed', sans-serif; /* Or your preferred heading font */
+  font-size: 50px !important; /* Specific size requested */
+  font-weight: 700;         /* Bold often looks good for stats */
+  line-height: 1.1;         /* Adjust line height for large font */
+  margin-top: 0;
+  margin-bottom: 10px;      /* Space below the number */
+  padding: 0;
+  color: #000000;           /* Black color for the number */
+}
+/* The .gold-text class will handle the arrow/star color */
+
+.stat-column p {
+  font-family: 'Poppins', sans-serif; /* Or your preferred body font */
+  font-weight: 300;         /* Light weight is common for descriptions */
+  font-size: 15px;          /* Adjust size as needed */
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #595959;           /* Grey color for description */
+}
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+  .stats-section {
+    padding-top: 60px;    /* Reduced vertical padding */
+    padding-bottom: 60px;
+  }
+  .stats-container {
+    gap: 25px;            /* Reduced gap */
+    padding-left: 40px;   /* Match tablet gutters */
+    padding-right: 40px;  /* Match tablet gutters */
+    max-width: 90%;       /* Allow slightly wider container */
+  }
+  .stat-column h2 {
+      font-size: 45px !important; /* Slightly smaller font on tablet */
+  }
+   .stat-column {
+      min-width: 160px; /* Adjust wrapping point */
+   }
+}
+
+@media (max-width: 767px) {
+  .stats-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .stats-container {
+    gap: 30px; /* Increase gap slightly for stacked/2-column */
+    padding-left: 20px;   /* Match mobile gutters */
+    padding-right: 20px;  /* Match mobile gutters */
+    max-width: 100%;      /* Allow full width */
+    /* Columns might naturally stack 2x2 or 1x4 depending on min-width */
+  }
+   .stat-column {
+       flex-basis: calc(50% - 15px); /* Aim for 2 columns (adjust gap calc if needed) */
+       min-width: 140px; /* Ensure wrapping */
+   }
+   .stat-column h2 {
+      font-size: 40px !important; /* Smaller font on mobile */
+  }
+   .stat-column p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        padding-left: 30px;   /* Match smallest gutters */
+        padding-right: 30px;
+        gap: 25px;
+    }
+    .stat-column {
+       flex-basis: calc(50% - 13px); /* Still aim for 2 columns if possible */
+       min-width: 120px;
+   }
+}
 .dark-two-column-section {
 	background-color: #1c1c1c;
 	padding-top: 80px;
