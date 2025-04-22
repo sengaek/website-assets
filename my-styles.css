@@ -169,14 +169,14 @@ body {
 }
 
 .stat-column h2 {
-  font-family: 'Poppins', sans-serif; /* Or your preferred heading font */
-  font-size: 50px !important; /* Specific size requested */
-  font-weight: 500;         /* Bold often looks good for stats */
-  line-height: 1.1;         /* Adjust line height for large font */
+  font-family: 'Poppins', sans-serif; /* CHANGED font family */
+  font-size: 50px !important;
+  font-weight: 600;         /* CHANGED font weight to Semibold */
+  line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 10px;      /* Space below the number */
+  margin-bottom: 10px;
   padding: 0;
-  color: #000000;           /* Black color for the number */
+  color: #000000;
 }
 /* The .gold-text class will handle the arrow/star color */
 
