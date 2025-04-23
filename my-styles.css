@@ -572,7 +572,7 @@ body {
 }
 
 .review-stars {
-	color: #b8860b; /* Keep existing gold - should contrast okay */
+	color: #000000; /* Keep existing gold - should contrast okay */
 	/* Or consider a darker brown/black if contrast is poor */
 	/* color: #4a2c00; */
 	font-size: 20px;
