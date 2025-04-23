@@ -581,61 +581,57 @@ body {
 	padding: 0;
 }
 .review-button-container {
-	text-align: center;
-	margin-top: 40px;
-	padding-bottom: 20px;
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
 }
+
+/* --- Styles for the Button --- */
 .review-cta-button {
-	display: inline-block;
-	width: 218px;
-	height: 55px;
-	line-height: 55px;
-	background-color: #000000;
-	color: #ffffff !important;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 18px;
-	text-align: center;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 6px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-	cursor: pointer;
-	box-sizing: border-box;
+  display: inline-block;
+  width: 218px;          /* <<< Fixed width for DESKTOP (base style) */
+  height: 55px;
+  line-height: 55px;
+  background-color: #000000;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
 }
+
 .review-cta-button:hover {
-	background-color: transparent;
-	color: #000000 !important;
-	border-color: #000000;
+  background-color: transparent;
+  color: #000000 !important;
+  border-color: #000000;
 }
+
+/* --- Responsive Adjustments for Button --- */
+
 @media (max-width: 1024px) {
-	.review-intro-section { padding: 60px 40px 0px 40px; }
-	.review-intro-content h2 { font-size: 32px !important; }
-	.review-section { padding: 30px 40px 50px 40px; }
-	}
-	.review-columns-container {
-		gap: 30px;
-	}
-	.review-button-container {
-		margin-top: 30px;
-		padding-bottom: 10px;
-	}
-	.review-cta-button {
-		width: 100%;
-	}
-@media (max-width: 767px) {
-	.review-intro-section { padding: 40px 20px 0px 20px; }
-	.review-section { padding: 30px 20px 30px 20px; }
-	.review-column { text-align: left;
-	}
-	.review-button-container {
-		margin-top: 30px;
-		padding-bottom: 10px;
-	}
-	.review-cta-button {
-		width: 100%;
-	}
+  /* Optional: Keep fixed width on tablet? */
+  /* If you want it full-width on tablet, add width: 100% here */
+  /* .review-cta-button { */
+  /*   width: 100%; */
+  /* } */
+}
+
+@media (max-width: 767px) { /* Only apply 100% width on MOBILE */
+  .review-button-container {
+     margin-top: 30px;
+     padding-bottom: 10px;
+  }
+  .review-cta-button {
+     width: 100%; /* <<< Make button full width ONLY on smaller screens */
+     max-width: 400px; /* Optional: Limit max width even on mobile */
+  }
 }
 @media (max-width: 480px) {
 	.review-intro-section {
