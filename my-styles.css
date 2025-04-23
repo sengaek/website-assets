@@ -133,7 +133,7 @@ body {
 	/* ========= START STATS SECTION STYLES ========= */
 
 .stats-section {
-  background-color: #f8f8f8; /* Or your chosen background */
+  background-color: #ffffff; /* Or your chosen background */
   padding-top: 80px;
   padding-bottom: 80px;
   /* ADD horizontal padding HERE for overall gutters */
@@ -174,7 +174,7 @@ body {
 
 /* ... (Keep .stat-column h2 and .stat-column p styles as they were) ... */
 .stat-column h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 50px !important;
   font-weight: 600;
   line-height: 1.1;
