@@ -175,8 +175,8 @@ body {
 /* ... (Keep .stat-column h2 and .stat-column p styles as they were) ... */
 .stat-column h2 {
   font-family: 'Poppins', sans-serif !important;
-  font-size: 50px !important;
-  font-weight: 600;
+  font-size: 48px !important;
+  font-weight: 500;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 10px;
@@ -186,7 +186,7 @@ body {
 .stat-column p {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
