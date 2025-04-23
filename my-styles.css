@@ -1,3 +1,7 @@
+/* =========================================== */
+/* === COMPLETE UPDATED CSS (my-styles.css) === */
+/* =========================================== */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -12,25 +16,28 @@ body {
 .gold-text {
 	color: #b8860b !important;
 }
+
+/* --- General Hero Section Styles --- */
 .hero-section {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 600px;
-	max-width: 1730px;
+	height: 600px; /* Default height */
+	max-width: 1730px; /* Max width of the section container */
 	margin-left: auto;
 	margin-right: auto;
+	/* Apply specific background image via inline style or page-specific class */
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-align: center;
 	color: #ffffff;
-	overflow: hidden;
+	overflow: hidden; /* Prevent content spill */
 }
 .hero-content {
 	position: relative;
-	z-index: 1;
+	z-index: 1; /* Ensure content is above background */
 	max-width: 800px;
 	padding: 30px 40px;
 	width: 100%;
@@ -93,6 +100,8 @@ body {
 	border-color: #f7f8fa !important;
 	color: #f7f8fa !important;
 }
+
+/* --- Feature Columns Section --- */
 .feature-columns-section {
 	max-width: 1730px;
 	margin: 0 auto;
@@ -129,35 +138,36 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+/* --- Stats Section --- */
 .stats-section {
-	background-color: #ffffff;
-	padding-top: 80px;
-	padding-bottom: 80px;
-	padding-left: 40px;
-	padding-right: 40px;
+	background-color: #ffffff; /* White background */
+	padding: 80px 40px;      /* Adjusted base padding */
 	margin: 0;
 	box-sizing: border-box;
 }
 .stats-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
-	justify-content: space-between;
-	max-width: 1730px;
+	gap: 30px;                /* Consistent gap */
+	justify-content: space-between; /* Stretch columns */
+	max-width: 1730px;        /* Match other containers */
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 }
 .stat-column {
 	flex: 1 1 auto;
+	/* flex-basis calculation removed - let flexbox handle distribution */
+	min-width: 180px; /* Add minimum width */
 	text-align: center;
 	color: #000000;
 	box-sizing: border-box;
 }
 .stat-column h2 {
-	font-family: 'Poppins', sans-serif !important;
-	font-size: 48px !important;
-	font-weight: 600 !important;
+	font-family: 'Poppins', sans-serif; /* Changed font */
+	font-size: 50px !important;      /* Kept specific size */
+	font-weight: 600;                /* Semibold */
 	line-height: 1.1;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -167,74 +177,26 @@ body {
 .stat-column p {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 16px; /* Slightly larger */
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
 	color: #595959;
 }
-@media (max-width: 1024px) {
-	.stats-section {
-		padding-top: 60px;
-		padding-bottom: 60px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	.stats-container {
-		gap: 25px;
-	}
-	.stat-column {
-	}
-	.stat-column h2 {
-		font-size: 45px !important;
-	}
-}
-@media (max-width: 767px) {
-	.stats-section {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.stats-container {
-		gap: 30px;
-		justify-content: center;
-		max-width: 100%;
-	}
-	.stat-column {
-		flex: 1 1 calc(50% - 15px);
-		min-width: 0;
-	}
-	.stat-column h2 {
-		font-size: 40px !important;
-	}
-	.stat-column p {
-		font-size: 14px;
-	}
-}
-@media (max-width: 480px) {
-	.stats-section {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.stats-container {
-		gap: 25px;
-	}
-	.stat-column {
-		flex-basis: calc(50% - 13px);
-	}
-}
+
+/* --- Dark Two Column Section --- */
 .dark-two-column-section {
 	background-color: #1c1c1c;
 	padding-top: 80px;
 	padding-left: 70px;
 	padding-right: 70px;
-	padding-bottom: 0;
+	padding-bottom: 0; /* No bottom padding on section */
 	color: #ffffff;
 	margin: 0;
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
+	/* min-height removed - add back if needed */
 }
 .dark-columns-container {
 	display: flex;
@@ -243,16 +205,22 @@ body {
 	max-width: 1730px;
 	margin: 0 auto;
 }
-.dark-column {
-	flex: 1;
-	min-width: 280px;
-	box-sizing: border-box;
-	text-align: left;
-	padding-bottom: 80px;
+.dark-column:not(.image-column-right) { /* Text column */
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box;
+  text-align: left;
+  padding-bottom: 80px; /* Space below text */
+  position: relative;
+  z-index: 2;
 }
-.image-column-right {
-	position: relative;
-	padding-bottom: 0;
+.image-column-right { /* Image column */
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box;
+  padding-bottom: 0;    /* No space below image container */
+  position: static;     /* Column itself doesn't need positioning */
+  z-index: 1;
 }
 .experience-heading {
 	font-family: 'Roboto', sans-serif;
@@ -273,84 +241,20 @@ body {
 	margin-top: 0;
 	margin-bottom: 25px;
 }
-.flush-bottom-image {
+.flush-bottom-image { /* Image itself */
 	display: block;
 	position: absolute;
 	bottom: 0;
-	left: calc(50% + (40px / 2));
+	left: 75%; /* Center of right column */
 	transform: translateX(-50%);
-	max-width: calc(50% - (40px / 2));
+	max-width: calc(50% - (40px / 2)); /* Desktop gap */
 	height: auto;
 	max-height: 100%;
+	z-index: 1;
+	margin-bottom: 0;
 }
-@media (max-width: 1024px) {
-	.dark-two-column-section {
-		padding-top: 60px;
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-bottom: 0;
-	}
-	.dark-columns-container {
-		gap: 30px;
-	}
-	.dark-column {
-		padding-bottom: 60px;
-	}
-	.image-column-right {
-		padding-bottom: 0;
-	}
-	.experience-heading {
-		font-size: 40px;
-	}
-	.flush-bottom-image {
-		left: calc(50% + (30px / 2));
-		max-width: calc(50% - (30px / 2));
-	}
-}
-@media (max-width: 767px) {
-	.dark-two-column-section {
-		padding: 40px 20px 0px 20px;
-	}
-	.dark-columns-container {
-		gap: 0;
-	}
-	.dark-column {
-		min-width: 100%;
-		width: 100%;
-		padding-bottom: 30px;
-	}
-	.image-column-right {
-		order: 2;
-		padding-bottom: 0;
-		margin-top: 20px;
-		position: static;
-	}
-	.dark-column:not(.image-column-right) {
-		order: 1;
-		padding-bottom: 20px;
-	}
-	.experience-heading {
-		font-size: 43px;
-	}
-	.experience-text {
-		font-size: 16px;
-	}
-	.flush-bottom-image {
-		position: static;
-		bottom: auto;
-		left: auto;
-		transform: none;
-		max-width: 80%;
-		width: 80%;
-		height: auto;
-		max-height: unset;
-		margin: 20px auto 0 auto;
-		display: block;
-		z-index: auto;
-		object-fit: contain;
-		aspect-ratio: 250 / 359;
-	}
-}
+
+/* --- Standard Section Container (Image/Text) --- */
 .section-container {
 	display: flex;
 	flex-direction: row;
@@ -411,7 +315,7 @@ body {
 	margin-bottom: 15px;
 	padding: 0;
 }
-.cta-button {
+.cta-button { /* Button within .text-column */
 	display: inline-block;
 	width: 216px;
 	height: 55px;
@@ -448,24 +352,26 @@ body {
 }
 .location-link-inline:hover, .location-link-inline:focus {
 }
+
+/* --- Review Intro Section --- */
 .review-intro-section {
 	background-color: #e6cfa5;
     background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
 	padding-top: 80px;
-	padding-bottom: 0px;
-	padding-left: 0;   
-	padding-right: 0; 
+	padding-bottom: 0px; /* No space below intro content */
+	padding-left: 0;   /* Outer section has no side padding */
+	padding-right: 0;  /* Outer section has no side padding */
 	margin: 0;
 	box-sizing: border-box;
 }
 .review-intro-content {
-	max-width: 1730px;
+	max-width: 1730px;     /* Constrain and center inner content */
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;   
-	padding-right: 70px;  
+	padding-left: 70px;   /* Add gutters here */
+	padding-right: 70px;  /* Add gutters here */
 	text-align: left;
-	background-color: transparent;
+	background-color: transparent; /* Ensure transparency */
 	box-sizing: border-box;
 }
 .review-intro-content h2 {
@@ -480,35 +386,37 @@ body {
 .review-intro-content hr {
 	border: none;
 	border-top: 1px dotted #000000;
-	margin: 10px 0 0 0;
+	margin: 10px 0 0 0; /* No bottom margin */
 	width: 100%;
 }
+
+/* --- Review Display Section --- */
 .review-section {
-	background-color: #e6cfa5; 
+	background-color: #e6cfa5;
     background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
-	padding-top: 30px;    
-	padding-bottom: 60px; 
-	padding-left: 0;     
-	padding-right: 0;     
+	padding-top: 30px;    /* Space between intro and columns */
+	padding-bottom: 60px; /* Space below columns */
+	padding-left: 0;      /* Outer section has no side padding */
+	padding-right: 0;     /* Outer section has no side padding */
 	margin: 0;
 	box-sizing: border-box;
 }
 .review-columns-container {
-	max-width: 1730px;
+	max-width: 1730px;      /* Constrain and center inner content */
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;    
-	padding-right: 70px;   
+	padding-left: 70px;    /* Add gutters here */
+	padding-right: 70px;   /* Add gutters here */
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 40px;
-	justify-content: space-between;
+	justify-content: space-between; /* Spread columns */
 }
 .review-column {
 	flex-grow: 1;
 	flex-shrink: 1;
-	flex-basis: calc(33.333% - (40px * 2 / 3));
+	flex-basis: calc(33.333% - (40px * 2 / 3)); /* Desktop: 3 columns */
 	min-width: 200px;
 	text-align: left;
 	color: #000000;
@@ -533,7 +441,7 @@ body {
 	color: #000000;
 }
 .review-stars {
-	color: #000000;
+	color: #b8860b; /* Gold color */
 	font-size: 20px;
 	line-height: 1;
 	margin: 0;
@@ -541,14 +449,16 @@ body {
 }
 .review-button-container {
 	text-align: center;
-	margin-top: 40px;
-	padding-bottom: 20px;
+	margin-top: 40px; /* Space above button */
+	padding-bottom: 20px; /* Ensure space below button is within section padding */
+    display: block; /* Default visible */
 }
 .review-cta-button {
 	display: inline-block;
-	width: 218px;
+	width: 330px; /* Mobile First: Define mobile size */
 	height: 55px;
 	line-height: 55px;
+	max-width: 100%; /* Prevent overflow on narrow screens */
 	background-color: #000000;
 	color: #ffffff !important;
 	font-family: 'Poppins', sans-serif;
@@ -564,177 +474,21 @@ body {
 	box-sizing: border-box;
 }
 .review-cta-button:hover {
-	background-color: #ffffff;
+	background-color: transparent;
 	color: #000000 !important;
 	border-color: #000000;
 }
-@media (max-width: 1024px) {
-	.review-intro-section {
-		padding-top: 60px;
-		padding-bottom: 0;
-	}
-	.review-intro-content {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	.review-intro-content h2 {
-		font-size: 32px !important;
-	}
-	.review-section {
-		padding-top: 30px;
-		padding-bottom: 50px;
-	}
-	.review-columns-container {
-		padding-left: 40px;
-		padding-right: 40px;
-		gap: 30px;
-	}
-	.review-column {
-		flex-basis: calc(33.333% - (30px * 2 / 3));
-		min-width: 180px;
-	}
-	.review-cta-button {
-		width: 218px;
-	}
-}
-@media (max-width: 767px) {
-	.review-intro-section {
-		padding-top: 40px;
-		padding-bottom: 0;
-	}
-	.review-intro-content {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.review-section {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	.review-columns-container {
-		padding-left: 20px;
-		padding-right: 20px;
-		gap: 30px;
-		justify-content: center;
-	}
-	.review-column {
-		flex-basis: 100%;
-		min-width: auto;
-	}
-	.review-cta-button {
-      display: block;
-      width: 100%;
-      max-width: 339px;
-      margin-left: auto;
-      margin-right: auto;
-	}
-}
-@media (max-width: 480px) {
-	.review-intro-content {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.review-intro-content h2 {
-		font-size: 30px !important;
-	}
-	.review-columns-container {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.review-section {
-		padding-top: 20px;
-		padding-bottom: 40px;
-	}
-}
-@media (max-width: 400px) {
-	.review-intro-content {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.review-columns-container {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
-/* ========= START ABOUT US - FLEET SECTION STYLES ========= */
 
-.about-fleet-section {
-  background-color: #ffffff; /* White background */
-  padding: 80px 0;       /* 80px top/bottom padding, NO horizontal padding */
-  margin: 0;
-  box-sizing: border-box;
-  text-align: center;     /* Helps center container if needed, centers button text */
-}
-
-.about-fleet-container {
-  max-width: 1200px; /* Adjust max-width as desired for the content */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;   /* Side gutters */
-  padding-right: 20px;  /* Side gutters */
-  box-sizing: border-box;
-}
-
-.about-fleet-image {
-  display: block;       /* Allows margin auto centering */
-  max-width: 100%;      /* Responsive */
-  height: auto;         /* Maintain aspect ratio */
-  margin-left: auto;    /* Center horizontally */
-  margin-right: auto;   /* Center horizontally */
-  margin-bottom: 40px;  /* Space between image and button */
-  object-fit: contain;
-}
-
-.about-fleet-button-container {
-	display: inline-block;
-	width: 218px;
-	height: 55px;
-	line-height: 55px;
-	background-color: #000000;
-	color: #ffffff !important;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 18px;
-	text-align: center;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 6px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-	cursor: pointer;
-	box-sizing: border-box;
-}
-@media (max-width: 1024px) {
-  .about-fleet-section {
-    padding: 60px 0; /* Reduce vertical padding */
-  }
-  .about-fleet-container {
-    padding-left: 40px; /* Adjust gutters */
-    padding-right: 40px;
-  }
-   .about-fleet-image {
-      margin-bottom: 30px; /* Adjust space */
-  }
-}
-@media (max-width: 767px) {
-  .about-fleet-section {
-    padding: 40px 0;
-  }
-   .about-fleet-container {
-    padding-left: 20px; /* Adjust gutters */
-    padding-right: 20px;
-  }
-  .about-fleet-image {
-      margin-bottom: 30px;
-  }
-}
+/* --- Fleet Intro Section --- */
 .fleet-intro-section {
     max-width: 1730px;
     margin: 0 auto;
-    padding: 80px 70px 40px 70px !important; /* Force padding */
+    padding: 80px 70px 40px 70px; /* Corrected padding */
     background-color: #ffffff;
-	}
+}
 .fleet-intro-content {
 	text-align: left;
+    /* Removed potential conflicting background */
 }
 .fleet-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -760,6 +514,8 @@ body {
 	padding: 0;
 	color: #595959;
 }
+
+/* --- Three Column Vehicle Section --- */
 .three-column-section {
 	display: flex;
 	flex-wrap: wrap;
@@ -768,7 +524,7 @@ body {
 	padding: 40px 20px 60px 20px;
 	max-width: 1730px;
 	margin: 0 auto;
-	background: #ffffff;
+	background: #ffffff; /* Changed from transparent */
 }
 .vehicle-column {
 	background: transparent;
@@ -843,11 +599,11 @@ body {
 	text-align: center;
 	margin-top: 20px;
 }
-.vehicle-select-button {
+.vehicle-select-button { /* Button in Fleet Section */
 	display: inline-block;
 	width: 218px;
 	height: 47px;
-	line-height: 47px;
+	line-height: 47px; /* Corrected */
 	background-color: #000000;
 	color: #ffffff !important;
 	font-family: 'Poppins', sans-serif;
@@ -862,6 +618,7 @@ body {
 	cursor: pointer;
 	max-width: 100%;
 	box-sizing: border-box;
+    vertical-align: middle;
 }
 .vehicle-select-button:hover {
 	background-color: transparent;
@@ -869,499 +626,294 @@ body {
 	border: 1px solid #000000;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
+
+/* --- About Us Fleet Section --- */
+.about-fleet-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.about-fleet-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.about-fleet-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  object-fit: contain;
+}
+.about-fleet-button-container {
+  /* Button inherits .review-cta-button styles */
+}
+
+/* --- Global Image Error Style --- */
 img[onerror] {
 }
+
+/* --- Media Queries --- */
+
 @media (min-width: 1278px) and (max-width: 1574px) {
-	.text-column h2:first-of-type {
-		font-size: 28px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 20px !important;
-	}
-	.text-column {
-		padding: 60px 50px;
-	}
-	.feature-columns-section {
-		padding: 60px 50px;
-	}
-	.fleet-intro-section {
-		padding: 60px 50px 30px 50px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		height: 55px;
-		line-height: 55px;
-	}
+	.text-column h2:first-of-type { font-size: 28px !important; }
+	.text-column h2:last-of-type { font-size: 20px !important; }
+	.text-column { padding: 60px 50px; }
+	.feature-columns-section { padding: 60px 50px; }
+    .stats-section { padding: 60px 50px; } /* Adjust stats padding */
+	.stat-column h2 { font-size: 45px !important; }
+    /* Dark section adjustments */
+    .dark-two-column-section {}
+    .dark-column:not(.image-column-right) { padding-bottom: 60px; }
+    .image-column-right { padding-bottom: 0; }
+    .experience-heading { font-size: 45px !important; }
+    .flush-bottom-image { /* Recalculate position if gap/padding changed */ }
+    .review-intro-section { padding: 60px 0px 0px 0px; } /* Remove side padding */
+    .review-intro-content { padding-left: 50px; padding-right: 50px; } /* Adjust gutters */
+    .review-section { padding: 30px 0px 50px 0px; } /* Remove side padding */
+    .review-columns-container { padding-left: 50px; padding-right: 50px; } /* Adjust gutters */
+	.fleet-intro-section { padding: 60px 50px 30px 50px; }
+	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; } /* Adjusting fleet button */
 }
+
 @media (min-width: 1025px) and (max-width: 1277px) {
-	.text-column h2:first-of-type {
-		font-size: 28px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 20px !important;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.text-column .cta-button {
-		width: 218px !important;
-		height: 47px !important;
-		line-height: 47px !important;
-		font-size: 16px !important;
-	}
-	.text-column {
-		padding: 60px 50px;
-	}
-	.feature-columns-section {
-		padding: 60px 50px;
-	}
-	.fleet-intro-section {
-		padding: 60px 50px 30px 50px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		height: 55px;
-		line-height: 55px;
-	}
+	.text-column h2:first-of-type { font-size: 28px !important; }
+	.text-column h2:last-of-type { font-size: 20px !important; }
+	.text-column p { font-size: 15px; }
+	.text-column .cta-button { width: 218px !important; height: 47px !important; line-height: 47px !important; font-size: 16px !important; }
+	.text-column { padding: 60px 50px; }
+	.feature-columns-section { padding: 60px 50px; }
+    .stats-section { padding: 60px 50px; } /* Adjust stats padding */
+    .stat-column h2 { font-size: 42px !important; }
+    /* Dark section adjustments */
+    .dark-two-column-section {}
+    .dark-column:not(.image-column-right) { padding-bottom: 60px; }
+    .image-column-right { padding-bottom: 0; }
+    .experience-heading { font-size: 42px !important; }
+    .flush-bottom-image { /* Recalculate position if gap/padding changed */ }
+    .review-intro-section { padding: 60px 0px 0px 0px; }
+    .review-intro-content { padding-left: 50px; padding-right: 50px; }
+    .review-section { padding: 30px 0px 50px 0px; }
+    .review-columns-container { padding-left: 50px; padding-right: 50px; }
+	.fleet-intro-section { padding: 60px 50px 30px 50px; }
+	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; } /* Adjusting fleet button */
 }
-@media (max-width: 1024px) {
-	.hero-section {
-		height: 450px;
-	}
-	.hero-content {
-		max-width: 100%;
-		padding: 25px 40px;
-	}
-	.hero-content h1 {
-		font-size: 45px !important;
-	}
-	.hero-content p {
-		font-size: 18px !important;
-		margin-bottom: 25px;
-	}
-	.hero-cta {
-		width: 200px !important;
-	}
-	.feature-columns-section {
-		padding: 60px 40px;
-	}
-	.feature-columns-container {
-		gap: 30px;
-	}
-	.feature-column {
-		min-width: 200px;
-	}
-	.feature-column h2 {
-		font-size: 32px !important;
-		margin-bottom: 10px;
-	}
-	.feature-column p {
-		font-size: 14px;
-	}
-	.section-container {
-		flex-direction: column;
-	}
-	.text-column, .image-column {
-		flex: none;
-		width: 100%;
-	}
-	.section-container.image-first-mobile .image-column {
-		order: 1;
-	}
-	.section-container.image-first-mobile .text-column {
-		order: 2;
-	}
-	.section-container.text-first-mobile .text-column {
-		order: 1;
-	}
-	.section-container.text-first-mobile .image-column {
-		order: 2;
-	}
-	.text-column {
-		padding: 60px 40px;
-	}
-	.image-column {
-		height: 450px;
-		max-height: 450px;
-	}
-	.image-column img {
-		height: 100%;
-		max-height: 100%;
-	}
-	.text-column h2:first-of-type {
-		font-size: 32px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 22px !important;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.text-column .cta-button {
-		width: 216px !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px !important;
-	}
-	.text-column h2+hr {
-		margin: 10px 0 20px 0;
-		width: 100%;
-	}
-	.section-container.image-position-top-mobile .image-column img {
-		object-position: center top !important;
-	}
-	.fleet-intro-section {
-		padding: 60px 40px 30px 40px;
-	}
-	.fleet-intro-content h2 {
-		font-size: 32px !important;
-	}
-	.fleet-intro-content p {
-		font-size: 15px;
-	}
-	.three-column-section {
-		gap: 25px;
-		padding: 30px 25px 50px 25px;
-	}
-	.vehicle-column {
-		padding: 25px;
-	}
-	.vehicle-column .header-text h2 {
-		font-size: 26px;
-	}
-	.vehicle-column .header-text p {
-		font-size: 16px;
-	}
-	.vehicle-column .icons-row {
-		gap: 30px;
-		margin: 25px 0;
-	}
-	.vehicle-column .icon-container img {
-		width: 35px;
-		height: 35px;
-	}
-	.vehicle-column .caption {
-		font-size: 16px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		height: 55px;
-		font-size: 18px;
-		line-height: 55px;
-	}
+
+@media (max-width: 1024px) { /* Tablet Breakpoint */
+	.hero-section { height: 450px; }
+	.hero-content { max-width: 100%; padding: 25px 40px; }
+	.hero-content h1 { font-size: 45px !important; }
+	.hero-content p { font-size: 18px !important; margin-bottom: 25px; }
+	.hero-cta { width: 200px !important; }
+	.feature-columns-section { padding: 60px 40px; }
+	.feature-columns-container { gap: 30px; }
+	.feature-column { min-width: 200px; }
+	.feature-column h2 { font-size: 32px !important; margin-bottom: 10px; }
+	.feature-column p { font-size: 14px; }
+    .stats-section { padding: 60px 40px; }
+    .stats-container { gap: 25px; padding-left: 0; padding-right: 0; } /* Container padding comes from section */
+	.stat-column h2 { font-size: 45px !important; }
+	.stat-column { min-width: 160px; } /* Let flexbox handle basis */
+	.dark-two-column-section { padding-top: 60px; padding-left: 40px; padding-right: 40px; padding-bottom: 0; min-height: unset; }
+	.dark-columns-container { gap: 30px; }
+    .dark-column:not(.image-column-right) { padding-bottom: 60px; }
+	.image-column-right { padding-bottom: 0; }
+	.experience-heading { font-size: 40px !important; }
+	.flush-bottom-image { left: 75%; max-width: calc(50% - (30px / 2)); } /* Adjusted */
+	.section-container { flex-direction: column; }
+	.text-column, .image-column { flex: none; width: 100%; }
+	.section-container.image-first-mobile .image-column { order: 1; }
+	.section-container.image-first-mobile .text-column { order: 2; }
+	.section-container.text-first-mobile .text-column { order: 1; }
+	.section-container.text-first-mobile .image-column { order: 2; }
+	.text-column { padding: 60px 40px; }
+	.image-column { height: 450px; max-height: 450px; }
+	.image-column img { height: 100%; max-height: 100%; }
+	.text-column h2:first-of-type { font-size: 32px !important; }
+	.text-column h2:last-of-type { font-size: 22px !important; }
+	.text-column p { font-size: 15px; }
+	.text-column .cta-button { width: 216px !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; }
+	.text-column h2+hr { margin: 10px 0 20px 0; width: 100%; }
+	.section-container.image-position-top-mobile .image-column img { object-position: center top !important; }
+	.review-intro-section { padding: 60px 0px 0px 0px; }
+	.review-intro-content { padding-left: 40px; padding-right: 40px; }
+	.review-intro-content h2 { font-size: 32px !important; }
+	.review-section { padding: 30px 0px 50px 0px; }
+	.review-columns-container { padding-left: 40px; padding-right: 40px; gap: 30px; }
+	.review-column { flex-basis: calc(33.333% - (30px * 2 / 3)); min-width: 180px; }
+	.review-button-container { margin-top: 30px; padding-bottom: 10px; display: none; /* Hide on tablet */ }
+	.review-cta-button { width: 218px; /* Keep fixed width on tablet */ }
+	.fleet-intro-section { padding: 60px 40px 30px 40px; }
+	.fleet-intro-content h2 { font-size: 32px !important; }
+	.fleet-intro-content p { font-size: 15px; }
+	.three-column-section { gap: 25px; padding: 30px 25px 50px 25px; }
+	.vehicle-column { padding: 25px; }
+	.vehicle-column .header-text h2 { font-size: 26px; }
+	.vehicle-column .header-text p { font-size: 16px; }
+	.vehicle-column .icons-row { gap: 30px; margin: 25px 0; }
+	.vehicle-column .icon-container img { width: 35px; height: 35px; }
+	.vehicle-column .caption { font-size: 16px; }
+	.vehicle-select-button { width: 290px; height: 55px; font-size: 18px; line-height: 55px; } /* Adjusting fleet button */
+	.about-fleet-section { padding: 60px 0; }
+    .about-fleet-container { padding-left: 40px; padding-right: 40px; }
+    .about-fleet-image { margin-bottom: 30px; }
 }
+
 @media (min-width: 768px) and (max-width: 900px) {
-	.feature-columns-container {
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
-	.feature-column {
-		flex-basis: 30%;
-		min-width: auto;
-	}
-	.three-column-section {
-		padding: 20px 15px 40px 15px;
-	}
-	.vehicle-column {
-		padding: 15px;
-		flex-basis: 230px;
-		min-width: 230px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		max-width: 100%;
-		height: 55px;
-		line-height: 55px;
-		font-size: 18px;
-	}
-	.vehicle-column .header-text img {
-		min-width: 150px;
-		min-height: 113px;
-	}
-	.vehicle-column .header-text h2 {
-		font-size: 20px;
-	}
-	.vehicle-column .header-text p {
-		font-size: 14px;
-	}
-	.vehicle-column .caption {
-		font-size: 14px;
-	}
-	.vehicle-column .icons-row {
-		gap: 15px;
-	}
-	.vehicle-column .icon-container img {
-		width: 28px;
-		height: 28px;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.text-column .cta-button {
-		width: 216px !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px !important;
-	}
+	.feature-columns-container { flex-wrap: nowrap; justify-content: space-between; }
+	.feature-column { flex-basis: 30%; min-width: auto; }
+    /* Dark section adjustments */
+    .dark-two-column-section { padding-top: 60px; padding-left: 30px; padding-right: 30px; }
+    .dark-columns-container { gap: 20px; }
+    .dark-column:not(.image-column-right) { padding-bottom: 60px; }
+    .experience-heading { font-size: 36px !important; }
+    .flush-bottom-image { left: 75%; max-width: calc(50% - (20px / 2)); } /* Adjust gap */
+    .stats-section { padding: 60px 30px; } /* Adjust padding */
+    .stats-container { gap: 20px; } /* Adjust gap */
+	.three-column-section { padding: 20px 15px 40px 15px; }
+	.vehicle-column { padding: 15px; flex-basis: 230px; min-width: 230px; }
+	.vehicle-select-button { width: 290px; max-width: 100%; height: 55px; line-height: 55px; font-size: 18px; } /* Adjusting fleet button */
+	.vehicle-column .header-text img { min-width: 150px; min-height: 113px; }
+	.vehicle-column .header-text h2 { font-size: 20px; }
+	.vehicle-column .header-text p { font-size: 14px; }
+	.vehicle-column .caption { font-size: 14px; }
+	.vehicle-column .icons-row { gap: 15px; }
+	.vehicle-column .icon-container img { width: 28px; height: 28px; }
+	.text-column p { font-size: 15px; }
+	.text-column .cta-button { width: 216px !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; }
 }
-@media (max-width: 767px) {
-	.hero-content {
-		padding: 0 50px !important;
-		margin-top: 25px !important;
-		text-align:left !important;
-	}
-	.hero-cta {
-		display: block !important;
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		margin-bottom: 15px;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		text-align: center;
-		box-sizing: border-box !important;
-	}
-	.hero-cta:last-child {
-		margin-bottom: 0;
-	}
-	.text-column {
-		padding: 40px 50px;
-	}
-	.text-column .cta-button {
-		display: block !important;
-		width: 100% !important;
-		max-width: 100% !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px !important;
-		margin: 10px auto 10px auto !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		box-sizing: border-box !important;
-	}
-	.vehicle-column {
-		padding: 20px;
-	}
-	.vehicle-select-button {
-		display: block !important;
-		width: 290px !important;
-		max-width: 100% !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px;
-		box-sizing: border-box !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-	}
-	.hero-section {
-		height: 550px !important;
-		align-items: flex-start !important;
-		justify-content: flex-start !important;
-	}
-	.hero-content h1 {
-		font-size: 45px !important;
-		margin-bottom: 10px;
-	}
-	.hero-content p {
-		font-size: 16px !important;
-		margin-bottom: 20px;
-	}
-	.hero-buttons-container {
-		margin-top: 20px;
-		text-align:left;
-	}
-	.feature-columns-section {
-		padding: 40px 50px;
-	}
-	.feature-columns-container {
-		flex-direction: column;
-		gap: 35px;
-	}
-	.feature-column {
-		min-width: 100%;
-	}
-	.feature-column h2 {
-		font-size: 32px !important;
-	}
-	.feature-column p {
-		font-size: 15px;
-	}
-	.feature-column:nth-child(1)::after,.feature-column:nth-child(2)::after {
-		content: "";
-		display: block;
-		width: 100%;
-		border-top: 1px dotted #d8a94e;
-		margin-top: 35px;
-	}
-	.section-container {
-		margin-bottom: 0 !important;
-	}
-	.image-column {
-		height: 300px;
-		max-height: 300px;
-	}
-	.image-column img {
-		height: 100%;
-		max-height: 100%;
-		display: block;
-	}
-	.text-column h2 {
-		padding: 0;
-	}
-	.text-column h2:first-of-type {
-		font-size: 32px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 22px !important;
-	}
-	.text-column p {
-		font-size: 15px;
-		padding: 0;
-		margin: 0 0 15px 0;
-	}
-	.text-column h2+hr {
-		margin: 10px 0 20px 0;
-		width: 100%;
-	}
-	.section-container.image-position-top-mobile .image-column img {
-		object-position: center top !important;
-	}
-	.fleet-intro-section {
-		padding: 40px 50px 30px 50px;
-	}
-	.fleet-intro-content h2 {
-		font-size: 32px !important;
-	}
-	.fleet-intro-content p {
-		font-size: 16px;
-	}
-	.three-column-section {
-		gap: 30px;
-		padding: 30px 20px 40px 20px;
-	}
-	.vehicle-column {
-		flex-basis: 100%;
-		width: 100%;
-		min-width: unset;
-	}
-	.three-column-section .vehicle-column:first-child .header-text img {
-		position: relative;
-		top: -20px;
-		margin-top: 0;
-	}
-	.three-column-section .vehicle-column:nth-child(3) .header-text img {
-		margin-top: 40px;
-	}
-	.vehicle-column .header-text h2 {
-		font-size: 22px !important;
-	}
-	.vehicle-column .header-text p {
-		font-size: 14px !important;
-	}
-	.vehicle-column .icons-row {
-		gap: 20px;
-		margin: 15px 0;
-	}
-	.vehicle-column .icon-container img {
-		width: 28px;
-		height: 28px;
-	}
-	.vehicle-column .caption {
-		font-size: 14px !important;
-	}
-	.vehicle-column .header-text img {
-		min-width: unset;
-		min-height: unset;
-	}
-	.vehicle-column .cta-container {
-		text-align: initial;
-	}
+
+@media (max-width: 767px) { /* Mobile Breakpoint */
+	.hero-content { padding: 0 50px !important; margin-top: 25px !important; text-align:left !important; }
+	.hero-cta { display: block !important; width: 100% !important; max-width: 100% !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 15px; padding-left: 0 !important; padding-right: 0 !important; text-align: center; box-sizing: border-box !important; }
+	.hero-cta:last-child { margin-bottom: 0; }
+	.text-column { padding: 40px 50px; }
+	.text-column .cta-button { display: block !important; width: 100% !important; max-width: 100% !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; margin: 10px auto 10px auto !important; padding-left: 0 !important; padding-right: 0 !important; box-sizing: border-box !important; }
+	.vehicle-column { padding: 20px; }
+	.vehicle-select-button { display: block !important; width: 290px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 55px !important; line-height: 55px !important; font-size: 18px; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important; } /* Adjusting fleet button */
+	.hero-section { height: 550px !important; align-items: flex-start !important; justify-content: flex-start !important; }
+	.hero-content h1 { font-size: 45px !important; margin-bottom: 10px; }
+	.hero-content p { font-size: 16px !important; margin-bottom: 20px; }
+	.hero-buttons-container { margin-top: 20px; text-align:left; }
+	.feature-columns-section { padding: 40px 20px; } /* Reduced padding */
+	.feature-columns-container { flex-direction: column; gap: 35px; }
+	.feature-column { min-width: 100%; max-width: 100%; text-align: left; } /* Ensure left align */
+	.feature-column h2 { font-size: 32px !important; text-align: left; }
+	.feature-column p { font-size: 15px; text-align: left; }
+	.feature-column:nth-child(1)::after,.feature-column:nth-child(2)::after { content: ""; display: block; width: 100%; border-top: 1px dotted #d8a94e; margin-top: 35px; }
+    .stats-section { padding: 40px 20px; }
+    .stats-container { gap: 30px; justify-content: center; padding-left: 0; padding-right: 0; }
+    .stat-column { flex: 1 1 calc(50% - 15px); min-width: 0; }
+    .stat-column h2 { font-size: 40px !important; }
+    .stat-column p { font-size: 14px; }
+	.dark-two-column-section { padding: 40px 20px 30px 20px; min-height: unset; } /* Add bottom padding back */
+	.dark-columns-container { gap: 0; }
+    .dark-column { min-width: 100%; width: 100%; position: static; z-index: auto; padding-bottom: 30px; }
+	.image-column-right { order: 2; padding-bottom: 0; margin-top: 20px; position: static; display: block; } /* Reset flex */
+	.dark-column:not(.image-column-right) { order: 1; padding-bottom: 20px; position: static; }
+	.experience-heading { font-size: 43px !important; }
+	.experience-text { font-size: 15px; }
+	.flush-bottom-image { position: static; bottom: auto; left: auto; transform: none; max-width: 80%; max-height: unset; margin: 0 auto; display: block; z-index: auto; }
+	.section-container { margin-bottom: 0 !important; flex-direction: column; } /* Ensure stacking */
+	.image-column { height: 300px; max-height: 300px; order: 0; width: 100%; flex: none; } /* Reset order if needed */
+    .text-column { padding: 40px 20px; order: 0; width: 100%; flex: none; } /* Reset order */
+	.image-column img { height: 100%; max-height: 100%; display: block; }
+	.text-column h2 { padding: 0; text-align: left; }
+	.text-column h2:first-of-type { font-size: 32px !important; }
+	.text-column h2:last-of-type { font-size: 22px !important; }
+	.text-column p { font-size: 15px; padding: 0; margin: 0 0 15px 0; text-align: left; }
+	.text-column h2+hr { margin: 10px 0 20px 0; width: 100%; }
+	.section-container.image-position-top-mobile .image-column img { object-position: center top !important; }
+	.review-intro-section { padding: 40px 0px 0px 0px; }
+    .review-intro-content { padding-left: 20px; padding-right: 20px; text-align: left !important; }
+	.review-section { padding: 30px 0px 30px 0px; }
+	.review-columns-container { padding-left: 20px; padding-right: 20px; gap: 30px; justify-content: center; }
+	.review-column { flex-basis: 100%; min-width: auto; text-align: left; }
+	.review-button-container { margin-top: 30px; padding-bottom: 10px; display: block; /* Ensure visible */}
+	.review-cta-button { width: 100%; max-width: 330px; /* Use mobile width */ }
+	.fleet-intro-section { padding: 40px 20px 30px 20px; /* Adjusted padding */ }
+    .fleet-intro-content { text-align: left !important; } /* Ensure left align */
+	.fleet-intro-content h2 { font-size: 32px !important; }
+	.fleet-intro-content p { font-size: 16px; }
+	.three-column-section { gap: 30px; padding: 30px 20px 40px 20px; }
+	.vehicle-column { flex-basis: 100%; width: 100%; min-width: unset; }
+	.three-column-section .vehicle-column:first-child .header-text img { position: relative; top: -20px; margin-top: 0; }
+	.three-column-section .vehicle-column:nth-child(3) .header-text img { margin-top: 40px; }
+	.vehicle-column .header-text h2 { font-size: 22px !important; }
+	.vehicle-column .header-text p { font-size: 14px !important; }
+	.vehicle-column .icons-row { gap: 20px; margin: 15px 0; }
+	.vehicle-column .icon-container img { width: 28px; height: 28px; }
+	.vehicle-column .caption { font-size: 14px !important; }
+	.vehicle-column .header-text img { min-width: unset; min-height: unset; }
+	.vehicle-column .cta-container { text-align: center; } /* Center button container */
+    .about-fleet-section { padding: 40px 0; }
+    .about-fleet-container { padding-left: 20px; padding-right: 20px; }
+    .about-fleet-image { margin-bottom: 30px; }
+    .about-fleet-button-container { /* Use button styles directly */}
+    .about-fleet-section .review-cta-button { /* Target button in about section */
+        display: block;
+        width: 100%;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+   }
 }
+
 @media (max-width: 480px) {
-	.hero-section {
-		height: 545px !important;
-	}
-	.hero-content h1 {
-		font-size: 45px !important;
-	}
-	.hero-content p {
-		font-size: 16px !important;
-	}
-	.feature-columns-section {
-		padding: 30px 30px;
-	}
-	.feature-column h2 {
-		font-size: 32px !important;
-	}
-	.feature-column p {
-		font-size: 15px;
-	}
-	.image-column {
-		height: 250px;
-		max-height: 250px;
-	}
-	.text-column {
-		padding: 30px 30px;
-	}
-	.text-column h2:first-of-type {
-		font-size: 32px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 22px !important;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.fleet-intro-section {
-		padding: 30px 30px 20px 30px;
-	}
-	.fleet-intro-content h2 {
-		font-size: 30px !important;
-	}
-	.fleet-intro-content p {
-		font-size: 16px;
-	}
-	.vehicle-column {
-		padding: 15px;
-	}
-	.three-column-section {
-		padding: 30px 15px 40px 15px;
-	}
-	.hero-content {
-		padding: 0 30px !important;
-		margin-top: 25px !important;
-	}
+	.hero-section { height: 545px !important; }
+	.hero-content h1 { font-size: 45px !important; }
+	.hero-content p { font-size: 16px !important; }
+	.feature-columns-section { padding: 30px 30px; }
+	.feature-column h2 { font-size: 32px !important; }
+	.feature-column p { font-size: 15px; }
+    .stats-section { padding: 40px 30px; } /* Adjusted padding */
+    .stats-container { gap: 25px; }
+    .stat-column { flex-basis: calc(50% - 13px); }
+	.dark-two-column-section { padding: 30px 15px 30px 15px; } /* Added bottom padding back */
+	.experience-heading { font-size: 28px !important; }
+	.image-column { height: 250px; max-height: 250px; }
+	.text-column { padding: 30px 30px; }
+	.text-column h2:first-of-type { font-size: 32px !important; }
+	.text-column h2:last-of-type { font-size: 22px !important; }
+	.text-column p { font-size: 15px; }
+	.review-intro-section { padding: 30px 0px 0px 0px; }
+    .review-intro-content { padding-left: 30px; padding-right: 30px; text-align: left !important; }
+	.review-intro-content h2 { font-size: 30px !important; }
+	.review-section { padding: 20px 0px 40px 0px; }
+    .review-columns-container { padding-left: 30px; padding-right: 30px; }
+	.review-button-container { margin-top: 25px; }
+	.fleet-intro-section { padding: 30px 30px 20px 30px; }
+    .fleet-intro-content { text-align: left !important; }
+	.fleet-intro-content h2 { font-size: 30px !important; }
+	.fleet-intro-content p { font-size: 16px; }
+	.vehicle-column { padding: 15px; }
+	.three-column-section { padding: 30px 15px 40px 15px; }
+	.hero-content { padding: 0 30px !important; margin-top: 25px !important; }
+    .about-fleet-section { padding: 30px 0; }
+    .about-fleet-container { padding-left: 30px; padding-right: 30px; }
 }
+
 @media (max-width: 400px) {
-	.feature-columns-section {
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-	.text-column {
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-	.fleet-intro-section {
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-	.three-column-section {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.vehicle-column {
-		padding: 15px;
-	}
-	.hero-content {
-		padding-left: 25px !important;
-		padding-right: 25px !important;
-	}
+	.feature-columns-section { padding-left: 25px; padding-right: 25px; }
+    .stats-section { padding-left: 25px; padding-right: 25px; }
+	.dark-two-column-section { padding-left: 15px; padding-right: 15px; }
+	.text-column { padding-left: 25px; padding-right: 25px; }
+	.review-intro-section { padding-left: 0; padding-right: 0; }
+    .review-intro-content { padding-left: 20px; padding-right: 20px; text-align: left !important; }
+	.review-section { padding-left: 0; padding-right: 0; }
+    .review-columns-container { padding-left: 20px; padding-right: 20px; }
+	.fleet-intro-section { padding-left: 25px; padding-right: 25px; }
+    .fleet-intro-content { text-align: left !important; }
+	.three-column-section { padding-left: 15px; padding-right: 15px; }
+	.vehicle-column { padding: 15px; }
+	.hero-content { padding-left: 25px !important; padding-right: 25px !important; }
+    .about-fleet-section { padding: 30px 0; }
+    .about-fleet-container { padding-left: 20px; padding-right: 20px; }
 }
