@@ -129,139 +129,101 @@ body {
 	margin: 0;
 	padding: 0;
 }
-	
-	/* ========= START STATS SECTION STYLES ========= */
-
 .stats-section {
-  background-color: #ffffff; /* Or your chosen background */
-  padding-top: 80px;
-  padding-bottom: 80px;
-  /* ADD horizontal padding HERE for overall gutters */
-  padding-left: 40px;   /* <-- ADDED */
-  padding-right: 40px;  /* <-- ADDED */
-  margin: 0;
-  box-sizing: border-box;
+	background-color: #ffffff;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0;
+	box-sizing: border-box;
 }
-
 .stats-container {
-  display: flex;
-  flex-wrap: wrap;       /* Keep wrapping for responsiveness */
-  gap: 30px;             /* Keep gap between columns */
-  justify-content: space-between; /* <-- CHANGED: Distribute space between items */
-
-  /* Center the container (optional if section padding is used) */
-  max-width: 1730px;     /* Set max-width (adjust as needed) */
-                          /* If using section padding, you might not need max-width here */
-                          /* Depending on desired effect */
-  margin-left: auto;
-  margin-right: auto;
-
-  /* REMOVE side padding from container, it's now on the section */
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
-  box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: space-between;
+	max-width: 1730px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
 }
-
 .stat-column {
-  flex: 1 1 auto; /* CHANGED: Allow grow, shrink, auto basis - helps distribution */
-                  /* You might need to experiment with flex-basis if wrapping is odd */
-                  /* e.g., flex: 1 1 180px; */
-  /* min-width: 180px; */ /* Remove or adjust min-width if using flex-basis */
-  text-align: center;
-  color: #000000;
-  box-sizing: border-box;
+	flex: 1 1 auto;
+	text-align: center;
+	color: #000000;
+	box-sizing: border-box;
 }
-
-/* ... (Keep .stat-column h2 and .stat-column p styles as they were) ... */
 .stat-column h2 {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 48px !important;
-  font-weight: 600 !important;
-  line-height: 1.1;
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding: 0;
-  color: #000000;
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 48px !important;
+	font-weight: 600 !important;
+	line-height: 1.1;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	color: #000000;
 }
 .stat-column p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  color: #595959;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	color: #595959;
 }
-
-
-/* --- Responsive Adjustments --- */
-
 @media (max-width: 1024px) {
-  .stats-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    /* Keep side padding */
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .stats-container {
-    gap: 25px;
-    /* justify-content: space-between; still applies */
-    /* Remove padding overrides */
-    /* padding-left: 40px; */
-    /* padding-right: 40px; */
-    /* max-width: 90%; */ /* Keep or adjust max-width */
-  }
-   /* Adjust column flex properties if needed for tablet */
-   .stat-column {
-       /* flex: 1 1 160px; Example */
-   }
-   .stat-column h2 {
-      font-size: 45px !important;
-  }
+	.stats-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.stats-container {
+		gap: 25px;
+	}
+	.stat-column {
+	}
+	.stat-column h2 {
+		font-size: 45px !important;
+	}
 }
-
 @media (max-width: 767px) {
-  .stats-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;   /* Reduced side padding */
-    padding-right: 20px;  /* Reduced side padding */
-  }
-  .stats-container {
-    gap: 30px;
-    justify-content: center; /* Switch back to center for 2x2 layout */
-    /* Remove padding overrides */
-    /* padding-left: 20px; */
-    /* padding-right: 20px; */
-    max-width: 100%;
-  }
-   .stat-column {
-       flex: 1 1 calc(50% - 15px); /* Explicitly aim for 2 columns */
-       min-width: 0; /* Reset min-width */
-   }
-   .stat-column h2 {
-      font-size: 40px !important;
-  }
-   .stat-column p {
-      font-size: 14px;
-  }
+	.stats-section {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.stats-container {
+		gap: 30px;
+		justify-content: center;
+		max-width: 100%;
+	}
+	.stat-column {
+		flex: 1 1 calc(50% - 15px);
+		min-width: 0;
+	}
+	.stat-column h2 {
+		font-size: 40px !important;
+	}
+	.stat-column p {
+		font-size: 14px;
+	}
 }
-
 @media (max-width: 480px) {
-    .stats-section {
-        padding-left: 30px; /* Match desired smallest gutters */
-        padding-right: 30px;
-    }
-    .stats-container {
-        gap: 25px;
-        /* justify-content: center; remains */
-    }
-    .stat-column {
-       flex-basis: calc(50% - 13px); /* Adjust gap calculation */
-   }
+	.stats-section {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.stats-container {
+		gap: 25px;
+	}
+	.stat-column {
+		flex-basis: calc(50% - 13px);
+	}
 }
-/* ========= END STATS SECTION STYLES ========= */
 .dark-two-column-section {
 	background-color: #1c1c1c;
 	padding-top: 80px;
@@ -373,21 +335,21 @@ body {
 	.experience-text {
 		font-size: 16px;
 	}
-  .flush-bottom-image {
-      position: static; /* Reset positioning */
-      bottom: auto;
-      left: auto;
-      transform: none;
-      max-width: 80%;   /* Constrain width */
-      width: 80%;       /* Often needed with aspect-ratio */
-      height: auto;     /* Let aspect-ratio determine height */
-      max-height: unset;
-      margin: 20px auto 0 auto; /* Top/Bottom margin, center horizontal */
-      display: block;
-      z-index: auto;
-      object-fit: contain; /* Ensure image fits */
-      aspect-ratio: 250 / 359;
-  }
+	.flush-bottom-image {
+		position: static;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		max-width: 80%;
+		width: 80%;
+		height: auto;
+		max-height: unset;
+		margin: 20px auto 0 auto;
+		display: block;
+		z-index: auto;
+		object-fit: contain;
+		aspect-ratio: 250 / 359;
+	}
 }
 .section-container {
 	display: flex;
@@ -487,98 +449,87 @@ body {
 .location-link-inline:hover, .location-link-inline:focus {
 }
 .review-intro-section {
-	max-width: 1730px;
-	margin: 0 auto;
-	padding: 80px 70px 0px 70px; /* Removed bottom padding */
-	/* background-color: #e0e0e0; */ /* REMOVE Old background color */
-    background-image: linear-gradient(to left, #d8a94e, #e6cfa5); /* ADD Gradient */
+	background-color: #e0e0e0;
+	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
+	padding-top: 80px;
+	padding-bottom: 0px;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
 	box-sizing: border-box;
 }
-
 .review-intro-content {
+	max-width: 1730px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 70px;
+	padding-right: 70px;
 	text-align: left;
-	background-color: transparent; /* Ensure no conflicting background */
+	background-color: inherit;
+	box-sizing: border-box;
 }
-
 .review-intro-content h2 {
-	/* Font styles remain */
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 	margin: 0 0 10px 0;
 	padding: 0;
-	color: #000000; /* Keep black */
+	color: #000000;
 	font-size: 35px !important;
 	line-height: 1.2;
 }
-
 .review-intro-content hr {
-	/* Keep existing border styles */
 	border: none;
-	border-top: 1px dotted #000000; /* Changed dotted line to black for contrast */
-	/* OR maybe a darker gold: border-top: 1px dotted #b8860b; */
+	border-top: 1px dotted #000000;
 	margin: 10px 0 0 0;
 	width: 100%;
 }
-
-/* --- Review Display Section Styles --- */
 .review-section {
-	/* Background and basic padding */
-	background-color: #e0e0e0; /* Gradient/Color */
-    background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
-	padding: 80px 70px 60px 70px; /* Desktop Padding */
+	background-color: #e0e0e0;
+	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
+	padding-top: 30px;
+	padding-bottom: 60px;
+	padding-left: 0;
+	padding-right: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-
 .review-columns-container {
-	display: flex;
-	flex-wrap: wrap; /* Allow wrapping ONLY on mobile */
-	gap: 40px;       /* Desktop Gap */
-	justify-content: space-between; /* Spread items out */
-	max-width: 1730px; /* Or your desired max width */
-	margin: 0 auto;
+	max-width: 1730px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 70px;
+	padding-right: 70px;
+	box-sizing: border-box;
 }
-
 .review-column {
-	/* --- Base styles for Desktop & Tablet --- */
 	flex-grow: 1;
-    flex-shrink: 1;
-    /* Calculate basis for 3 columns with 40px gap */
-    /* (100% width - 2 gaps) / 3 columns */
-    flex-basis: calc(33.333% - (40px * 2 / 3)); /* Approx 33.33% - 27px */
-    /* Fallback basis */
-    /* flex-basis: 30%; */
-    min-width: 200px; /* Prevent excessive shrinking */
+	flex-shrink: 1;
+	flex-basis: calc(33.333% - (40px * 2 / 3));
+	min-width: 200px;
 	text-align: left;
 	color: #000000;
 	box-sizing: border-box;
 }
 .review-text {
-	/* Keep font styles */
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6;
 	margin-bottom: 15px;
 	padding: 0;
-	color: #000000; /* Ensure black text */
+	color: #000000;
 }
-
 .review-author {
-	/* Keep font styles */
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 1.4;
 	margin-bottom: 10px;
 	padding: 0;
-	color: #000000; /* Ensure black text */
+	color: #000000;
 }
-
 .review-stars {
-	color: #000000; /* Keep existing gold - should contrast okay */
-	/* Or consider a darker brown/black if contrast is poor */
-	/* color: #4a2c00; */
+	color: #000000;
 	font-size: 20px;
 	line-height: 1;
 	margin: 0;
@@ -591,10 +542,9 @@ body {
 }
 .review-cta-button {
 	display: inline-block;
-	width: 218px; /* Fixed width desktop/tablet */
+	width: 218px;
 	height: 55px;
 	line-height: 55px;
-	/* ... other button styles ... */
 	background-color: #000000;
 	color: #ffffff !important;
 	font-family: 'Poppins', sans-serif;
@@ -614,62 +564,89 @@ body {
 	color: #000000 !important;
 	border-color: #000000;
 }
-
-/* --- Responsive Adjustments for Button --- */
-
 @media (max-width: 1024px) {
-  .review-section {
-    padding: 60px 40px 50px 40px; /* Adjust padding */
-  }
-  .review-columns-container {
-    gap: 30px; /* Adjust gap */
-    /* justify-content: space-between; remains */
-  }
-  .review-column {
-     /* Adjust basis calculation for 30px gap */
-     flex-basis: calc(33.333% - (30px * 2 / 3)); /* Approx 33.33% - 20px */
-     /* Fallback basis */
-     /* flex-basis: 30%; */
-     min-width: 180px; /* Adjust min width */
-  }
-  /* Button likely still fixed width here */
-   .review-cta-button {
-	  width: 218px;
-   }
+	.review-intro-section {
+		padding-top: 60px;
+		padding-bottom: 0;
+	}
+	.review-intro-content {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.review-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+	.review-columns-container {
+		padding-left: 40px;
+		padding-right: 40px;
+		gap: 30px;
+	}
+	.review-column {
+		flex-basis: calc(33.333% - (30px * 2 / 3));
+		min-width: 180px;
+	}
+	.review-cta-button {
+		width: 218px;
+	}
 }
-
-/* Mobile: Stack columns */
 @media (max-width: 767px) {
-  .review-section {
-    padding: 40px 20px 30px 20px;
-  }
-  .review-columns-container {
-    gap: 30px;
-    justify-content: center; /* Center stacked items */
-  }
-  .review-column {
-     flex-basis: 100%; /* Force full width = stacking */
-     min-width: auto; /* Reset min-width */
-     /* text-align: left; remains */
-  }
-  .review-cta-button {
-     width: 100%; /* Button full width */
-     max-width: 400px;
-  }
+	.review-intro-section {
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
+	.review-intro-content {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.review-columns-container {
+		padding-left: 20px;
+		padding-right: 20px;
+		gap: 30px;
+		justify-content: center;
+	}
+	.review-column {
+		flex-basis: 100%;
+		min-width: auto;
+	}
+	.review-cta-button {
+		width: 100%;
+		max-width: 400px;
+	}
 }
-
-/* Adjustments for smaller mobile if needed */
 @media (max-width: 480px) {
-    .review-section {
-        padding: 20px 30px 40px 30px;
-    }
-    /* Column is already 100% width */
+	.review-intro-content {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.review-intro-content h2 {
+		font-size: 30px !important;
+	}
+	.review-columns-container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.review-section {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
 }
 @media (max-width: 400px) {
-    .review-section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+	.review-intro-content {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.review-columns-container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 .fleet-intro-section {
 	max-width: 1730px;
