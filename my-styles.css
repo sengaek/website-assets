@@ -621,8 +621,8 @@ body {
 		min-width: auto;
 	}
 	.review-cta-button {
-		width: 100%;
-		max-width: 400px;
+		width: 330px;
+		max-width: 100%;
 	}
 }
 @media (max-width: 480px) {
