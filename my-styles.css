@@ -489,80 +489,92 @@ body {
 .review-intro-section {
 	max-width: 1730px;
 	margin: 0 auto;
-	padding: 80px 70px 0px 70px;
-	background-color: #e0e0e0;
+	padding: 80px 70px 0px 70px; /* Removed bottom padding */
+	/* background-color: #e0e0e0; */ /* REMOVE Old background color */
+    background-image: linear-gradient(to left, #d8a94e, #e6cfa5); /* ADD Gradient */
 	box-sizing: border-box;
 }
+
 .review-intro-content {
 	text-align: left;
-	background-color: inherit;
+	background-color: transparent; /* Ensure no conflicting background */
 }
+
 .review-intro-content h2 {
+	/* Font styles remain */
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 	margin: 0 0 10px 0;
 	padding: 0;
-	color: #000000;
+	color: #000000; /* Keep black */
 	font-size: 35px !important;
 	line-height: 1.2;
 }
+
 .review-intro-content hr {
+	/* Keep existing border styles */
 	border: none;
-	border-top: 1px dotted #d8a94e;
+	border-top: 1px dotted #000000; /* Changed dotted line to black for contrast */
+	/* OR maybe a darker gold: border-top: 1px dotted #b8860b; */
 	margin: 10px 0 0 0;
 	width: 100%;
 }
-.review-intro-content p {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 1.6;
-	margin-bottom: 0;
-	padding: 0;
-	color: #000000 !important;
-}
+
+/* --- Review Display Section Styles --- */
 .review-section {
-	background-color: #e0e0e0;
-	padding: 30px 70px 60px 70px;
+	/* background-color: #e0e0e0; */ /* REMOVE Old background color */
+    background-image: linear-gradient(to left, #d8a94e, #e6cfa5); /* ADD Gradient */
+	padding: 30px 70px 60px 70px; /* Reduced top padding */
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .review-columns-container {
-	display: flex;
+	/* Keep existing flex styles */
+    display: flex;
 	flex-wrap: wrap;
 	gap: 40px;
 	justify-content: center;
 	max-width: 1730px;
 	margin: 0 auto;
 }
+
 .review-column {
-	flex: 1;
+	/* Keep existing flex styles */
+    flex: 1;
 	min-width: 260px;
 	max-width: 350px;
 	text-align: left;
-	color: #000000;
+	color: #000000; /* Default black text */
 	box-sizing: border-box;
 }
+
 .review-text {
+	/* Keep font styles */
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6;
 	margin-bottom: 15px;
 	padding: 0;
-	color: #000000;
+	color: #000000; /* Ensure black text */
 }
+
 .review-author {
+	/* Keep font styles */
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 1.4;
 	margin-bottom: 10px;
 	padding: 0;
-	color: #000000;
+	color: #000000; /* Ensure black text */
 }
+
 .review-stars {
-	color: #b8860b;
+	color: #b8860b; /* Keep existing gold - should contrast okay */
+	/* Or consider a darker brown/black if contrast is poor */
+	/* color: #4a2c00; */
 	font-size: 20px;
 	line-height: 1;
 	margin: 0;
@@ -598,17 +610,9 @@ body {
 	border-color: #000000;
 }
 @media (max-width: 1024px) {
-	.review-intro-section {
-		padding: 60px 40px 0px 40px;
-	}
-	.review-intro-content h2 {
-		font-size: 32px !important;
-	}
-	.review-intro-content p {
-		font-size: 15px;
-	}
-	.review-section {
-		padding: 30px 40px 50px 40px;
+	.review-intro-section { padding: 60px 40px 0px 40px; }
+	.review-intro-content h2 { font-size: 32px !important; }
+	.review-section { padding: 30px 40px 50px 40px; }
 	}
 	.review-columns-container {
 		gap: 30px;
@@ -620,18 +624,10 @@ body {
 	.review-cta-button {
 		width: 100%;
 	}
-}
 @media (max-width: 767px) {
-	.review-intro-section {
-		padding: 40px 20px 0px 20px;
-	}
-	.review-section {
-		padding: 30px 20px 30px 20px;
-	}
-	.review-column {
-		min-width: 100%;
-		max-width: 100%;
-		text-align: left;
+	.review-intro-section { padding: 40px 20px 0px 20px; }
+	.review-section { padding: 30px 20px 30px 20px; }
+	.review-column { text-align: left;
 	}
 	.review-button-container {
 		margin-top: 30px;
