@@ -727,6 +727,12 @@ body {
       margin-bottom: 30px;
   }
 }
+.fleet-intro-section {
+    max-width: 1730px;
+    margin: 0 auto;
+    padding: 80px 70px 40px 70px !important; /* Force padding */
+    background-color: #ffffff;
+	}
 .fleet-intro-content {
 	text-align: left;
 }
