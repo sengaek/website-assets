@@ -449,12 +449,12 @@ body {
 .location-link-inline:hover, .location-link-inline:focus {
 }
 .review-intro-section {
-	background-color: #e0e0e0;
-	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
+	background-color: #e6cfa5;
+    background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
 	padding-top: 80px;
 	padding-bottom: 0px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0;   
+	padding-right: 0; 
 	margin: 0;
 	box-sizing: border-box;
 }
@@ -462,10 +462,10 @@ body {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 70px;   
+	padding-right: 70px;  
 	text-align: left;
-	background-color: inherit;
+	background-color: transparent;
 	box-sizing: border-box;
 }
 .review-intro-content h2 {
@@ -484,12 +484,12 @@ body {
 	width: 100%;
 }
 .review-section {
-	background-color: #e0e0e0;
-	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
-	padding-top: 30px;
-	padding-bottom: 60px;
-	padding-left: 0;
-	padding-right: 0;
+	background-color: #e6cfa5; 
+    background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
+	padding-top: 30px;    
+	padding-bottom: 60px; 
+	padding-left: 0;     
+	padding-right: 0;     
 	margin: 0;
 	box-sizing: border-box;
 }
@@ -497,9 +497,13 @@ body {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 70px;    
+	padding-right: 70px;   
 	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: space-between;
 }
 .review-column {
 	flex-grow: 1;
