@@ -655,11 +655,77 @@ body {
 		padding-right: 20px;
 	}
 }
-.fleet-intro-section {
-	max-width: 1730px;
-	margin: 0 auto;
-	padding: 80px 70px 40px 70px;
-	background-color: #ffffff;
+/* ========= START ABOUT US - FLEET SECTION STYLES ========= */
+
+.about-fleet-section {
+  background-color: #ffffff; /* White background */
+  padding: 80px 0;       /* 80px top/bottom padding, NO horizontal padding */
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;     /* Helps center container if needed, centers button text */
+}
+
+.about-fleet-container {
+  max-width: 1200px; /* Adjust max-width as desired for the content */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;   /* Side gutters */
+  padding-right: 20px;  /* Side gutters */
+  box-sizing: border-box;
+}
+
+.about-fleet-image {
+  display: block;       /* Allows margin auto centering */
+  max-width: 100%;      /* Responsive */
+  height: auto;         /* Maintain aspect ratio */
+  margin-left: auto;    /* Center horizontally */
+  margin-right: auto;   /* Center horizontally */
+  margin-bottom: 40px;  /* Space between image and button */
+  object-fit: contain;
+}
+
+.about-fleet-button-container {
+	display: inline-block;
+	width: 218px;
+	height: 55px;
+	line-height: 55px;
+	background-color: #000000;
+	color: #ffffff !important;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .about-fleet-section {
+    padding: 60px 0; /* Reduce vertical padding */
+  }
+  .about-fleet-container {
+    padding-left: 40px; /* Adjust gutters */
+    padding-right: 40px;
+  }
+   .about-fleet-image {
+      margin-bottom: 30px; /* Adjust space */
+  }
+}
+@media (max-width: 767px) {
+  .about-fleet-section {
+    padding: 40px 0;
+  }
+   .about-fleet-container {
+    padding-left: 20px; /* Adjust gutters */
+    padding-right: 20px;
+  }
+  .about-fleet-image {
+      margin-bottom: 30px;
+  }
 }
 .fleet-intro-content {
 	text-align: left;
