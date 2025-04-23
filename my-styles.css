@@ -522,30 +522,29 @@ body {
 
 /* --- Review Display Section Styles --- */
 .review-section {
-	/* background-color: #e0e0e0; */ /* REMOVE Old background color */
-    background-image: linear-gradient(to left, #d8a94e, #e6cfa5); /* ADD Gradient */
-	padding: 30px 70px 60px 70px; /* Reduced top padding */
+	background-color: #e0e0e0; /* Gradient/Color */
+    background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
+	padding: 30px 70px 60px 70px;
 	margin: 0;
 	box-sizing: border-box;
 }
 
 .review-columns-container {
-	/* Keep existing flex styles */
-    display: flex;
+	display: flex;
 	flex-wrap: wrap;
-	gap: 40px;
-	justify-content: center;
+	gap: 40px; /* Default gap */
+	justify-content: center; /* Center columns by default */
 	max-width: 1730px;
 	margin: 0 auto;
 }
 
 .review-column {
-	/* Keep existing flex styles */
-    flex: 1;
-	min-width: 260px;
-	max-width: 350px;
+	flex: 1 1 auto; /* Allow grow, shrink, auto basis */
+	/* Remove min/max width from base - control via media queries */
+	/* min-width: 260px; */
+	/* max-width: 350px; */
 	text-align: left;
-	color: #000000; /* Default black text */
+	color: #000000;
 	box-sizing: border-box;
 }
 
@@ -615,47 +614,61 @@ body {
 
 /* --- Responsive Adjustments for Button --- */
 
-@media (max-width: 1024px) {
-  /* Optional: Keep fixed width on tablet? */
-  /* If you want it full-width on tablet, add width: 100% here */
-  /* .review-cta-button { */
-  /*   width: 100%; */
-  /* } */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .review-section {
+    padding: 30px 40px 50px 40px; /* Tablet padding */
+  }
+  .review-columns-container {
+    gap: 30px; /* Tablet gap */
+    justify-content: space-between; /* Stretch columns out */
+  }
+  .review-column {
+     flex-grow: 1;
+     flex-shrink: 1;
+     /* Suggest a basis that allows 3 across, accounting for gap */
+     flex-basis: calc(33.333% - 22px); /* Adjust calculation based on 30px gap */
+     /* Fallback if calc() is not supported (less precise) */
+     /* flex-basis: 30%; */
+     min-width: 200px; /* Prevent getting too small */
+  }
+  /* Button likely still fixed width here */
+   .review-cta-button {
+	  width: 218px;
+   }
 }
 
-@media (max-width: 767px) { /* Only apply 100% width on MOBILE */
-  .review-button-container {
-     margin-top: 30px;
-     padding-bottom: 10px;
+/* Mobile: Stack columns */
+@media (max-width: 767px) {
+  .review-section {
+    padding: 30px 20px 30px 20px; /* Mobile padding */
+  }
+  .review-columns-container {
+    gap: 30px; /* Keep or adjust mobile gap */
+    justify-content: center; /* Center single column */
+  }
+  .review-column {
+     flex-basis: 100%; /* Force full width = stacking */
+     min-width: 100%; /* Reinforce stacking */
+     text-align: left; /* Keep left align */
   }
   .review-cta-button {
-     width: 100%; /* <<< Make button full width ONLY on smaller screens */
-     max-width: 400px; /* Optional: Limit max width even on mobile */
+     width: 100%; /* Button full width */
+     max-width: 400px;
   }
 }
+
+/* Adjustments for smaller mobile if needed */
 @media (max-width: 480px) {
-	.review-intro-section {
-		padding: 30px 30px 0px 30px;
-	}
-	.review-intro-content h2 {
-		font-size: 30px !important;
-	}
-	.review-section {
-		padding: 20px 30px 40px 30px;
-	}
-	.review-button-container {
-		margin-top: 25px;
-	}
+    .review-section {
+        padding: 20px 30px 40px 30px;
+    }
+    /* Column is already 100% width */
 }
 @media (max-width: 400px) {
-	.review-intro-section {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.review-section {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+    .review-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 .fleet-intro-section {
 	max-width: 1730px;
