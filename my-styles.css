@@ -564,7 +564,7 @@ body {
 	box-sizing: border-box;
 }
 .review-cta-button:hover {
-	background-color: transparent;
+	background-color: #ffffff;
 	color: #000000 !important;
 	border-color: #000000;
 }
@@ -621,7 +621,7 @@ body {
 		min-width: auto;
 	}
 	.review-cta-button {
-		width: 330px;
+		width: 333px;
 		max-width: 100%;
 	}
 }
