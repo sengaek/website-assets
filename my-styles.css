@@ -32,7 +32,7 @@ body {
 	position: relative;
 	z-index: 1;
 	max-width: 800px;
-	padding: 30px 40px;
+	padding: 30px 40px; /* Default large screen padding */
 	width: 100%;
 }
 .hero-content h1 {
@@ -96,7 +96,7 @@ body {
 .feature-columns-section {
 	max-width: 1730px;
 	margin: 0 auto;
-	padding: 80px 70px;
+	padding: 80px 70px; /* Default large screen padding */
 }
 .feature-columns-container {
 	display: flex;
@@ -133,10 +133,9 @@ body {
 	background-color: #ffffff;
 	padding-top: 80px;
 	padding-bottom: 80px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 40px; /* Default large screen padding */
+	padding-right: 40px; /* Default large screen padding */
 	margin: 0;
-	box-sizing: border-box;
 }
 .stats-container {
 	display: flex;
@@ -146,13 +145,11 @@ body {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	box-sizing: border-box;
 }
 .stat-column {
 	flex: 1 1 auto;
 	text-align: center;
 	color: #000000;
-	box-sizing: border-box;
 }
 .stat-column h2 {
 	font-family: 'Poppins', sans-serif !important;
@@ -173,66 +170,15 @@ body {
 	padding: 0;
 	color: #595959;
 }
-@media (max-width: 1024px) {
-	.stats-section {
-		padding-top: 60px;
-		padding-bottom: 60px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	.stats-container {
-		gap: 25px;
-	}
-	.stat-column {
-	}
-	.stat-column h2 {
-		font-size: 45px !important;
-	}
-}
-@media (max-width: 767px) {
-	.stats-section {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.stats-container {
-		gap: 30px;
-		justify-content: center;
-		max-width: 100%;
-	}
-	.stat-column {
-		flex: 1 1 calc(50% - 15px);
-		min-width: 0;
-	}
-	.stat-column h2 {
-		font-size: 40px !important;
-	}
-	.stat-column p {
-		font-size: 14px;
-	}
-}
-@media (max-width: 480px) {
-	.stats-section {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.stats-container {
-		gap: 25px;
-	}
-	.stat-column {
-		flex-basis: calc(50% - 13px);
-	}
-}
+
 .dark-two-column-section {
 	background-color: #1c1c1c;
 	padding-top: 80px;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
 	padding-bottom: 0;
 	color: #ffffff;
 	margin: 0;
-	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
 }
@@ -246,7 +192,6 @@ body {
 .dark-column {
 	flex: 1;
 	min-width: 280px;
-	box-sizing: border-box;
 	text-align: left;
 	padding-bottom: 80px;
 }
@@ -283,74 +228,7 @@ body {
 	height: auto;
 	max-height: 100%;
 }
-@media (max-width: 1024px) {
-	.dark-two-column-section {
-		padding-top: 60px;
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-bottom: 0;
-	}
-	.dark-columns-container {
-		gap: 30px;
-	}
-	.dark-column {
-		padding-bottom: 60px;
-	}
-	.image-column-right {
-		padding-bottom: 0;
-	}
-	.experience-heading {
-		font-size: 40px;
-	}
-	.flush-bottom-image {
-		left: calc(50% + (30px / 2));
-		max-width: calc(50% - (30px / 2));
-	}
-}
-@media (max-width: 767px) {
-	.dark-two-column-section {
-		padding: 40px 20px 0px 20px;
-	}
-	.dark-columns-container {
-		gap: 0;
-	}
-	.dark-column {
-		min-width: 100%;
-		width: 100%;
-		padding-bottom: 30px;
-	}
-	.image-column-right {
-		order: 2;
-		padding-bottom: 0;
-		margin-top: 20px;
-		position: static;
-	}
-	.dark-column:not(.image-column-right) {
-		order: 1;
-		padding-bottom: 20px;
-	}
-	.experience-heading {
-		font-size: 43px;
-	}
-	.experience-text {
-		font-size: 16px;
-	}
-	.flush-bottom-image {
-		position: static;
-		bottom: auto;
-		left: auto;
-		transform: none;
-		max-width: 80%;
-		width: 80%;
-		height: auto;
-		max-height: unset;
-		margin: 20px auto 0 auto;
-		display: block;
-		z-index: auto;
-		object-fit: contain;
-		aspect-ratio: 250 / 359;
-	}
-}
+
 .section-container {
 	display: flex;
 	flex-direction: row;
@@ -358,7 +236,7 @@ body {
 	align-items: stretch;
 	max-width: 1730px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 0; /* Container itself has no padding */
 }
 .image-column, .text-column {
 	flex: 0 0 50%;
@@ -378,7 +256,7 @@ body {
 	object-position: center center;
 }
 .text-column {
-	padding: 80px 70px;
+	padding: 80px 70px; /* Default large screen padding */
 	color: #595959;
 	text-align:left;
 }
@@ -453,20 +331,18 @@ body {
 	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
 	padding-top: 80px;
 	padding-bottom: 0px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0; /* Section edge-to-edge */
+	padding-right: 0; /* Section edge-to-edge */
 	margin: 0;
-	box-sizing: border-box;
 }
 .review-intro-content {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
 	text-align: left;
 	background-color: transparent;
-	box-sizing: border-box;
 }
 .review-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -488,18 +364,16 @@ body {
 	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
 	padding-top: 30px;
 	padding-bottom: 60px;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0; /* Section edge-to-edge */
+	padding-right: 0; /* Section edge-to-edge */
 	margin: 0;
-	box-sizing: border-box;
 }
 .review-columns-container {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 70px;
-	padding-right: 70px;
-	box-sizing: border-box;
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
 	display: flex;
 	flex-wrap: wrap;
 	gap: 40px;
@@ -512,7 +386,6 @@ body {
 	min-width: 200px;
 	text-align: left;
 	color: #000000;
-	box-sizing: border-box;
 }
 .review-text {
 	font-family: 'Poppins', sans-serif;
@@ -561,118 +434,31 @@ body {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 	cursor: pointer;
-	box-sizing: border-box;
 }
 .review-cta-button:hover {
 	background-color: #ffffff;
 	color: #000000 !important;
 	border-color: #000000;
 }
-@media (max-width: 1024px) {
-	.review-intro-section {
-		padding-top: 60px;
-		padding-bottom: 0;
-	}
-	.review-intro-content {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	.review-intro-content h2 {
-		font-size: 32px !important;
-	}
-	.review-section {
-		padding-top: 30px;
-		padding-bottom: 50px;
-	}
-	.review-columns-container {
-		padding-left: 40px;
-		padding-right: 40px;
-		gap: 30px;
-	}
-	.review-column {
-		flex-basis: calc(33.333% - (30px * 2 / 3));
-		min-width: 180px;
-	}
-	.review-cta-button {
-		width: 218px;
-	}
-}
-@media (max-width: 767px) {
-	.review-intro-section {
-		padding-top: 40px;
-		padding-bottom: 0;
-	}
-	.review-intro-content {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.review-section {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	.review-columns-container {
-		padding-left: 20px;
-		padding-right: 20px;
-		gap: 30px;
-		justify-content: center;
-	}
-	.review-column {
-		flex-basis: 100%;
-		min-width: auto;
-	}
-	.review-cta-button {
-		display: block;
-		width: 100%;
-		max-width: 339px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-@media (max-width: 480px) {
-	.review-intro-content {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.review-intro-content h2 {
-		font-size: 30px !important;
-	}
-	.review-columns-container {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.review-section {
-		padding-top: 20px;
-		padding-bottom: 40px;
-	}
-}
-@media (max-width: 400px) {
-	.review-intro-content {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.review-columns-container {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
 
 .fleet-intro-section {
 	max-width: 1730px;
 	margin: 0 auto;
 	padding-top: 80px;
-	padding-bottom: 0; 
+	padding-bottom: 0;
+    padding-left: 0; /* Section edge-to-edge */
+    padding-right: 0; /* Section edge-to-edge */
 	background-color: #ffffff;
 	text-align: left;
 }
 .fleet-intro-content {
-	max-width: 1730px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 70px;
-    padding-right: 70px;
+	max-width: 1730px; /* Already centered by section margin */
+    margin-left: auto; /* Remove if section handles centering */
+    margin-right: auto; /* Remove if section handles centering */
+    padding-left: 70px; /* Default large screen padding */
+    padding-right: 70px; /* Default large screen padding */
     text-align: left;
     background-color: transparent;
-    box-sizing: border-box;
 }
 .fleet-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -703,7 +489,7 @@ body {
 	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
-	padding: 40px 20px 60px 20px;
+	padding: 40px 20px 60px 20px; /* Default large screen padding - already 20px */
 	max-width: 1730px;
 	margin: 0 auto;
 	background: #ffffff;
@@ -712,7 +498,7 @@ body {
 	background: transparent;
 	border: none;
 	border-radius: 6px;
-	padding: 20px;
+	padding: 20px; /* Inner padding of the column */
 	text-align: center;
 	flex-grow: 1;
 	flex-shrink: 1;
@@ -799,7 +585,6 @@ body {
 	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 	cursor: pointer;
 	max-width: 100%;
-	box-sizing: border-box;
 }
 .vehicle-select-button:hover {
 	background-color: transparent;
@@ -808,66 +593,14 @@ body {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
-@media (min-width: 1278px) and (max-width: 1574px) {
-	.text-column h2:first-of-type {
-		font-size: 28px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 20px !important;
-	}
-	.text-column {
-		padding: 60px 50px;
-	}
-	.feature-columns-section {
-		padding: 60px 50px;
-	}
-	.fleet-intro-section {
-		padding: 60px 50px 30px 50px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		height: 55px;
-		line-height: 55px;
-	}
-}
-@media (min-width: 1025px) and (max-width: 1277px) {
-	.text-column h2:first-of-type {
-		font-size: 28px !important;
-	}
-	.text-column h2:last-of-type {
-		font-size: 20px !important;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.text-column .cta-button {
-		width: 218px !important;
-		height: 47px !important;
-		line-height: 47px !important;
-		font-size: 16px !important;
-	}
-	.text-column {
-		padding: 60px 50px;
-	}
-	.feature-columns-section {
-		padding: 60px 50px;
-	}
-	.fleet-intro-section {
-		padding: 60px 50px 30px 50px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		height: 55px;
-		line-height: 55px;
-	}
-}
+/* --- Tablet and Below --- */
 @media (max-width: 1024px) {
 	.hero-section {
 		height: 450px;
 	}
 	.hero-content {
 		max-width: 100%;
-		padding: 25px 40px;
+		padding: 25px 20px; /* CHANGE: Tablet padding */
 	}
 	.hero-content h1 {
 		font-size: 45px !important;
@@ -880,7 +613,7 @@ body {
 		width: 200px !important;
 	}
 	.feature-columns-section {
-		padding: 60px 40px;
+		padding: 60px 20px; /* CHANGE: Tablet padding */
 	}
 	.feature-columns-container {
 		gap: 30px;
@@ -895,6 +628,43 @@ body {
 	.feature-column p {
 		font-size: 14px;
 	}
+	.stats-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+	}
+	.stats-container {
+		gap: 25px;
+	}
+	/* .stat-column {} - Removed empty rule */
+	.stat-column h2 {
+		font-size: 45px !important;
+	}
+
+	.dark-two-column-section {
+		padding-top: 60px;
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+		padding-bottom: 0;
+	}
+	.dark-columns-container {
+		gap: 30px;
+	}
+	.dark-column {
+		padding-bottom: 60px;
+	}
+	.image-column-right {
+		padding-bottom: 0;
+	}
+	.experience-heading {
+		font-size: 40px; /* Note: !important removed, check if needed */
+	}
+	.flush-bottom-image {
+		left: calc(50% + (30px / 2));
+		max-width: calc(50% - (30px / 2));
+	}
+
 	.section-container {
 		flex-direction: column;
 	}
@@ -915,7 +685,7 @@ body {
 		order: 2;
 	}
 	.text-column {
-		padding: 60px 40px;
+		padding: 60px 20px; /* CHANGE: Tablet padding */
 	}
 	.image-column {
 		height: 450px;
@@ -947,8 +717,43 @@ body {
 	.section-container.image-position-top-mobile .image-column img {
 		object-position: center top !important;
 	}
+
+	.review-intro-section {
+		padding-top: 60px;
+		padding-bottom: 0;
+	}
+	.review-intro-content {
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+	}
+	.review-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+	.review-columns-container {
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+		gap: 30px;
+	}
+	.review-column {
+		flex-basis: calc(33.333% - (30px * 2 / 3));
+		min-width: 180px;
+	}
+	.review-cta-button {
+		width: 218px;
+	}
+
 	.fleet-intro-section {
-		padding: 60px 40px 30px 40px;
+		padding-top: 60px;
+        padding-bottom: 30px;
+        /* Section padding is 0 left/right */
+	}
+	.fleet-intro-content {
+        padding-left: 20px; /* CHANGE: Tablet padding */
+        padding-right: 20px; /* CHANGE: Tablet padding */
 	}
 	.fleet-intro-content h2 {
 		font-size: 32px !important;
@@ -956,12 +761,13 @@ body {
 	.fleet-intro-content p {
 		font-size: 15px;
 	}
+
 	.three-column-section {
 		gap: 25px;
-		padding: 30px 25px 50px 25px;
+		padding: 30px 20px 50px 20px; /* CHANGE: Tablet padding (was 25px) */
 	}
 	.vehicle-column {
-		padding: 25px;
+		padding: 25px; /* Inner column padding */
 	}
 	.vehicle-column .header-text h2 {
 		font-size: 26px;
@@ -987,63 +793,51 @@ body {
 		line-height: 55px;
 	}
 }
-@media (min-width: 768px) and (max-width: 900px) {
-	.feature-columns-container {
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
-	.feature-column {
-		flex-basis: 30%;
-		min-width: auto;
-	}
-	.three-column-section {
-		padding: 20px 15px 40px 15px;
-	}
-	.vehicle-column {
-		padding: 15px;
-		flex-basis: 230px;
-		min-width: 230px;
-	}
-	.vehicle-select-button {
-		width: 290px;
-		max-width: 100%;
-		height: 55px;
-		line-height: 55px;
-		font-size: 18px;
-	}
-	.vehicle-column .header-text img {
-		min-width: 150px;
-		min-height: 113px;
-	}
-	.vehicle-column .header-text h2 {
-		font-size: 20px;
-	}
-	.vehicle-column .header-text p {
-		font-size: 14px;
-	}
-	.vehicle-column .caption {
-		font-size: 14px;
-	}
-	.vehicle-column .icons-row {
-		gap: 15px;
-	}
-	.vehicle-column .icon-container img {
-		width: 28px;
-		height: 28px;
-	}
-	.text-column p {
-		font-size: 15px;
-	}
-	.text-column .cta-button {
-		width: 216px !important;
-		height: 55px !important;
-		line-height: 55px !important;
-		font-size: 18px !important;
-	}
+
+/* --- Specific Mid-Range Tweaks (Keep as is unless conflicting) --- */
+@media (min-width: 1278px) and (max-width: 1574px) {
+	/* These rules adjust specific elements within the larger padding */
+	.text-column h2:first-of-type { font-size: 28px !important; }
+	.text-column h2:last-of-type { font-size: 20px !important; }
+	.text-column { padding: 60px 50px; } /* Reverts to 50px padding in this range */
+	.feature-columns-section { padding: 60px 50px; } /* Reverts to 50px padding */
+	.fleet-intro-content { padding: 60px 50px 30px 50px; } /* Reverts to 50px padding */
+	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; }
 }
+@media (min-width: 1025px) and (max-width: 1277px) {
+	/* These rules adjust specific elements within the larger padding */
+	.text-column h2:first-of-type { font-size: 28px !important; }
+	.text-column h2:last-of-type { font-size: 20px !important; }
+	.text-column p { font-size: 15px; }
+	.text-column .cta-button { width: 218px !important; height: 47px !important; line-height: 47px !important; font-size: 16px !important; }
+	.text-column { padding: 60px 50px; } /* Reverts to 50px padding */
+	.feature-columns-section { padding: 60px 50px; } /* Reverts to 50px padding */
+	.fleet-intro-content { padding: 60px 50px 30px 50px; } /* Reverts to 50px padding */
+	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+    /* This range falls within max-width: 1024px, so 20px padding applies unless overridden */
+	.feature-columns-container { flex-wrap: nowrap; justify-content: space-between; }
+	.feature-column { flex-basis: 30%; min-width: auto; }
+	.three-column-section { padding: 20px 20px 40px 20px; } /* CHANGE: Ensure 20px padding (was 15px) */
+	.vehicle-column { padding: 15px; flex-basis: 230px; min-width: 230px; } /* Inner padding */
+	.vehicle-select-button { width: 290px; max-width: 100%; height: 55px; line-height: 55px; font-size: 18px; }
+	.vehicle-column .header-text img { min-width: 150px; min-height: 113px; }
+	.vehicle-column .header-text h2 { font-size: 20px; }
+	.vehicle-column .header-text p { font-size: 14px; }
+	.vehicle-column .caption { font-size: 14px; }
+	.vehicle-column .icons-row { gap: 15px; }
+	.vehicle-column .icon-container img { width: 28px; height: 28px; }
+	.text-column p { font-size: 15px; }
+    /* Text column padding already set to 20px by max-width: 1024px rule */
+	.text-column .cta-button { width: 216px !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; }
+}
+
+
+/* --- Mobile --- */
 @media (max-width: 767px) {
 	.hero-content {
-		padding: 0 50px !important;
+		padding: 0 20px !important; /* CHANGE: Mobile padding */
 		margin-top: 25px !important;
 		text-align:left !important;
 	}
@@ -1057,8 +851,8 @@ body {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 		margin-bottom: 15px;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
+		padding-left: 0 !important; /* Keep button text centered */
+		padding-right: 0 !important; /* Keep button text centered */
 		text-align: center;
 		box-sizing: border-box !important;
 	}
@@ -1066,7 +860,7 @@ body {
 		margin-bottom: 0;
 	}
 	.text-column {
-		padding: 40px 50px;
+		padding: 40px 20px; /* CHANGE: Mobile padding */
 	}
 	.text-column .cta-button {
 		display: block !important;
@@ -1080,6 +874,7 @@ body {
 		padding-right: 0 !important;
 		box-sizing: border-box !important;
 	}
+    /* .vehicle-column inner padding */
 	.vehicle-column {
 		padding: 20px;
 	}
@@ -1116,7 +911,7 @@ body {
 		text-align:left;
 	}
 	.feature-columns-section {
-		padding: 40px 50px;
+		padding: 40px 20px; /* CHANGE: Mobile padding */
 	}
 	.feature-columns-container {
 		flex-direction: column;
@@ -1137,6 +932,69 @@ body {
 		width: 100%;
 		border-top: 1px dotted #d8a94e;
 		margin-top: 35px;
+	}
+	.stats-section {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
+	}
+	.stats-container {
+		gap: 30px;
+		justify-content: center;
+		max-width: 100%;
+	}
+	.stat-column {
+		flex: 1 1 calc(50% - 15px);
+		min-width: 0;
+	}
+	.stat-column h2 {
+		font-size: 40px !important;
+	}
+	.stat-column p {
+		font-size: 14px;
+	}
+	.dark-two-column-section {
+		padding: 40px 20px 0px 20px; /* Already 20px */
+	}
+	.dark-columns-container {
+		gap: 0;
+	}
+	.dark-column {
+		min-width: 100%;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.image-column-right {
+		order: 2;
+		padding-bottom: 0;
+		margin-top: 20px;
+		position: static;
+	}
+	.dark-column:not(.image-column-right) {
+		order: 1;
+		padding-bottom: 20px;
+	}
+	.experience-heading {
+		font-size: 43px; /* Note: !important removed */
+	}
+	.experience-text {
+		font-size: 16px;
+	}
+	.flush-bottom-image {
+		position: static;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		max-width: 80%;
+		width: 80%;
+		height: auto;
+		max-height: unset;
+		margin: 20px auto 0 auto;
+		display: block;
+		z-index: auto;
+		object-fit: contain;
+		aspect-ratio: 250 / 359;
 	}
 	.section-container {
 		margin-bottom: 0 !important;
@@ -1171,8 +1029,42 @@ body {
 	.section-container.image-position-top-mobile .image-column img {
 		object-position: center top !important;
 	}
-	.fleet-intro-section { 
-		padding: 40px 20px 30px 20px;
+	.review-intro-section {
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
+	.review-intro-content {
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.review-columns-container {
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
+		gap: 30px;
+		justify-content: center;
+	}
+	.review-column {
+		flex-basis: 100%;
+		min-width: auto;
+	}
+	.review-cta-button {
+		display: block;
+		width: 100%;
+		max-width: 339px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.fleet-intro-section {
+		padding: 40px 0 30px 0; /* Section edge-to-edge */
+	}
+	.fleet-intro-content {
+        padding-left: 20px; /* CHANGE: Mobile padding */
+        padding-right: 20px; /* CHANGE: Mobile padding */
+		text-align: left !important;
 	}
 	.fleet-intro-content h2 {
 		font-size: 32px !important;
@@ -1180,12 +1072,9 @@ body {
 	.fleet-intro-content p {
 		font-size: 16px;
 	}
-	.fleet-intro-content { 
-		text-align: left !important; 
-	}
 	.three-column-section {
 		gap: 30px;
-		padding: 30px 20px 40px 20px;
+		padding: 30px 20px 40px 20px; /* Already 20px */
 	}
 	.vehicle-column {
 		flex-basis: 100%;
@@ -1225,9 +1114,15 @@ body {
 		text-align: initial;
 	}
 }
+
+/* --- Small Mobile --- */
 @media (max-width: 480px) {
 	.hero-section {
 		height: 545px !important;
+	}
+	.hero-content {
+        padding: 0 20px !important; /* CHANGE: Ensure 20px */
+        margin-top: 25px !important;
 	}
 	.hero-content h1 {
 		font-size: 45px !important;
@@ -1236,7 +1131,7 @@ body {
 		font-size: 16px !important;
 	}
 	.feature-columns-section {
-		padding: 30px 30px;
+		padding: 30px 20px; /* CHANGE: Ensure 20px */
 	}
 	.feature-column h2 {
 		font-size: 32px !important;
@@ -1244,12 +1139,21 @@ body {
 	.feature-column p {
 		font-size: 15px;
 	}
+	/* Stats section padding already 20px via max-width: 767px */
+    /* Removed redundant stats-section padding rule */
+	.stats-container {
+		gap: 25px;
+	}
+	.stat-column {
+		flex-basis: calc(50% - 13px);
+	}
+	/* Dark two col section padding already 20px via max-width: 767px */
 	.image-column {
 		height: 250px;
 		max-height: 250px;
 	}
 	.text-column {
-		padding: 30px 30px;
+		padding: 30px 20px; /* CHANGE: Ensure 20px */
 	}
 	.text-column h2:first-of-type {
 		font-size: 32px !important;
@@ -1260,59 +1164,80 @@ body {
 	.text-column p {
 		font-size: 15px;
 	}
-	.fleet-intro-section { 
-		padding: 40px 20px 30px 20px;
+	/* Review intro/columns padding already 20px via max-width: 767px */
+    /* Removed redundant review-intro-content padding rule */
+	.review-intro-content h2 {
+		font-size: 30px !important;
 	}
+    /* Removed redundant review-columns-container padding rule */
+	.review-section {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	/* Fleet intro padding already 20px via max-width: 767px */
+    .fleet-intro-section {
+        /* Padding top/bottom changes only */
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
 	.fleet-intro-content h2 {
 		font-size: 32px !important;
 	}
 	.fleet-intro-content p {
 		font-size: 16px;
 	}
-	.fleet-intro-content { 
-		text-align: left !important; 
-	}
+	/* .vehicle-column inner padding */
 	.vehicle-column {
 		padding: 15px;
 	}
 	.three-column-section {
-		padding: 30px 15px 40px 15px;
+		padding: 30px 20px 40px 20px; /* CHANGE: Ensure 20px */
 	}
-	.hero-content {
-		padding: 0 30px !important;
-		margin-top: 25px !important;
-	}
+
 }
+
+/* --- Tiny Mobile --- */
 @media (max-width: 400px) {
+    /* Most padding is already 20px from previous breakpoints */
+	.hero-content {
+        padding-left: 20px !important; /* CHANGE: Ensure 20px */
+        padding-right: 20px !important; /* CHANGE: Ensure 20px */
+	}
 	.feature-columns-section {
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
 	}
 	.text-column {
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
 	}
-	.fleet-intro-section { 
-		padding: 40px 20px 30px 20px;
+    /* Review intro/columns already 20px via max-width: 767px */
+	.review-intro-content {
+		/* padding-left: 20px; already set */
+		/* padding-right: 20px; already set */
 	}
+	.review-columns-container {
+		/* padding-left: 20px; already set */
+		/* padding-right: 20px; already set */
+	}
+    /* Fleet intro already 20px via max-width: 767px */
+    .fleet-intro-section {
+        /* Padding top/bottom changes only */
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
 	.fleet-intro-content h2 {
 		font-size: 32px !important;
 	}
 	.fleet-intro-content p {
 		font-size: 16px;
 	}
-	.fleet-intro-content { 
-		text-align: left !important; 
-	}
-	.three-column-section {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+	/* .vehicle-column inner padding */
 	.vehicle-column {
 		padding: 15px;
 	}
-	.hero-content {
-		padding-left: 25px !important;
-		padding-right: 25px !important;
+	.three-column-section {
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
 	}
 }
