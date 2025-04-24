@@ -1237,14 +1237,17 @@ img[onerror] {
 	.section-container.image-position-top-mobile .image-column img {
 		object-position: center top !important;
 	}
-	.fleet-intro-section {
-		padding: 40px 50px 30px 50px;
+	.fleet-intro-section { 
+		padding: 40px 20px 30px 20px;
 	}
 	.fleet-intro-content h2 {
 		font-size: 32px !important;
 	}
 	.fleet-intro-content p {
 		font-size: 16px;
+	}
+	.fleet-intro-content { 
+		text-align: left !important; 
 	}
 	.three-column-section {
 		gap: 30px;
@@ -1323,14 +1326,17 @@ img[onerror] {
 	.text-column p {
 		font-size: 15px;
 	}
-	.fleet-intro-section {
-		padding: 30px 30px 20px 30px;
+	.fleet-intro-section { 
+		padding: 40px 20px 30px 20px;
 	}
 	.fleet-intro-content h2 {
-		font-size: 30px !important;
+		font-size: 32px !important;
 	}
 	.fleet-intro-content p {
 		font-size: 16px;
+	}
+	.fleet-intro-content { 
+		text-align: left !important; 
 	}
 	.vehicle-column {
 		padding: 15px;
@@ -1352,9 +1358,17 @@ img[onerror] {
 		padding-left: 25px;
 		padding-right: 25px;
 	}
-	.fleet-intro-section {
-		padding-left: 25px;
-		padding-right: 25px;
+	.fleet-intro-section { 
+		padding: 40px 20px 30px 20px;
+	}
+	.fleet-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.fleet-intro-content p {
+		font-size: 16px;
+	}
+	.fleet-intro-content { 
+		text-align: left !important; 
 	}
 	.three-column-section {
 		padding-left: 15px;
