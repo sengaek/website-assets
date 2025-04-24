@@ -874,8 +874,7 @@ body {
 	border: 1px solid #000000;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
-img[onerror] {
-}
+
 @media (min-width: 1278px) and (max-width: 1574px) {
 	.text-column h2:first-of-type {
 		font-size: 28px !important;
