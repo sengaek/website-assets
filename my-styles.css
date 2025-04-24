@@ -733,11 +733,13 @@ body {
 .fleet-intro-section {
 	max-width: 1730px;
 	margin: 0 auto;
-	padding: 80px 70px 40px 70px !important; /* Force padding */
+	padding-top: 40px;
+	padding-bottom: 0; 
 	background-color: #ffffff;
 }
 .fleet-intro-content {
-	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .fleet-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -745,7 +747,7 @@ body {
 	margin: 0 0 10px 0;
 	padding: 0;
 	color: #000000;
-	font-size: 35px !important;
+	font-size: 32px !important;
 	line-height: 1.2;
 }
 .fleet-intro-content hr {
