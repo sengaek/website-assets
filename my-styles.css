@@ -665,8 +665,14 @@ body {
 	text-align: left;
 }
 .fleet-intro-content {
-	padding-left: 70px;
-	padding-right: 70px;
+	max-width: 1730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
 }
 .fleet-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
