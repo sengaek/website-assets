@@ -1241,3 +1241,110 @@ body {
 		padding-right: 20px; /* CHANGE: Ensure 20px */
 	}
 }
+/* ================================= */
+      /* START: App Install Banner CSS     */
+      /* ================================= */
+      #app-install-banner {
+        position: fixed;
+        bottom: 0; /* Position at the bottom */
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0; /* Light grey background */
+        border-top: 1px solid #ccc;
+        padding: 10px 15px; /* Add slightly more horizontal padding */
+        box-sizing: border-box;
+        z-index: 1000; /* High z-index to stay on top */
+        display: none; /* Initially hidden - JS will show it */
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* System fonts */
+        font-size: 14px;
+        color: #333;
+      }
+
+      .app-banner-content {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Space between icon, text, button */
+        flex-grow: 1;
+        margin-right: 10px;
+        overflow: hidden; /* Prevent text overflow */
+      }
+
+      .app-banner-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 8px; /* Optional rounded corners */
+      }
+
+      .app-banner-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        flex-grow: 1; /* Allow text to take space */
+        min-width: 0; /* Allow text to shrink if needed */
+      }
+
+      .app-banner-text strong {
+        font-weight: 600; /* Slightly bolder */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Add ellipsis if too long */
+      }
+       .app-banner-text span {
+         font-size: 13px;
+         color: #555;
+         white-space: nowrap; /* Prevent wrapping */
+         overflow: hidden;
+         text-overflow: ellipsis; /* Add ellipsis if too long */
+       }
+
+
+      .app-banner-button {
+        display: inline-block;
+        background-color: #007bff; /* Blue button */
+        color: white !important; /* Ensure white text */
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 10px; /* Space before button */
+        flex-shrink: 0;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+       .app-banner-button:hover {
+         background-color: #0056b3; /* Darker blue on hover */
+       }
+
+      .app-banner-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+        color: #888;
+        padding: 0 5px;
+        flex-shrink: 0;
+      }
+       .app-banner-close:hover {
+         color: #333;
+       }
+
+
+      /* Hide banner button/text if screen is too narrow */
+      @media (max-width: 360px) {
+          .app-banner-text span {
+              display: none; /* Hide subtitle on very small screens */
+          }
+          .app-banner-button {
+              padding: 5px 8px;
+              font-size: 12px;
+          }
+          .app-banner-content {
+              gap: 8px;
+          }
+      }
