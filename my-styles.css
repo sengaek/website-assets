@@ -1246,19 +1246,19 @@ body {
       /* ================================= */
       #app-install-banner {
         position: fixed;
-        bottom: 0; /* Position at the bottom */
+        top: 0; 
         left: 0;
         width: 100%;
         background-color: #f0f0f0; /* Light grey background */
-        border-top: 1px solid #ccc;
-        padding: 10px 15px; /* Add slightly more horizontal padding */
+        border-bottom: 1px solid #ccc; 
+        padding: 10px 15px;
         box-sizing: border-box;
-        z-index: 1000; /* High z-index to stay on top */
+        z-index: 1000;
         display: none; /* Initially hidden - JS will show it */
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* System fonts */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #333;
       }
