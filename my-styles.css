@@ -1304,7 +1304,7 @@ body {
 
       .app-banner-button {
         display: inline-block;
-        background-color: #007bff; /* Blue button */
+        background-color: #002b7f; /* Blue button */
         color: white !important; /* Ensure white text */
         padding: 6px 12px;
         border-radius: 4px;
