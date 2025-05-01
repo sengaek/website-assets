@@ -837,7 +837,7 @@ body {
 /* --- Mobile --- */
 @media (max-width: 767px) {
 	.hero-content {
-		padding: 0 40px !important; /* CHANGE: Mobile padding */
+		padding: 0 20px !important; /* CHANGE: Mobile padding */
 		margin-top: 25px !important;
 		text-align:left !important;
 	}
