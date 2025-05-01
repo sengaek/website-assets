@@ -1,6 +1,3 @@
-/* ================================= */
-/* Global & Base Styles             */
-/* ================================= */
 body {
 	margin: 0;
 	padding: 0;
@@ -12,28 +9,9 @@ body {
 *, *:before, :after {
 	box-sizing: inherit;
 }
-
-/* Helper Class */
 .gold-text {
 	color: #b8860b !important;
 }
-
-/* ================================= */
-/* Content Padding Wrapper          */
-/* ================================= */
-/* ADD THIS DIV in your HTML inside sections where needed */
-.content-padding {
-  padding-left: 40px;  /* Base horizontal padding */
-  padding-right: 40px; /* Base horizontal padding */
-  max-width: 100%;
-  margin-left: auto;  /* Centering if parent section has max-width */
-  margin-right: auto; /* Centering if parent section has max-width */
-  box-sizing: border-box;
-}
-
-/* ================================= */
-/* Hero Section                     */
-/* ================================= */
 .hero-section {
 	position: relative;
 	display: flex;
@@ -49,16 +27,13 @@ body {
 	text-align: center;
 	color: #ffffff;
 	overflow: hidden;
-    /* No horizontal padding here */
 }
-/* .hero-content now acts as the padding wrapper for this section */
 .hero-content {
 	position: relative;
 	z-index: 1;
-	max-width: 800px; /* Or 100% if you want it wider within the padding */
-	padding: 30px 40px; /* Specific padding for hero */
+	max-width: 800px;
+	padding: 30px 40px; /* Default large screen padding */
 	width: 100%;
-    box-sizing: border-box;
 }
 .hero-content h1 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -118,18 +93,11 @@ body {
 	border-color: #f7f8fa !important;
 	color: #f7f8fa !important;
 }
-
-/* ================================= */
-/* Feature Columns Section          */
-/* ================================= */
 .feature-columns-section {
 	max-width: 1730px;
 	margin: 0 auto;
-	padding-top: 80px;     /* Keep vertical padding */
-	padding-bottom: 80px;  /* Keep vertical padding */
-    /* Removed horizontal padding - Add .content-padding div inside */
+	padding: 80px 70px; /* Default large screen padding */
 }
-/* Styles for content INSIDE .content-padding */
 .feature-columns-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -161,26 +129,22 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
-/* ================================= */
-/* Stats Section                    */
-/* ================================= */
 .stats-section {
 	background-color: #ffffff;
-	padding-top: 80px;     /* Keep vertical padding */
-	padding-bottom: 80px;  /* Keep vertical padding */
+	padding-top: 80px;
+	padding-bottom: 80px;
+	padding-left: 40px; /* Default large screen padding */
+	padding-right: 40px; /* Default large screen padding */
 	margin: 0;
-    /* Removed horizontal padding - Add .content-padding div inside */
 }
-/* Styles for content INSIDE .content-padding */
 .stats-container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
 	justify-content: space-between;
-	max-width: 1730px; /* This will be centered by .content-padding's auto margins */
-    margin-left: auto;
-    margin-right: auto;
+	max-width: 1730px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .stat-column {
 	flex: 1 1 auto;
@@ -207,18 +171,16 @@ body {
 	color: #595959;
 }
 
-/* ================================= */
-/* Dark Two Column Section          */
-/* ================================= */
 .dark-two-column-section {
 	background-color: #1c1c1c;
-	padding-top: 80px;    /* Keep vertical padding */
-	padding-bottom: 0;    /* Keep vertical padding */
+	padding-top: 80px;
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
+	padding-bottom: 0;
 	color: #ffffff;
 	margin: 0;
 	position: relative;
 	overflow: hidden;
-    /* Removed horizontal padding - Add .content-padding div inside text column */
 }
 .dark-columns-container {
 	display: flex;
@@ -226,20 +188,17 @@ body {
 	gap: 40px;
 	max-width: 1730px;
 	margin: 0 auto;
-    /* This container likely sits inside .content-padding if the whole section needs padding */
-    /* Or, add .content-padding inside the specific .dark-column that has text */
 }
-.dark-column { /* This column holds the text/image */
+.dark-column {
 	flex: 1;
 	min-width: 280px;
 	text-align: left;
 	padding-bottom: 80px;
 }
-.image-column-right { /* Specific styles for the image column variant */
+.image-column-right {
 	position: relative;
 	padding-bottom: 0;
 }
-/* Text styles likely inside a .dark-column wrapped by .content-padding */
 .experience-heading {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
@@ -259,20 +218,17 @@ body {
 	margin-top: 0;
 	margin-bottom: 25px;
 }
-.flush-bottom-image { /* This likely stays outside .content-padding */
+.flush-bottom-image {
 	display: block;
 	position: absolute;
 	bottom: 0;
-	left: calc(50% + (40px / 2)); /* Adjust positioning based on container */
+	left: calc(50% + (40px / 2));
 	transform: translateX(-50%);
 	max-width: calc(50% - (40px / 2));
 	height: auto;
 	max-height: 100%;
 }
 
-/* ================================= */
-/* Generic Two Column (Image/Text) */
-/* ================================= */
 .section-container {
 	display: flex;
 	flex-direction: row;
@@ -285,7 +241,7 @@ body {
 .image-column, .text-column {
 	flex: 0 0 50%;
 }
-.image-column { /* Image remains edge-to-edge within this column */
+.image-column {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
@@ -299,17 +255,11 @@ body {
 	object-fit: cover;
 	object-position: center center;
 }
-.text-column { /* Text column's content will be wrapped */
-	padding-top: 80px;    /* Keep vertical padding */
-	padding-bottom: 80px; /* Keep vertical padding */
-    /* Removed horizontal padding - Add .content-padding div inside */
+.text-column {
+	padding: 80px 70px; /* Default large screen padding */
 	color: #595959;
 	text-align:left;
-    display: flex; /* Helps inner wrapper align */
-    flex-direction: column;
-    justify-content: center;
 }
-/* Styles for content INSIDE .content-padding within .text-column */
 .text-column h2 {
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
@@ -375,12 +325,7 @@ body {
 	cursor: pointer;
 }
 .location-link-inline:hover, .location-link-inline:focus {
-    /* Define hover state if needed */
 }
-
-/* ================================= */
-/* Review Intro Section             */
-/* ================================= */
 .review-intro-section {
 	background-color: #e6cfa5;
 	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
@@ -390,16 +335,14 @@ body {
 	padding-right: 0; /* Section edge-to-edge */
 	margin: 0;
 }
-/* .review-intro-content acts as the padding wrapper here */
 .review-intro-content {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 40px; /* Apply desired padding HERE */
-	padding-right: 40px;/* Apply desired padding HERE */
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
 	text-align: left;
 	background-color: transparent;
-    box-sizing: border-box;
 }
 .review-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -416,10 +359,6 @@ body {
 	margin: 10px 0 0 0;
 	width: 100%;
 }
-
-/* ================================= */
-/* Review Columns Section           */
-/* ================================= */
 .review-section {
 	background-color: #e6cfa5;
 	background-image: linear-gradient(to left, #d8a94e, #e6cfa5);
@@ -429,20 +368,18 @@ body {
 	padding-right: 0; /* Section edge-to-edge */
 	margin: 0;
 }
-/* .review-columns-container acts as the padding wrapper here */
 .review-columns-container {
 	max-width: 1730px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 40px; /* Apply desired padding HERE */
-	padding-right: 40px;/* Apply desired padding HERE */
+	padding-left: 70px; /* Default large screen padding */
+	padding-right: 70px; /* Default large screen padding */
 	display: flex;
 	flex-wrap: wrap;
 	gap: 40px;
 	justify-content: space-between;
-    box-sizing: border-box;
 }
-.review-column { /* Individual column styles */
+.review-column {
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: calc(33.333% - (40px * 2 / 3));
@@ -475,19 +412,10 @@ body {
 	margin: 0;
 	padding: 0;
 }
-/* Button container might need its own wrapper or be inside the main padding */
 .review-button-container {
 	text-align: center;
 	margin-top: 40px;
 	padding-bottom: 20px;
-    /* This likely needs to be inside .content-padding or similar */
-    /* Or remove padding from here and add a wrapper */
-    padding-left: 40px; /* Assuming centered within the overall padding */
-    padding-right: 40px;
-    max-width: 1730px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
 }
 .review-cta-button {
 	display: inline-block;
@@ -513,29 +441,24 @@ body {
 	border-color: #000000;
 }
 
-/* ================================= */
-/* Fleet Intro Section              */
-/* ================================= */
 .fleet-intro-section {
-	max-width: 1730px; /* Section can still have max-width */
-	margin: 0 auto;    /* And be centered */
+	max-width: 1730px;
+	margin: 0 auto;
 	padding-top: 80px;
 	padding-bottom: 0;
-    padding-left: 0; /* Section edge-to-edge within its max-width */
-    padding-right: 0;/* Section edge-to-edge within its max-width */
+    padding-left: 0; /* Section edge-to-edge */
+    padding-right: 0; /* Section edge-to-edge */
 	background-color: #ffffff;
 	text-align: left;
 }
-/* .fleet-intro-content acts as the padding wrapper here */
 .fleet-intro-content {
-	/* max-width: 1730px; /* No longer needed if parent section has it */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    padding-left: 40px; /* Apply desired padding HERE */
-    padding-right: 40px;/* Apply desired padding HERE */
+	max-width: 1730px; /* Already centered by section margin */
+    margin-left: auto; /* Remove if section handles centering */
+    margin-right: auto; /* Remove if section handles centering */
+    padding-left: 70px; /* Default large screen padding */
+    padding-right: 70px; /* Default large screen padding */
     text-align: left;
     background-color: transparent;
-    box-sizing: border-box;
 }
 .fleet-intro-content h2 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -561,36 +484,27 @@ body {
 	padding: 0;
 	color: #595959;
 }
-
-/* ================================= */
-/* Three Column / Fleet Section     */
-/* ================================= */
-.three-column-section { /* This container holds the vehicle columns */
+.three-column-section {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
-	padding-top: 40px;    /* Keep vertical padding */
-	padding-bottom: 60px; /* Keep vertical padding */
-    /* Removed horizontal padding - Add .content-padding div *if* there's text ABOVE this flex container */
-    /* Or adjust padding on .content-padding if the columns themselves need padding */
+	padding: 40px 20px 60px 20px; /* Default large screen padding - already 20px */
 	max-width: 1730px;
 	margin: 0 auto;
 	background: #ffffff;
 }
-/* Individual vehicle columns */
 .vehicle-column {
 	background: transparent;
 	border: none;
 	border-radius: 6px;
-	padding: 20px; /* INNER padding of the column - keep this */
+	padding: 20px; /* Inner padding of the column */
 	text-align: center;
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 280px;
 	min-width: 280px;
 }
-/* Styles for content INSIDE .vehicle-column */
 .vehicle-column .header-text {
 	margin-bottom: 20px;
 }
@@ -679,209 +593,234 @@ body {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
-
-/* ================================= */
-/* --- Tablet and Below ---         */
-/* ================================= */
+/* --- Tablet and Below --- */
 @media (max-width: 1024px) {
-    /* Adjust padding for the wrapper */
-    .content-padding {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    /* Adjust padding for specific wrappers */
-    .hero-content {
-        padding: 25px 20px; /* Tablet padding */
-    }
-    .review-intro-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .review-columns-container {
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 30px;
-    }
-    .fleet-intro-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-     .review-button-container { /* Adjust button container padding */
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    /* Adjustments for sections (vertical padding mainly) */
 	.hero-section {
 		height: 450px;
 	}
-	.hero-content h1 { font-size: 45px !important; }
-	.hero-content p { font-size: 18px !important; margin-bottom: 25px; }
-	.hero-cta { width: 200px !important; }
-
-	.feature-columns-section {
-		padding-top: 60px;
-        padding-bottom: 60px;
-        /* padding-left/right handled by .content-padding */
+	.hero-content {
+		max-width: 100%;
+		padding: 25px 20px; /* CHANGE: Tablet padding */
 	}
-	.feature-columns-container { gap: 30px; }
-	.feature-column { min-width: 200px; }
-	.feature-column h2 { font-size: 32px !important; margin-bottom: 10px; }
-	.feature-column p { font-size: 14px; }
-
+	.hero-content h1 {
+		font-size: 45px !important;
+	}
+	.hero-content p {
+		font-size: 18px !important;
+		margin-bottom: 25px;
+	}
+	.hero-cta {
+		width: 200px !important;
+	}
+	.feature-columns-section {
+		padding: 60px 20px; /* CHANGE: Tablet padding */
+	}
+	.feature-columns-container {
+		gap: 30px;
+	}
+	.feature-column {
+		min-width: 200px;
+	}
+	.feature-column h2 {
+		font-size: 32px !important;
+		margin-bottom: 10px;
+	}
+	.feature-column p {
+		font-size: 14px;
+	}
 	.stats-section {
 		padding-top: 60px;
 		padding-bottom: 60px;
-        /* padding-left/right handled by .content-padding */
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
 	}
-	.stats-container { gap: 25px; }
-	.stat-column h2 { font-size: 45px !important; }
+	.stats-container {
+		gap: 25px;
+	}
+	/* .stat-column {} - Removed empty rule */
+	.stat-column h2 {
+		font-size: 45px !important;
+	}
 
 	.dark-two-column-section {
 		padding-top: 60px;
-        padding-bottom: 0;
-        /* padding-left/right handled by .content-padding */
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+		padding-bottom: 0;
 	}
-	.dark-columns-container { gap: 30px; }
-	.dark-column { padding-bottom: 60px; }
-	.image-column-right { padding-bottom: 0; }
-	.experience-heading { font-size: 40px; }
-	.flush-bottom-image { /* Adjust positioning if needed based on new padding */
+	.dark-columns-container {
+		gap: 30px;
+	}
+	.dark-column {
+		padding-bottom: 60px;
+	}
+	.image-column-right {
+		padding-bottom: 0;
+	}
+	.experience-heading {
+		font-size: 40px; /* Note: !important removed, check if needed */
+	}
+	.flush-bottom-image {
 		left: calc(50% + (30px / 2));
 		max-width: calc(50% - (30px / 2));
 	}
 
-	.section-container { flex-direction: column; }
-	.text-column, .image-column { flex: none; width: 100%; }
-	/* Order classes */
-	.section-container.image-first-mobile .image-column { order: 1; }
-	.section-container.image-first-mobile .text-column { order: 2; }
-	.section-container.text-first-mobile .text-column { order: 1; }
-	.section-container.text-first-mobile .image-column { order: 2; }
-	/* Text column adjustments */
-	.text-column {
-		padding-top: 60px;
-        padding-bottom: 60px;
-        /* padding-left/right handled by .content-padding */
+	.section-container {
+		flex-direction: column;
 	}
-	.image-column { height: 450px; max-height: 450px; }
-	.image-column img { height: 100%; max-height: 100%; }
-	/* Styles for content inside .content-padding within .text-column */
-	.text-column h2:first-of-type { font-size: 32px !important; }
-	.text-column h2:last-of-type { font-size: 22px !important; }
-	.text-column p { font-size: 15px; }
-	.text-column .cta-button { width: 216px !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; }
-	.text-column h2+hr { margin: 10px 0 20px 0; width: 100%; }
-	.section-container.image-position-top-mobile .image-column img { object-position: center top !important; }
+	.text-column, .image-column {
+		flex: none;
+		width: 100%;
+	}
+	.section-container.image-first-mobile .image-column {
+		order: 1;
+	}
+	.section-container.image-first-mobile .text-column {
+		order: 2;
+	}
+	.section-container.text-first-mobile .text-column {
+		order: 1;
+	}
+	.section-container.text-first-mobile .image-column {
+		order: 2;
+	}
+	.text-column {
+		padding: 60px 20px; /* CHANGE: Tablet padding */
+	}
+	.image-column {
+		height: 450px;
+		max-height: 450px;
+	}
+	.image-column img {
+		height: 100%;
+		max-height: 100%;
+	}
+	.text-column h2:first-of-type {
+		font-size: 32px !important;
+	}
+	.text-column h2:last-of-type {
+		font-size: 22px !important;
+	}
+	.text-column p {
+		font-size: 15px;
+	}
+	.text-column .cta-button {
+		width: 216px !important;
+		height: 55px !important;
+		line-height: 55px !important;
+		font-size: 18px !important;
+	}
+	.text-column h2+hr {
+		margin: 10px 0 20px 0;
+		width: 100%;
+	}
+	.section-container.image-position-top-mobile .image-column img {
+		object-position: center top !important;
+	}
 
-	.review-intro-section { padding-top: 60px; padding-bottom: 0; }
-	/* Padding handled by .review-intro-content */
-	.review-intro-content h2 { font-size: 32px !important; }
+	.review-intro-section {
+		padding-top: 60px;
+		padding-bottom: 0;
+	}
+	.review-intro-content {
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+	}
+	.review-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+	.review-columns-container {
+		padding-left: 20px; /* CHANGE: Tablet padding */
+		padding-right: 20px; /* CHANGE: Tablet padding */
+		gap: 30px;
+	}
+	.review-column {
+		flex-basis: calc(33.333% - (30px * 2 / 3));
+		min-width: 180px;
+	}
+	.review-cta-button {
+		width: 218px;
+	}
 
-	.review-section { padding-top: 30px; padding-bottom: 50px; }
-	/* Padding handled by .review-columns-container */
-	.review-column { flex-basis: calc(33.333% - (30px * 2 / 3)); min-width: 180px; }
-	.review-cta-button { width: 218px; }
-
-	.fleet-intro-section { padding-top: 60px; padding-bottom: 30px; }
-	/* Padding handled by .fleet-intro-content */
-	.fleet-intro-content h2 { font-size: 32px !important; }
-	.fleet-intro-content p { font-size: 15px; }
+	.fleet-intro-section {
+		padding-top: 60px;
+        padding-bottom: 30px;
+        /* Section padding is 0 left/right */
+	}
+	.fleet-intro-content {
+        padding-left: 20px; /* CHANGE: Tablet padding */
+        padding-right: 20px; /* CHANGE: Tablet padding */
+	}
+	.fleet-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.fleet-intro-content p {
+		font-size: 15px;
+	}
 
 	.three-column-section {
-        padding-top: 30px;
-        padding-bottom: 50px;
-        gap: 25px;
-        /* padding-left/right handled by .content-padding if applicable */
+		gap: 25px;
+		padding: 30px 20px 50px 20px; /* CHANGE: Tablet padding (was 25px) */
 	}
-	.vehicle-column { padding: 25px; } /* Inner column padding */
-	/* Styles for content inside .vehicle-column */
-	.vehicle-column .header-text h2 { font-size: 26px; }
-	.vehicle-column .header-text p { font-size: 16px; }
-	.vehicle-column .icons-row { gap: 30px; margin: 25px 0; }
-	.vehicle-column .icon-container img { width: 35px; height: 35px; }
-	.vehicle-column .caption { font-size: 16px; }
-	.vehicle-select-button { width: 290px; height: 55px; font-size: 18px; line-height: 55px; }
+	.vehicle-column {
+		padding: 25px; /* Inner column padding */
+	}
+	.vehicle-column .header-text h2 {
+		font-size: 26px;
+	}
+	.vehicle-column .header-text p {
+		font-size: 16px;
+	}
+	.vehicle-column .icons-row {
+		gap: 30px;
+		margin: 25px 0;
+	}
+	.vehicle-column .icon-container img {
+		width: 35px;
+		height: 35px;
+	}
+	.vehicle-column .caption {
+		font-size: 16px;
+	}
+	.vehicle-select-button {
+		width: 290px;
+		height: 55px;
+		font-size: 18px;
+		line-height: 55px;
+	}
 }
 
-
-/* ================================= */
-/* --- Specific Mid-Range Tweaks --- */
-/* ================================= */
-/* These adjust INNER elements or revert padding on SPECIFIC wrappers */
+/* --- Specific Mid-Range Tweaks (Keep as is unless conflicting) --- */
 @media (min-width: 1278px) and (max-width: 1574px) {
-    /* Adjust padding for the wrapper */
-    .content-padding {
-        /* padding-left: 50px; /* Example if needed */
-        /* padding-right: 50px; */
-    }
-     /* Adjust padding for specific wrappers */
-    .text-column .content-padding { /* Target wrapper inside text-column */
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .feature-columns-section .content-padding { /* Target wrapper inside features */
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .fleet-intro-content { /* Target specific wrapper */
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 60px; /* Keep vertical */
-        padding-bottom: 30px;
-    }
-
-    /* Adjust inner element styles */
+	/* These rules adjust specific elements within the larger padding */
 	.text-column h2:first-of-type { font-size: 28px !important; }
 	.text-column h2:last-of-type { font-size: 20px !important; }
+	.text-column { padding: 60px 50px; } /* Reverts to 50px padding in this range */
+	.feature-columns-section { padding: 60px 50px; } /* Reverts to 50px padding */
+	.fleet-intro-content { padding: 60px 50px 30px 50px; } /* Reverts to 50px padding */
 	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; }
 }
-
 @media (min-width: 1025px) and (max-width: 1277px) {
-     /* Adjust padding for the wrapper */
-    .content-padding {
-        /* padding-left: 50px; /* Example if needed */
-        /* padding-right: 50px; */
-    }
-    /* Adjust padding for specific wrappers */
-    .text-column .content-padding {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .feature-columns-section .content-padding {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .fleet-intro-content {
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 60px;
-        padding-bottom: 30px;
-    }
-
-    /* Adjust inner element styles */
+	/* These rules adjust specific elements within the larger padding */
 	.text-column h2:first-of-type { font-size: 28px !important; }
 	.text-column h2:last-of-type { font-size: 20px !important; }
 	.text-column p { font-size: 15px; }
 	.text-column .cta-button { width: 218px !important; height: 47px !important; line-height: 47px !important; font-size: 16px !important; }
+	.text-column { padding: 60px 50px; } /* Reverts to 50px padding */
+	.feature-columns-section { padding: 60px 50px; } /* Reverts to 50px padding */
+	.fleet-intro-content { padding: 60px 50px 30px 50px; } /* Reverts to 50px padding */
 	.vehicle-select-button { width: 290px; height: 55px; line-height: 55px; }
 }
-
 @media (min-width: 768px) and (max-width: 900px) {
-    /* Padding already set to 20px by (max-width: 1024px) for .content-padding */
-    /* and specific wrappers */
-
-    /* Layout adjustments */
+    /* This range falls within max-width: 1024px, so 20px padding applies unless overridden */
 	.feature-columns-container { flex-wrap: nowrap; justify-content: space-between; }
 	.feature-column { flex-basis: 30%; min-width: auto; }
-
-    .three-column-section {
-        padding-top: 20px;
-        padding-bottom: 40px;
-        /* padding-left/right handled by .content-padding if applicable */
-    }
+	.three-column-section { padding: 20px 20px 40px 20px; } /* CHANGE: Ensure 20px padding (was 15px) */
 	.vehicle-column { padding: 15px; flex-basis: 230px; min-width: 230px; } /* Inner padding */
-    /* Styles for content inside .vehicle-column */
 	.vehicle-select-button { width: 290px; max-width: 100%; height: 55px; line-height: 55px; font-size: 18px; }
 	.vehicle-column .header-text img { min-width: 150px; min-height: 113px; }
 	.vehicle-column .header-text h2 { font-size: 20px; }
@@ -889,309 +828,523 @@ body {
 	.vehicle-column .caption { font-size: 14px; }
 	.vehicle-column .icons-row { gap: 15px; }
 	.vehicle-column .icon-container img { width: 28px; height: 28px; }
-
 	.text-column p { font-size: 15px; }
+    /* Text column padding already set to 20px by max-width: 1024px rule */
 	.text-column .cta-button { width: 216px !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; }
 }
 
 
-/* ================================= */
-/* --- Mobile ---                   */
-/* ================================= */
+/* --- Mobile --- */
 @media (max-width: 767px) {
-    /* Padding already set to 20px by (max-width: 1024px) for .content-padding */
-    /* and specific wrappers unless overridden here */
-
-    /* Hero adjustments */
-    .hero-section { height: 550px !important; align-items: flex-start !important; justify-content: flex-start !important; }
-    .hero-content {
-		padding: 0 20px !important; /* Ensure mobile padding */
+	.hero-content {
+		padding: 0 20px !important; /* CHANGE: Mobile padding */
 		margin-top: 25px !important;
 		text-align:left !important;
-        max-width: 100%; /* Allow full width within padding */
 	}
-	.hero-cta { display: block !important; width: 100% !important; max-width: 100% !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 15px; padding-left: 0 !important; padding-right: 0 !important; text-align: center; box-sizing: border-box !important; }
-	.hero-cta:last-child { margin-bottom: 0; }
-    .hero-content h1 { font-size: 45px !important; margin-bottom: 10px; }
-	.hero-content p { font-size: 16px !important; margin-bottom: 20px; }
-	.hero-buttons-container { margin-top: 20px; text-align:left; }
-
-    /* Text Column adjustments */
+	.hero-cta {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 55px !important;
+		line-height: 55px !important;
+		font-size: 18px !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-bottom: 15px;
+		padding-left: 0 !important; /* Keep button text centered */
+		padding-right: 0 !important; /* Keep button text centered */
+		text-align: center;
+		box-sizing: border-box !important;
+	}
+	.hero-cta:last-child {
+		margin-bottom: 0;
+	}
 	.text-column {
-		padding-top: 40px;
-        padding-bottom: 40px;
-        /* padding-left/right handled by .content-padding */
+		padding: 40px 20px; /* CHANGE: Mobile padding */
 	}
-    /* Styles for content inside .content-padding within .text-column */
-	.text-column .cta-button { display: block !important; width: 100% !important; max-width: 100% !important; height: 55px !important; line-height: 55px !important; font-size: 18px !important; margin: 10px auto 10px auto !important; padding-left: 0 !important; padding-right: 0 !important; box-sizing: border-box !important; }
-    .text-column h2 { padding: 0; }
-    .text-column h2:first-of-type { font-size: 32px !important; }
-	.text-column h2:last-of-type { font-size: 22px !important; }
-	.text-column p { font-size: 15px; padding: 0; margin: 0 0 15px 0; }
-	.text-column h2+hr { margin: 10px 0 20px 0; width: 100%; }
-
-    /* Vehicle Column adjustments */
-	.vehicle-column { padding: 20px; } /* Inner padding */
-	.vehicle-select-button { display: block !important; width: 290px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 55px !important; line-height: 55px !important; font-size: 18px; box-sizing: border-box !important; padding-left: 0 !important; padding-right: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important; }
-
-    /* Feature Column adjustments */
+	.text-column .cta-button {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: 55px !important;
+		line-height: 55px !important;
+		font-size: 18px !important;
+		margin: 10px auto 10px auto !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		box-sizing: border-box !important;
+	}
+    /* .vehicle-column inner padding */
+	.vehicle-column {
+		padding: 20px;
+	}
+	.vehicle-select-button {
+		display: block !important;
+		width: 290px !important;
+		max-width: 100% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		height: 55px !important;
+		line-height: 55px !important;
+		font-size: 18px;
+		box-sizing: border-box !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.hero-section {
+		height: 550px !important;
+		align-items: flex-start !important;
+		justify-content: flex-start !important;
+	}
+	.hero-content h1 {
+		font-size: 45px !important;
+		margin-bottom: 10px;
+	}
+	.hero-content p {
+		font-size: 16px !important;
+		margin-bottom: 20px;
+	}
+	.hero-buttons-container {
+		margin-top: 20px;
+		text-align:left;
+	}
 	.feature-columns-section {
-		padding-top: 40px;
-        padding-bottom: 40px;
-        /* padding-left/right handled by .content-padding */
+		padding: 40px 20px; /* CHANGE: Mobile padding */
 	}
-	.feature-columns-container { flex-direction: column; gap: 35px; }
-	.feature-column { min-width: 100%; }
-	.feature-column h2 { font-size: 32px !important; }
-	.feature-column p { font-size: 15px; }
-	.feature-column:nth-child(1)::after,.feature-column:nth-child(2)::after { content: ""; display: block; width: 100%; border-top: 1px dotted #d8a94e; margin-top: 35px; }
-
-    /* Stats adjustments */
+	.feature-columns-container {
+		flex-direction: column;
+		gap: 35px;
+	}
+	.feature-column {
+		min-width: 100%;
+	}
+	.feature-column h2 {
+		font-size: 32px !important;
+	}
+	.feature-column p {
+		font-size: 15px;
+	}
+	.feature-column:nth-child(1)::after,.feature-column:nth-child(2)::after {
+		content: "";
+		display: block;
+		width: 100%;
+		border-top: 1px dotted #d8a94e;
+		margin-top: 35px;
+	}
 	.stats-section {
 		padding-top: 40px;
 		padding-bottom: 40px;
-        /* padding-left/right handled by .content-padding */
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
 	}
-	.stats-container { gap: 30px; justify-content: center; max-width: 100%; }
-	.stat-column { flex: 1 1 calc(50% - 15px); min-width: 0; }
-	.stat-column h2 { font-size: 40px !important; }
-	.stat-column p { font-size: 14px; }
-
-    /* Dark Two Column adjustments */
+	.stats-container {
+		gap: 30px;
+		justify-content: center;
+		max-width: 100%;
+	}
+	.stat-column {
+		flex: 1 1 calc(50% - 15px);
+		min-width: 0;
+	}
+	.stat-column h2 {
+		font-size: 40px !important;
+	}
+	.stat-column p {
+		font-size: 14px;
+	}
 	.dark-two-column-section {
+		padding: 40px 20px 0px 20px; /* Already 20px */
+	}
+	.dark-columns-container {
+		gap: 0;
+	}
+	.dark-column {
+		min-width: 100%;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.image-column-right {
+		order: 2;
+		padding-bottom: 0;
+		margin-top: 20px;
+		position: static;
+	}
+	.dark-column:not(.image-column-right) {
+		order: 1;
+		padding-bottom: 20px;
+	}
+	.experience-heading {
+		font-size: 43px; /* Note: !important removed */
+	}
+	.experience-text {
+		font-size: 16px;
+	}
+	.flush-bottom-image {
+		position: static;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		max-width: 80%;
+		width: 80%;
+		height: auto;
+		max-height: unset;
+		margin: 20px auto 0 auto;
+		display: block;
+		z-index: auto;
+		object-fit: contain;
+		aspect-ratio: 250 / 359;
+	}
+	.section-container {
+		margin-bottom: 0 !important;
+	}
+	.image-column {
+		height: 300px;
+		max-height: 300px;
+	}
+	.image-column img {
+		height: 100%;
+		max-height: 100%;
+		display: block;
+	}
+	.text-column h2 {
+		padding: 0;
+	}
+	.text-column h2:first-of-type {
+		font-size: 32px !important;
+	}
+	.text-column h2:last-of-type {
+		font-size: 22px !important;
+	}
+	.text-column p {
+		font-size: 15px;
+		padding: 0;
+		margin: 0 0 15px 0;
+	}
+	.text-column h2+hr {
+		margin: 10px 0 20px 0;
+		width: 100%;
+	}
+	.section-container.image-position-top-mobile .image-column img {
+		object-position: center top !important;
+	}
+	.review-intro-section {
 		padding-top: 40px;
-        padding-bottom: 0px;
-        /* padding-left/right handled by .content-padding */
+		padding-bottom: 0;
 	}
-	.dark-columns-container { gap: 0; }
-	.dark-column { min-width: 100%; width: 100%; padding-bottom: 30px; }
-	.image-column-right { order: 2; padding-bottom: 0; margin-top: 20px; position: static; }
-	.dark-column:not(.image-column-right) { order: 1; padding-bottom: 20px; }
-	.experience-heading { font-size: 43px; }
-	.experience-text { font-size: 16px; }
-	.flush-bottom-image { position: static; bottom: auto; left: auto; transform: none; max-width: 80%; width: 80%; height: auto; max-height: unset; margin: 20px auto 0 auto; display: block; z-index: auto; object-fit: contain; aspect-ratio: 250 / 359; }
-
-    /* Generic Two Column Image */
-	.section-container { margin-bottom: 0 !important; }
-	.image-column { height: 300px; max-height: 300px; }
-	.image-column img { height: 100%; max-height: 100%; display: block; }
-	.section-container.image-position-top-mobile .image-column img { object-position: center top !important; }
-
-    /* Review Intro adjustments */
-	.review-intro-section { padding-top: 40px; padding-bottom: 0; }
-	/* Padding handled by .review-intro-content */
-
-    /* Review Columns adjustments */
-	.review-section { padding-top: 30px; padding-bottom: 30px; }
-	/* Padding handled by .review-columns-container */
-	.review-columns-container { gap: 30px; justify-content: center; }
-	.review-column { flex-basis: 100%; min-width: auto; }
-    .review-button-container { /* Center button */
-        text-align: center;
-        padding-left: 20px; /* Ensure padding matches content */
-        padding-right: 20px;
-    }
-	.review-cta-button { display: block; width: 100%; max-width: 339px; margin-left: auto; margin-right: auto; }
-
-    /* Fleet Intro adjustments */
-	.fleet-intro-section { padding-top: 40px; padding-bottom: 30px; }
-	/* Padding handled by .fleet-intro-content */
-    .fleet-intro-content { text-align: left !important; }
-	.fleet-intro-content h2 { font-size: 32px !important; }
-	.fleet-intro-content p { font-size: 16px; }
-
-    /* Three Column / Fleet adjustments */
+	.review-intro-content {
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
+	}
+	.review-section {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.review-columns-container {
+		padding-left: 20px; /* Already 20px */
+		padding-right: 20px; /* Already 20px */
+		gap: 30px;
+		justify-content: center;
+	}
+	.review-column {
+		flex-basis: 100%;
+		min-width: auto;
+	}
+	.review-cta-button {
+		display: block;
+		width: 100%;
+		max-width: 339px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.fleet-intro-section {
+		padding: 40px 0 30px 0; /* Section edge-to-edge */
+	}
+	.fleet-intro-content {
+        padding-left: 20px; /* CHANGE: Mobile padding */
+        padding-right: 20px; /* CHANGE: Mobile padding */
+		text-align: left !important;
+	}
+	.fleet-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.fleet-intro-content p {
+		font-size: 16px;
+	}
 	.three-column-section {
-        padding-top: 30px;
-        padding-bottom: 40px;
-        gap: 30px;
-        /* padding-left/right handled by .content-padding if applicable */
+		gap: 30px;
+		padding: 30px 20px 40px 20px; /* Already 20px */
 	}
-	.vehicle-column { flex-basis: 100%; width: 100%; min-width: unset; }
-    /* Styles for content inside .vehicle-column */
-	.three-column-section .vehicle-column:first-child .header-text img { position: relative; top: -20px; margin-top: 0; }
-	.three-column-section .vehicle-column:nth-child(3) .header-text img { margin-top: 40px; }
-	.vehicle-column .header-text h2 { font-size: 22px !important; }
-	.vehicle-column .header-text p { font-size: 14px !important; }
-	.vehicle-column .icons-row { gap: 20px; margin: 15px 0; }
-	.vehicle-column .icon-container img { width: 28px; height: 28px; }
-	.vehicle-column .caption { font-size: 14px !important; }
-	.vehicle-column .header-text img { min-width: unset; min-height: unset; }
-	.vehicle-column .cta-container { text-align: initial; }
+	.vehicle-column {
+		flex-basis: 100%;
+		width: 100%;
+		min-width: unset;
+	}
+	.three-column-section .vehicle-column:first-child .header-text img {
+		position: relative;
+		top: -20px;
+		margin-top: 0;
+	}
+	.three-column-section .vehicle-column:nth-child(3) .header-text img {
+		margin-top: 40px;
+	}
+	.vehicle-column .header-text h2 {
+		font-size: 22px !important;
+	}
+	.vehicle-column .header-text p {
+		font-size: 14px !important;
+	}
+	.vehicle-column .icons-row {
+		gap: 20px;
+		margin: 15px 0;
+	}
+	.vehicle-column .icon-container img {
+		width: 28px;
+		height: 28px;
+	}
+	.vehicle-column .caption {
+		font-size: 14px !important;
+	}
+	.vehicle-column .header-text img {
+		min-width: unset;
+		min-height: unset;
+	}
+	.vehicle-column .cta-container {
+		text-align: initial;
+	}
 }
 
-
-/* ================================= */
-/* --- Small Mobile ---             */
-/* ================================= */
+/* --- Small Mobile --- */
 @media (max-width: 480px) {
-    /* Padding generally remains 20px from previous breakpoint */
-
-    .hero-section { height: 545px !important; }
-	.hero-content { /* Already 20px */ }
-	.hero-content h1 { font-size: 45px !important; }
-	.hero-content p { font-size: 16px !important; }
-
+	.hero-section {
+		height: 545px !important;
+	}
+	.hero-content {
+        padding: 0 20px !important; /* CHANGE: Ensure 20px */
+        margin-top: 25px !important;
+	}
+	.hero-content h1 {
+		font-size: 45px !important;
+	}
+	.hero-content p {
+		font-size: 16px !important;
+	}
 	.feature-columns-section {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        /* padding-left/right handled by .content-padding */
-    }
-	.feature-column h2 { font-size: 32px !important; }
-	.feature-column p { font-size: 15px; }
-
-	.stats-container { gap: 25px; }
-	.stat-column { flex-basis: calc(50% - 13px); }
-
-	.image-column { height: 250px; max-height: 250px; }
+		padding: 30px 20px; /* CHANGE: Ensure 20px */
+	}
+	.feature-column h2 {
+		font-size: 32px !important;
+	}
+	.feature-column p {
+		font-size: 15px;
+	}
+	/* Stats section padding already 20px via max-width: 767px */
+    /* Removed redundant stats-section padding rule */
+	.stats-container {
+		gap: 25px;
+	}
+	.stat-column {
+		flex-basis: calc(50% - 13px);
+	}
+	/* Dark two col section padding already 20px via max-width: 767px */
+	.image-column {
+		height: 250px;
+		max-height: 250px;
+	}
 	.text-column {
-        padding-top: 30px;
+		padding: 30px 20px; /* CHANGE: Ensure 20px */
+	}
+	.text-column h2:first-of-type {
+		font-size: 32px !important;
+	}
+	.text-column h2:last-of-type {
+		font-size: 22px !important;
+	}
+	.text-column p {
+		font-size: 15px;
+	}
+	/* Review intro/columns padding already 20px via max-width: 767px */
+    /* Removed redundant review-intro-content padding rule */
+	.review-intro-content h2 {
+		font-size: 30px !important;
+	}
+    /* Removed redundant review-columns-container padding rule */
+	.review-section {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+	/* Fleet intro padding already 20px via max-width: 767px */
+    .fleet-intro-section {
+        /* Padding top/bottom changes only */
+        padding-top: 40px;
         padding-bottom: 30px;
-        /* padding-left/right handled by .content-padding */
     }
-    /* Styles for content inside .content-padding within .text-column */
-	.text-column h2:first-of-type { font-size: 32px !important; }
-	.text-column h2:last-of-type { font-size: 22px !important; }
-	.text-column p { font-size: 15px; }
+	.fleet-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.fleet-intro-content p {
+		font-size: 16px;
+	}
+	/* .vehicle-column inner padding */
+	.vehicle-column {
+		padding: 15px;
+	}
+	.three-column-section {
+		padding: 30px 20px 40px 20px; /* CHANGE: Ensure 20px */
+	}
 
-	/* Review Intro - padding handled by wrapper */
-	.review-intro-content h2 { font-size: 30px !important; }
-	/* Review Columns - padding handled by wrapper */
-	.review-section { padding-top: 20px; padding-bottom: 40px; }
-
-	/* Fleet Intro - padding handled by wrapper */
-    .fleet-intro-section { padding-top: 40px; padding-bottom: 30px; }
-	.fleet-intro-content h2 { font-size: 32px !important; }
-	.fleet-intro-content p { font-size: 16px; }
-
-    /* Three Column / Fleet */
-    .three-column-section {
-        padding-top: 30px;
-        padding-bottom: 40px;
-        /* padding-left/right handled by .content-padding if applicable */
-    }
-	.vehicle-column { padding: 15px; } /* Inner padding */
 }
 
-/* ================================= */
-/* --- Tiny Mobile ---              */
-/* ================================= */
+/* --- Tiny Mobile --- */
 @media (max-width: 400px) {
-    /* Most padding already 20px from previous breakpoints, no changes needed */
-    /* unless specific overrides required for the wrappers or .content-padding */
-
-    /* Example: If hero needed even less padding */
-    /* .hero-content { padding-left: 15px !important; padding-right: 15px !important; } */
-
-    /* Example: Adjust vehicle inner padding */
-    /* .vehicle-column { padding: 10px; } */
+    /* Most padding is already 20px from previous breakpoints */
+	.hero-content {
+        padding-left: 20px !important; /* CHANGE: Ensure 20px */
+        padding-right: 20px !important; /* CHANGE: Ensure 20px */
+	}
+	.feature-columns-section {
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
+	}
+	.text-column {
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
+	}
+    /* Review intro/columns already 20px via max-width: 767px */
+	.review-intro-content {
+		/* padding-left: 20px; already set */
+		/* padding-right: 20px; already set */
+	}
+	.review-columns-container {
+		/* padding-left: 20px; already set */
+		/* padding-right: 20px; already set */
+	}
+    /* Fleet intro already 20px via max-width: 767px */
+    .fleet-intro-section {
+        /* Padding top/bottom changes only */
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+	.fleet-intro-content h2 {
+		font-size: 32px !important;
+	}
+	.fleet-intro-content p {
+		font-size: 16px;
+	}
+	/* .vehicle-column inner padding */
+	.vehicle-column {
+		padding: 15px;
+	}
+	.three-column-section {
+		padding-left: 20px; /* CHANGE: Ensure 20px */
+		padding-right: 20px; /* CHANGE: Ensure 20px */
+	}
 }
-
-
 /* ================================= */
-/* App Install Banner CSS           */
-/* ================================= */
- #app-install-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f0f0f0; /* Light grey background */
-    border-bottom: 1px solid #ccc;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    z-index: 1000;
-    display: none; /* Initially hidden - JS will show it */
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
-  }
-
-  .app-banner-content {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Space between icon, text, button */
-    flex-grow: 1;
-    margin-right: 10px;
-    overflow: hidden; /* Prevent text overflow */
-  }
-
-  .app-banner-icon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 8px; /* Optional rounded corners */
-  }
-
-  .app-banner-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3;
-    flex-grow: 1; /* Allow text to take space */
-    min-width: 0; /* Allow text to shrink if needed */
-  }
-
-  .app-banner-text strong {
-    font-weight: 600; /* Slightly bolder */
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis if too long */
-  }
-   .app-banner-text span {
-     font-size: 13px;
-     color: #555;
-     white-space: nowrap; /* Prevent wrapping */
-     overflow: hidden;
-     text-overflow: ellipsis; /* Add ellipsis if too long */
-   }
-
-
-  .app-banner-button {
-    display: inline-block;
-    background-color: #002b7f; /* Blue button */
-    color: white !important; /* Ensure white text */
-    padding: 6px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-    margin-left: 10px; /* Space before button */
-    flex-shrink: 0;
-    font-size: 13px;
-    line-height: 1.4;
-  }
-   .app-banner-button:hover {
-     background-color: #0056b3; /* Darker blue on hover */
-   }
-
-  .app-banner-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    line-height: 1;
-    cursor: pointer;
-    color: #888;
-    padding: 0 5px;
-    flex-shrink: 0;
-  }
-   .app-banner-close:hover {
-     color: #333;
-   }
-
-
-  /* Hide banner button/text if screen is too narrow */
-  @media (max-width: 360px) {
-      .app-banner-text span {
-          display: none; /* Hide subtitle on very small screens */
+      /* START: App Install Banner CSS     */
+      /* ================================= */
+      #app-install-banner {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0; /* Light grey background */
+        border-bottom: 1px solid #ccc; 
+        padding: 10px 15px;
+        box-sizing: border-box;
+        z-index: 1000;
+        display: none; /* Initially hidden - JS will show it */
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
       }
-      .app-banner-button {
-          padding: 5px 8px;
-          font-size: 12px;
-      }
+
       .app-banner-content {
-          gap: 8px;
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Space between icon, text, button */
+        flex-grow: 1;
+        margin-right: 10px;
+        overflow: hidden; /* Prevent text overflow */
       }
-  }
+
+      .app-banner-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 8px; /* Optional rounded corners */
+      }
+
+      .app-banner-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        flex-grow: 1; /* Allow text to take space */
+        min-width: 0; /* Allow text to shrink if needed */
+      }
+
+      .app-banner-text strong {
+        font-weight: 600; /* Slightly bolder */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Add ellipsis if too long */
+      }
+       .app-banner-text span {
+         font-size: 13px;
+         color: #555;
+         white-space: nowrap; /* Prevent wrapping */
+         overflow: hidden;
+         text-overflow: ellipsis; /* Add ellipsis if too long */
+       }
+
+
+      .app-banner-button {
+        display: inline-block;
+        background-color: #002b7f; /* Blue button */
+        color: white !important; /* Ensure white text */
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 10px; /* Space before button */
+        flex-shrink: 0;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+       .app-banner-button:hover {
+         background-color: #0056b3; /* Darker blue on hover */
+       }
+
+      .app-banner-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+        color: #888;
+        padding: 0 5px;
+        flex-shrink: 0;
+      }
+       .app-banner-close:hover {
+         color: #333;
+       }
+
+
+      /* Hide banner button/text if screen is too narrow */
+      @media (max-width: 360px) {
+          .app-banner-text span {
+              display: none; /* Hide subtitle on very small screens */
+          }
+          .app-banner-button {
+              padding: 5px 8px;
+              font-size: 12px;
+          }
+          .app-banner-content {
+              gap: 8px;
+          }
+      }
