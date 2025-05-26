@@ -4,9 +4,9 @@ body {
 	font-family: 'Poppins', sans-serif;
 	background-color: #fff;
 	box-sizing: border-box;
-	overflow-x: hidden;
+	overflow-x: hidden; /* Important to prevent horizontal scrollbars */
 }
-*, *:before, :after {
+*, *:before, *:after {
 	box-sizing: inherit;
 }
 .gold-text {
@@ -16,24 +16,25 @@ body {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; /* This will center .hero-content */
 	height: 600px;
-	max-width: 1730px;
-	margin-left: auto;
-	margin-right: auto;
-	background-size: cover:
+	width: 100%; /* Make the section itself full width */
+	/* REMOVE: max-width: 1730px; */
+	/* REMOVE: margin-left: auto; */
+	/* REMOVE: margin-right: auto; */
+	background-size: cover; /* CORRECTED: Was 'cover:' */
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-align: center;
 	color: #ffffff;
-	overflow: hidden;
+	overflow: hidden; /* Good to prevent content from spilling if it's too large */
 }
 .hero-content {
 	position: relative;
 	z-index: 1;
-	max-width: 800px;
-	padding: 30px 40px; /* Default large screen padding */
-	width: 100%;
+	max-width: 800px; /* Keeps content from spanning full width */
+	padding: 30px 40px;
+	width: 100%; /* Takes up available space within its max-width */
 }
 .hero-content h1 {
 	font-family: 'Roboto Condensed', sans-serif;
