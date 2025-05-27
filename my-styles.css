@@ -231,14 +231,31 @@ body {
 }
 
 .section-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: stretch;
-	max-width: 1730px;
-	margin: 0 auto;
-	padding: 0; /* Container itself has no padding */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: stretch;
+width: 100%; 
+max-width: 1730px; 
+margin: 0 auto;
+padding: 0;
 }
+.content-wrapper-for-section { /* or a more specific name */
+            max-width: 1730px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 70px;  /* Or your desired inner padding */
+            padding-right: 70px; /* Or your desired inner padding */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        /* If .section-container is flex, the wrapper might also need to be flex */
+        .content-wrapper-for-section.is-flex {
+            display: flex;
+            flex-direction: row; /* or column as needed */
+            justify-content: space-between;
+            align-items: stretch;
+        }
 .image-column, .text-column {
 	flex: 0 0 50%;
 }
