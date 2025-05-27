@@ -234,34 +234,46 @@ body {
 .section-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-between; /* This will spread .image-column and .text-column to the edges */
 	align-items: stretch;
-	max-width: 1730px;
-	margin: 0 auto;
+	width: 100%; /* Make the section itself full width */
+	/* REMOVED: max-width: 1730px; */
+	/* REMOVED: margin: 0 auto; */
 	padding: 0; /* Container itself has no padding */
+    /* Add a background-color here if you want to see it span full width:
+       background-color: #f0f0f0; /* Example */
 }
+
+/* The .image-column and .text-column will now each take up 50% of the *viewport width* */
 .image-column, .text-column {
 	flex: 0 0 50%;
 }
+
 .image-column {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
 	overflow: hidden;
-	padding: 0;
+	padding: 0; /* Image column itself has no padding */
 }
+
 .image-column img {
-	width: 100%;
+	width: 100%; /* Image will fill its 50% viewport-width column */
 	height: 540px;
 	display: block;
 	object-fit: cover;
 	object-position: center center;
 }
+
 .text-column {
-	padding: 80px 70px; /* Default large screen padding */
+    /* This padding will now be from the edge of the 50% viewport-width column */
+	padding: 80px 70px;
 	color: #595959;
 	text-align:left;
+    box-sizing: border-box; /* Good practice when padding is applied */
 }
+
+/* Styles for content within .text-column remain the same */
 .text-column h2 {
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
